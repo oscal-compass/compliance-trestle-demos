@@ -14,7 +14,10 @@
 # limitations under the License.
 """Create ISM catalogs.
 
-This script is used to convert Australian government ISM into OSCAL formats.
+This script is used to convert Australian Government Information Security Manual (ISM) into OSCAL formats.
+The ISM is the equivalent of NIST 800-53 / FedRAMP / IL6 and similar documents in the USA. The goal is to produce a
+similar set OSCAL documents to what NIST and FedRAMP are currently publishing.
+
 It does this via pulling the ISM xml doc and creating:
 
 1 Catalog for all the controls
@@ -23,7 +26,7 @@ It does this via pulling the ISM xml doc and creating:
 Ideally this would be a cron job based script, however, as ACSC publish revisions
 with specific names this would need to be discovered by crawling. This will be a potential future enhancement.
 
-This script pulls down teh controls in a 'dumb' way from the xml to get the actual controls. A full featured catalog
+This script pulls down the controls in a 'dumb' way from the xml to get the actual controls. A full featured catalog
 will need to parse appropriate word / xml documents to provide groups /guidance.
 """
 import io
@@ -98,9 +101,9 @@ class ISMManager():
 
     def _name_clean(self, name: str) -> str:
         """Normalize string to ncname format."""
-        return input.strip().lower().replace(' ', '_').replace('/', '-')
+        return name.strip().lower().replace(' ', '_').replace('/', '-')
 
-    def create_ism_catalogs(self, version: str) -> None:
+    def create_ism_catalog(self, version: str) -> None:
         """Parse ISM object and create a catalog."""
         m = common.Metadata(
             **{
@@ -252,7 +255,7 @@ class ISM(Command):
             logger.info(revision_string)
             ism_name = 'ISM_' + revision_string
 
-            ism_manager.create_ism_catalogs(revision_string)
+            ism_manager.create_ism_catalog(revision_string)
             # This is presumed to be relative for now to the catalog repo based on this
             ism_manager.write_catalog(catalogs_dir, ism_name)
             ism_manager.create_ism_profiles(revision_string, '../../catalogs/' + ism_name + '/catalog.json')

@@ -1,6 +1,6 @@
 # compliance-trestle-demos
 
-A project capturing a number of demos and sample sets of cotnent for the [compliance-trestle](https://ibm.github.io/compliance-trestle) project including various additional scripts and transformers.
+This project captures a number of demos, and sample set of content for [compliance-trestle](https://ibm.github.io/compliance-trestle). Each of the folders in the top level of this project is a self contained demonstration.
 
 ## Using / management of this repository
 
@@ -9,10 +9,10 @@ This project follows the same methodologies as within the main trestle project i
 The top level project itself is a container for a set of demonstrations. At a high level all files are expected to pass:
 
 - mdformat setup
-- code-linting for python files
-- code-formatting for python files.
+- code-linting for python files (using `flake8`)
+- code-formatting for python files (using `yapf`)
 
-All content provided here is 'as is' and is not required to pass unit testing etc.
+All content provided here is 'as is' and is maintained on a best effort basis.
 
 To add a demonstration in addition to opening a PR with the new demonstration in a single folder within the top level project:
 
@@ -23,22 +23,30 @@ To add a demonstration in addition to opening a PR with the new demonstration in
 ### Demos with CICD
 
 - Some of the demonstrations may integrate with CICD systems (e.g. travis / github actions / circle CI)
-- To simplify this project those demonstrations
+- To simplify this project, demonstrations highlighting CICD tooling will be included in this project as a git submodule from an independent repository.
 
 # Demonstrations
 
+## Simple sdk examples.
+
+[This folder](./treste_sdk_examples) contains a number of small examples for using the trestle OSCAL sdks.
+
 ## Australian government Information Security Manual (ISM)
 
-This demonstration uses trestle as an SDK for generating OSCAL files.
-A script `scripts/ISM/ISM.py` generates a set of profiles (for each security level) and a catalog per ISM version.
-Read more about the demo [here](./scripts/ISM/ISM.py).
+This demonstration uses trestle as an SDK for generating OSCAL files. This demonstration downloads all currently available versions of the Australian Government ISM from [ACSC](https://www.acsc.gov.au) and converts those documents to a set of OSCAL catalogs and profiles. [Read more about the demo here](ISM_catalog_profile).
 
 ## arc42 architectural template enforcement using trestle author.
 
 [arc42](https://arc42.org/) have created a set open-source architecture documentation templates. This [demonstration](./arc42-author-demo)
 uses `trestle author` to enforce use of the (modified) arc42 templates.
 
-A CICD pipeline (using github actions) is used for this demonstration. The full repository, including working CICD is [here](https://github.com/IBM/compliance-trestle-arc42-demo). Read more about the demo [here](https://github.com/IBM/compliance-trestle-arc42-demo)
+A CICD pipeline (using github actions) is used for this demonstration. The full repository, including working CICD is [here](https://github.com/IBM/compliance-trestle-arc42-demo). Read more about the demo [here](https://github.com/IBM/compliance-trestle-arc42-demo).
+
+## Trestle flask microservice demonstation.
+
+`trestle` uses a python library called [pydantic](https://pydantic-docs.helpmanual.io/) to form the underlying OSCAL object models. [flask-pydantic](https://github.com/bauerji/flask_pydantic) introduces a mechanism which integrates pydantic models into flask, providing automated user input validation in one line of code. This demo accepts a catalog as a POSTed object, throwing errors if the catalog does not meet the schema, and returns the catalog in the response.
+
+## Creating a CIS controls catalog from an excel spreadsheet.
 
 ## License & Authors
 

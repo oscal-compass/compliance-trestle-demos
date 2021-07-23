@@ -1,0 +1,44 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+# Messy merges
+*.orig
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+.settings
+.project
+.pydevproject
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+venv
+*.egg-info
+.vscode/settings.json
+.vscode
+
+# jupyter notebooks for local tests and prototypes
+*.ipynb
+
+_*/
+
+#OS X 
+.DS_Store
+
+
+build
+dist
+tmp
+
+.coverage
+coverage.xml
+cov_html
+
+site
+/.pytest_cache/

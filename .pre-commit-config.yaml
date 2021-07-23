@@ -4,7 +4,6 @@ repos:
     hooks:
       - id: yapf
         args: [--in-place, --parallel, --recursive, --style, .yapf-config]
-        files: "^(trestle|tests|scripts)"
         exclude: "(oscal|third_party)"
         stages: [commit]
   - repo: https://gitlab.com/pycqa/flake8
@@ -31,7 +30,6 @@ repos:
             flake8-use-fstring,
             pep8-naming,
           ]
-        files: "^(trestle|tests|scripts)"
         exclude: "(oscal|third_party)"
         stages: [commit]
   - repo: https://github.com/executablebooks/mdformat

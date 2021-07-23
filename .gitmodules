@@ -1,0 +1,4 @@
+[submodule "arc42-author-demo"]
+	path = arc42-author-demo
+	url = https://github.com/IBM/compliance-trestle-arc42-demo
+	branch = develop

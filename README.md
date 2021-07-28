@@ -48,6 +48,12 @@ A CICD pipeline (using github actions) is used for this demonstration. The full 
 
 ## Creating a CIS controls catalog from an excel spreadsheet.
 
+The Centre for Internet Security (CIS) produce a number of cross industry standards for IT security including their [platform specific benchmarks](https://www.cisecurity.org/cis-benchmarks/) and a suite of [controls](https://www.cisecurity.org/controls/). [This demo](./CIS_controls) converts a spreadsheet of those controls into a a catalog and three profiles.
+
+## Creating an SSP using trestle author.
+
+`trestle author ssp-generate` and `trestle author ssp-author` allow users to generate first a set of markdown documents to allow easy editing of control responses and second to reassemble that information up into an OSCAL ssp document. This is a 'baseline' demonstration with more sophisticated updates expected in the near term.
+
 ## License & Authors
 
 If you would like to see the detailed LICENSE click [here](LICENSE).

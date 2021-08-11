@@ -58,7 +58,9 @@ The Centre for Internet Security (CIS) produce a number of cross industry standa
 
 `trestle.core.repository` is an API which abstracts users from the file system of a trestle repository. It provides a way for external developers to access a trestle repository without relying on presumptions (such as cwd being within the repository). Find the demo [here](./trestle_repo_api_examples).
 
-## Converting a spreadsheet into a `component-definition`
+## Task Examples
+
+### Converting a spreadsheet into a `component-definition`
 
 Plenty of compliance content exists today in spreadsheets. This [demonstration](./trestle_task_spread_sheet_to_component_definition) show how to use the xlsx-to-oscal-component-definition MVP functionality.
 

@@ -222,7 +222,6 @@ class ISM(Command):
         root_dir = pathlib.Path(args.root_dir).resolve()
         catalogs_dir = root_dir.joinpath('catalogs').resolve()
         profiles_dir = root_dir.joinpath('profiles').resolve()
-        cache_dir = root_dir.joinpath('non-oscal-data').resolve()
         ism_json_file = root_dir.joinpath('scripts/ISM/ism_editions.json').resolve()
 
         if not root_dir.exists():
@@ -234,10 +233,6 @@ class ISM(Command):
 
         if not profiles_dir.exists():
             logger.error('Profiles directory does not exist.')
-            return 1
-
-        if not cache_dir.exists():
-            logger.error('Cache directory does not exist.')
             return 1
 
         ism_versions = json.load(ism_json_file.open())
@@ -258,7 +253,7 @@ class ISM(Command):
             ism_manager.create_ism_catalog(revision_string)
             # This is presumed to be relative for now to the catalog repo based on this
             ism_manager.write_catalog(catalogs_dir, ism_name)
-            ism_manager.create_ism_profiles(revision_string, '../../catalogs/' + ism_name + '/catalog.json')
+            ism_manager.create_ism_profiles(revision_string, 'trestle://' + ism_name + '/catalog.json')
             ism_manager.write_profiles(profiles_dir, ism_name)
 
 

@@ -28,6 +28,7 @@ Running the demo
 ```
 > cd
 > cd git/compliance-trestle-demos/trestle_task_osco_to_oscal
+> trestle init
 > trestle task osco-to-oscal -c ./demo-osco-to-oscal.config
 
 output: osco/runtime/ssg-ocp4-ds-cis-111.222.333.444-pod.oscal.json

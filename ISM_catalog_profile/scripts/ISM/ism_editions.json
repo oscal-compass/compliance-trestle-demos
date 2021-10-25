@@ -1,6 +1,11 @@
 {
     "isms": [
         {
+            "version_name": "September 2021",
+            "version_url": "https://www.cyber.gov.au/sites/default/files/2021-09/ISM%20September%202021%20%28September%202021%29.zip"
+
+        },
+        {
             "version_name": "June 2021",
             "version_url": "https://www.cyber.gov.au/sites/default/files/2021-06/ISM%20June%202021%20%28June%202021%29.zip"
 

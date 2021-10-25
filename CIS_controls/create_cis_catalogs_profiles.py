@@ -6,7 +6,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
+#     https://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -156,7 +156,7 @@ def determine_version(file_pth: pathlib.Path) -> Optional[str]:
 class CISConverter(Command):
     """Converter CLI wrapper class."""
 
-    def _init_arguments(self):
+    def _init_arguments(self) -> None:
         self.add_argument('-i', '--input', help='', type=pathlib.Path, required=True)
         self.add_argument('-o', '--output', help='', type=pathlib.Path, default=pathlib.Path.cwd())
         self.add_argument('-v', '--cis-version', help='', type=str, default=None)

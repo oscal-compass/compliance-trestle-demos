@@ -60,9 +60,15 @@ The Centre for Internet Security (CIS) produce a number of cross industry standa
 
 ## Task Examples
 
-### Converting a spreadsheet into a `component-definition`
-
-Plenty of compliance content exists today in spreadsheets. This [demonstration](./trestle_task_spread_sheet_to_component_definition) show how to use the xlsx-to-oscal-component-definition MVP functionality.
+- Convert a spreadsheet into a `component-definition`
+<br>
+This [demonstration](./trestle_task_spread_sheet_to_component_definition) shows how to use the `trestle task xlsx-to-oscal-component-definition` functionality.
+<br>
+<br>
+- Convert an OpenShift Compliance Operator (OSCO) results into a partial `assessment-results`
+<br>
+This [demonstration](./trestle_task_osco_to_oscal) shows how to use the `trestle task osco-to-oscal` functionality.
+<br>
 
 ## License & Authors
 

@@ -150,9 +150,7 @@ class ISMManager():
                     # make description the part statement
                     statement_part = common.Part(id='control-' + raw_id + '-stmt', name='statement', prose=description)
                     # this is very minimial
-                    oscal_control = catalog.Control(
-                        id='control-' + raw_id, title=topic + ' ' + raw_id, parts=[statement_part]
-                    )
+                    oscal_control = catalog.Control(id='control-' + raw_id, title=topic, parts=[statement_part])
                     self._populate_control_list(ism_control, raw_id)
                     oscal_controls.append(oscal_control)
                 l2_group.controls = oscal_controls

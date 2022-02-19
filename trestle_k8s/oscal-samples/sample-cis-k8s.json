@@ -1,0 +1,149 @@
+{
+  "results": [
+    {
+      "uuid": "9119823d-9bc2-481f-91a4-49583e71bec2",
+      "title": "sample-cis-bench-api-server",
+      "description": "kube-cis",
+      "start": "2022-02-19T14:24:53+00:00",
+      "prop": [
+        {
+          "name": "apiVersion",
+          "value": "wgpolicyk8s.io/v1alpha2"
+        },
+        {
+          "name": "kind",
+          "value": "PolicyReport"
+        },
+        {
+          "name": "metadata.name",
+          "value": "sample-cis-bench-api-server"
+        },
+        {
+          "name": "metadata.labels.wgpolicyk8s.io_engine",
+          "value": "kube-cis"
+        },
+        {
+          "name": "metadata.annotations.name",
+          "value": "CIS Kubernetes Benchmarks"
+        },
+        {
+          "name": "metadata.annotations.category",
+          "value": "API Server"
+        },
+        {
+          "name": "metadata.annotations.version",
+          "value": "v1.5.1 - 02-14-2020"
+        }
+      ],
+      "reviewed-controls": {
+        "control-selections": [
+          {}
+        ]
+      },
+      "observations": [
+        {
+          "uuid": "09750594-881f-4134-8525-ab9577c16638",
+          "description": "kube-cis",
+          "props": [
+            {
+              "name": "results.policy",
+              "value": "api-server:anonymous-auth"
+            },
+            {
+              "name": "results.message",
+              "value": "ensure that --anonymous-auth argument is set to false"
+            },
+            {
+              "name": "results.result",
+              "value": "warn"
+            },
+            {
+              "name": "results.scored",
+              "value": "True"
+            },
+            {
+              "name": "results.properties.category",
+              "value": "API Server"
+            },
+            {
+              "name": "results.properties.index",
+              "value": "1.2.2"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "collected": "2022-02-19T14:24:53+00:00"
+        },
+        {
+          "uuid": "3dd919e5-8db2-4204-a66c-36556fd1c57c",
+          "description": "kube-cis",
+          "props": [
+            {
+              "name": "results.policy",
+              "value": "api-server:basic-auth-file"
+            },
+            {
+              "name": "results.message",
+              "value": "ensure that --basic-auth-file argument is not set"
+            },
+            {
+              "name": "results.result",
+              "value": "fail"
+            },
+            {
+              "name": "results.scored",
+              "value": "True"
+            },
+            {
+              "name": "results.properties.category",
+              "value": "API Server"
+            },
+            {
+              "name": "results.properties.index",
+              "value": "1.2.2"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "collected": "2022-02-19T14:24:53+00:00"
+        },
+        {
+          "uuid": "e1365447-aede-4422-8793-f61583280ef0",
+          "description": "kube-cis",
+          "props": [
+            {
+              "name": "results.policy",
+              "value": "api-server:token-auth-file"
+            },
+            {
+              "name": "results.message",
+              "value": "ensure that --token-auth-file argument is not set"
+            },
+            {
+              "name": "results.result",
+              "value": "warn"
+            },
+            {
+              "name": "results.scored",
+              "value": "False"
+            },
+            {
+              "name": "results.properties.category",
+              "value": "API Server"
+            },
+            {
+              "name": "results.properties.index",
+              "value": "1.2.2"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "collected": "2022-02-19T14:24:53+00:00"
+        }
+      ]
+    }
+  ]
+}

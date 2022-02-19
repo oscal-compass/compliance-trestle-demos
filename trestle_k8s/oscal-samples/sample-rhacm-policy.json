@@ -1,0 +1,113 @@
+{
+  "results": [
+    {
+      "uuid": "5fd4ceb8-8a0b-4eb7-8f02-1364c5f6e17b",
+      "title": "sample-rhacm-policy",
+      "description": "rhacm-configuration-policy",
+      "start": "2022-02-19T14:24:53+00:00",
+      "prop": [
+        {
+          "name": "apiVersion",
+          "value": "wgpolicyk8s.io/v1alpha2"
+        },
+        {
+          "name": "kind",
+          "value": "PolicyReport"
+        },
+        {
+          "name": "metadata.name",
+          "value": "sample-rhacm-policy"
+        },
+        {
+          "name": "metadata.labels.policy.kubernetes.io_engine",
+          "value": "rhacm-configuration-policy"
+        },
+        {
+          "name": "scope.apiVersion",
+          "value": "policy.open-cluster-management.io/v1"
+        },
+        {
+          "name": "scope.kind",
+          "value": "Policy"
+        },
+        {
+          "name": "scope.name",
+          "value": "policy-imagemanifestvuln"
+        },
+        {
+          "name": "scope.namespace",
+          "value": "cluster1"
+        }
+      ],
+      "reviewed-controls": {
+        "control-selections": [
+          {}
+        ]
+      },
+      "observations": [
+        {
+          "uuid": "41a006a7-f848-4349-be4a-bd5ca733663e",
+          "description": "rhacm-configuration-policy",
+          "props": [
+            {
+              "name": "results.policy",
+              "value": "mustnothaveimagevuln"
+            },
+            {
+              "name": "results.message",
+              "value": "must not have imagemanifestvulns"
+            },
+            {
+              "name": "results.result",
+              "value": "fail"
+            },
+            {
+              "name": "results.scored",
+              "value": "False"
+            },
+            {
+              "name": "results.resources.apiVersion",
+              "value": "secscan.quay.redhat.com/v1alpha1"
+            },
+            {
+              "name": "results.resources.kind",
+              "value": "ImageManifestVuln"
+            },
+            {
+              "name": "results.resources.name",
+              "value": "sha256.8d104847fc2371a983f7cb01c7c0a3ab35b7381d6bf7ce355d9b32a08c0031f0"
+            },
+            {
+              "name": "results.resources.namespace",
+              "value": "openshift-cluster-version"
+            },
+            {
+              "name": "results.properties.details",
+              "value": "NonCompliant; violation - imagemanifestvulns exist and should be deleted: [sha256.8d104847fc2371a983f7cb01c7c0a3ab35b7381d6bf7ce355d9b32a08c0031f0] in namespace openshift-cluster-version"
+            },
+            {
+              "name": "results.properties.standards",
+              "value": "NIST-CSF"
+            },
+            {
+              "name": "results.properties.categories",
+              "value": "DE.CM Security Continuous Monitoring"
+            },
+            {
+              "name": "results.properties.controls",
+              "value": "DE.CM-8 Vulnerability scans"
+            },
+            {
+              "name": "results.properties.severity",
+              "value": "high"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "collected": "2022-02-19T14:24:53+00:00"
+        }
+      ]
+    }
+  ]
+}

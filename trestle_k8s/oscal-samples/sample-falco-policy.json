@@ -1,0 +1,186 @@
+{
+  "results": [
+    {
+      "uuid": "1d25be6b-b8a1-492b-9155-335b93612dc1",
+      "title": "falco-alerts-policy",
+      "description": "falco-agent",
+      "start": "2022-02-19T14:24:53+00:00",
+      "prop": [
+        {
+          "name": "apiVersion",
+          "value": "wgpolicyk8s.io/v1alpha2"
+        },
+        {
+          "name": "kind",
+          "value": "PolicyReport"
+        },
+        {
+          "name": "metadata.name",
+          "value": "falco-alerts-policy"
+        },
+        {
+          "name": "metadata.namespace",
+          "value": "my-namespace"
+        },
+        {
+          "name": "metadata.labels.policy.kubernetes.io_engine",
+          "value": "falco-agent"
+        }
+      ],
+      "reviewed-controls": {
+        "control-selections": [
+          {}
+        ]
+      },
+      "observations": [
+        {
+          "uuid": "f2202729-ceff-4d35-b8dd-659d7c8d110a",
+          "description": "falco-agent",
+          "props": [
+            {
+              "name": "results.policy",
+              "value": "Change thread namespace"
+            },
+            {
+              "name": "results.message",
+              "value": "Falco alert created due to the Change thread namespace rule"
+            },
+            {
+              "name": "results.result",
+              "value": "fail"
+            },
+            {
+              "name": "results.scored",
+              "value": "False"
+            },
+            {
+              "name": "results.resources.apiVersion",
+              "value": "v1"
+            },
+            {
+              "name": "results.resources.kind",
+              "value": "Pod"
+            },
+            {
+              "name": "results.resources.name",
+              "value": "a-pod"
+            },
+            {
+              "name": "results.resources.namespace",
+              "value": "my-namespace"
+            },
+            {
+              "name": "results.properties.details",
+              "value": "12:57:37.086240437: Notice Namespace change (setns) by unexpected program (user=root user_loginuid=-1 command=ovnkube --init-node ..."
+            },
+            {
+              "name": "results.properties.container.id",
+              "value": "0f8d7e2a3296"
+            },
+            {
+              "name": "results.properties.evt.arg.path",
+              "value": "/bin/directory-created-by-event-generator"
+            },
+            {
+              "name": "results.properties.proc.cmdline",
+              "value": "event-generator run --loop ^syscall"
+            },
+            {
+              "name": "results.properties.severity",
+              "value": "low"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "collected": "2022-02-19T14:24:53+00:00"
+        }
+      ]
+    },
+    {
+      "uuid": "0c8bc64b-c465-4a17-909c-dc497e4deb23",
+      "title": "falco-alerts-policy",
+      "description": "falco-agent",
+      "start": "2022-02-19T14:24:53+00:00",
+      "prop": [
+        {
+          "name": "apiVersion",
+          "value": "wgpolicyk8s.io/v1alpha2"
+        },
+        {
+          "name": "kind",
+          "value": "ClusterPolicyReport"
+        },
+        {
+          "name": "metadata.name",
+          "value": "falco-alerts-policy"
+        },
+        {
+          "name": "metadata.labels.policy.kubernetes.io_engine",
+          "value": "falco-agent"
+        }
+      ],
+      "reviewed-controls": {
+        "control-selections": [
+          {}
+        ]
+      },
+      "observations": [
+        {
+          "uuid": "e509e17f-4e30-49da-903f-7b0e73ec8949",
+          "description": "falco-agent",
+          "props": [
+            {
+              "name": "results.policy",
+              "value": "audit"
+            },
+            {
+              "name": "results.message",
+              "value": "audit rule violation from the kubernetes api server"
+            },
+            {
+              "name": "results.result",
+              "value": "fail"
+            },
+            {
+              "name": "results.scored",
+              "value": "False"
+            },
+            {
+              "name": "results.properties.details",
+              "value": "Warning K8s Operation performed by user not in allowed list of users"
+            },
+            {
+              "name": "results.properties.severity",
+              "value": "medium"
+            },
+            {
+              "name": "results.properties.user",
+              "value": "username"
+            },
+            {
+              "name": "results.properties.target",
+              "value": "kubernetes/endpoints"
+            },
+            {
+              "name": "results.properties.verb",
+              "value": "create"
+            },
+            {
+              "name": "results.properties.uri",
+              "value": "/api/v1/namespaces/default/endpoints/kubernetes"
+            },
+            {
+              "name": "results.properties.resp",
+              "value": "200"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "collected": "2022-02-19T14:24:53+00:00"
+        }
+      ]
+    }
+  ]
+}

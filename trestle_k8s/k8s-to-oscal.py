@@ -27,6 +27,7 @@ from trestle.oscal.assessment_results import Result
 from trestle.oscal.assessment_results import ReviewedControls
 from trestle.oscal.common import InventoryItem
 from trestle.oscal.common import Property
+from trestle.oscal.common import SubjectReference
 from trestle.transforms.results import Results
 
 import yaml
@@ -109,7 +110,7 @@ class YamlToOscal:
         except KeyError:
             pass
 
-    def _get_result_observations(self, yaml_data: Dict) -> List[Observation]:
+    def _get_result_observations(self, yaml_data: Dict, subjects: List[SubjectReference]) -> List[Observation]:
         observations = []
         results = yaml_data['results']
         for result in results:
@@ -118,6 +119,7 @@ class YamlToOscal:
                 description=self._description(yaml_data),
                 methods=['TEST-AUTOMATED'],
                 props=[],
+                subjects=subjects,
                 collected=_timestamp
             )
             for key in result.keys():
@@ -152,7 +154,7 @@ class YamlToOscal:
         ]:
             self._add_prop(props, key, yaml_data, key.split('.'))
         return props
-    
+
     def _get_local_definitions(self, yaml_data: Dict) -> LocalDefinitions1:
         try:
             props = []
@@ -161,10 +163,22 @@ class YamlToOscal:
                 self._add_prop(props, compound_key, yaml_data, compound_key.split('.'))
             inventory_item = InventoryItem(uuid=self._uuid(), description='inventory', props=props)
             rval = LocalDefinitions1()
-            rval.inventory_items = [ inventory_item ]
+            rval.inventory_items = [inventory_item]
         except KeyError:
             rval = None
         return rval
+
+    def _get_subjects(self, local_definitions: List[LocalDefinitions1]) -> List[SubjectReference]:
+        try:
+            subjects = []
+            for item in local_definitions.inventory_items:
+                subject_reference = SubjectReference(subject_uuid=item.uuid, type='inventory-item')
+                subjects.append(subject_reference)
+        except AttributeError:
+            subjects = None
+        except TypeError:
+            subjects = None
+        return subjects
 
     def _get_result(self, yaml_data: Dict) -> Result:
         result = Result(
@@ -176,7 +190,8 @@ class YamlToOscal:
         )
         result.prop = self._get_result_properties(yaml_data)
         result.local_definitions = self._get_local_definitions(yaml_data)
-        result.observations = self._get_result_observations(yaml_data)
+        subjects = self._get_subjects(result.local_definitions)
+        result.observations = self._get_result_observations(yaml_data, subjects)
         return result
 
     def transform(self, yaml_data_list: List[Dict]) -> Results:

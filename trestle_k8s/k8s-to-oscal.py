@@ -154,6 +154,11 @@ class YamlToOscal:
         self._add_prop(props, 'scope.kind', yaml_data, ['scope', 'kind'])
         self._add_prop(props, 'scope.name', yaml_data, ['scope', 'name'])
         self._add_prop(props, 'scope.namespace', yaml_data, ['scope', 'namespace'])
+        self._add_prop(props, 'summary.pass', yaml_data, ['summary', 'pass'])
+        self._add_prop(props, 'summary.fail', yaml_data, ['summary', 'fail'])
+        self._add_prop(props, 'summary.warn', yaml_data, ['summary', 'warn'])
+        self._add_prop(props, 'summary.error', yaml_data, ['summary', 'error'])
+        self._add_prop(props, 'summary.skip', yaml_data, ['summary', 'skip'])
         return props
 
     def _get_result(self, yaml_data: Dict) -> Result:

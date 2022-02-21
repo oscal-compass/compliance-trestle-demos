@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "uuid": "9119823d-9bc2-481f-91a4-49583e71bec2",
+      "uuid": "b35fa9a9-4889-44f7-9d00-e1dacc14c448",
       "title": "sample-cis-bench-api-server",
       "description": "kube-cis",
-      "start": "2022-02-19T14:24:53+00:00",
+      "start": "2022-02-21T12:58:32+00:00",
       "prop": [
         {
           "name": "apiVersion",
@@ -33,6 +33,26 @@
         {
           "name": "metadata.annotations.version",
           "value": "v1.5.1 - 02-14-2020"
+        },
+        {
+          "name": "summary.pass",
+          "value": "8"
+        },
+        {
+          "name": "summary.fail",
+          "value": "2"
+        },
+        {
+          "name": "summary.warn",
+          "value": "0"
+        },
+        {
+          "name": "summary.error",
+          "value": "0"
+        },
+        {
+          "name": "summary.skip",
+          "value": "0"
         }
       ],
       "reviewed-controls": {
@@ -42,7 +62,7 @@
       },
       "observations": [
         {
-          "uuid": "09750594-881f-4134-8525-ab9577c16638",
+          "uuid": "aa3067cb-fcf3-470e-8801-3d910453159e",
           "description": "kube-cis",
           "props": [
             {
@@ -73,10 +93,10 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-19T14:24:53+00:00"
+          "collected": "2022-02-21T12:58:32+00:00"
         },
         {
-          "uuid": "3dd919e5-8db2-4204-a66c-36556fd1c57c",
+          "uuid": "efb38f7d-864e-46ae-8290-58e3e8bf4475",
           "description": "kube-cis",
           "props": [
             {
@@ -107,10 +127,10 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-19T14:24:53+00:00"
+          "collected": "2022-02-21T12:58:32+00:00"
         },
         {
-          "uuid": "e1365447-aede-4422-8793-f61583280ef0",
+          "uuid": "91e10dcf-8182-4f5f-98d5-d944e9cbb212",
           "description": "kube-cis",
           "props": [
             {
@@ -141,7 +161,7 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-19T14:24:53+00:00"
+          "collected": "2022-02-21T12:58:32+00:00"
         }
       ]
     }

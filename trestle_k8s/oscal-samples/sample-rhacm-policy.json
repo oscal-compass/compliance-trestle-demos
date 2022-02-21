@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "uuid": "5fd4ceb8-8a0b-4eb7-8f02-1364c5f6e17b",
+      "uuid": "d2292ae5-fc8b-4dc9-8114-79aea0c9bdea",
       "title": "sample-rhacm-policy",
       "description": "rhacm-configuration-policy",
-      "start": "2022-02-19T14:24:53+00:00",
+      "start": "2022-02-21T12:58:32+00:00",
       "prop": [
         {
           "name": "apiVersion",
@@ -37,6 +37,14 @@
         {
           "name": "scope.namespace",
           "value": "cluster1"
+        },
+        {
+          "name": "summary.pass",
+          "value": "1"
+        },
+        {
+          "name": "summary.fail",
+          "value": "11"
         }
       ],
       "reviewed-controls": {
@@ -46,7 +54,7 @@
       },
       "observations": [
         {
-          "uuid": "41a006a7-f848-4349-be4a-bd5ca733663e",
+          "uuid": "9e62be69-a351-4795-9bf9-2de2afdec013",
           "description": "rhacm-configuration-policy",
           "props": [
             {
@@ -105,7 +113,7 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-19T14:24:53+00:00"
+          "collected": "2022-02-21T12:58:32+00:00"
         }
       ]
     }

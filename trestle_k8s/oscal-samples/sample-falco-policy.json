@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "uuid": "1d25be6b-b8a1-492b-9155-335b93612dc1",
+      "uuid": "7992bcf6-dd15-4f9f-9849-fbbf7ff2a0b2",
       "title": "falco-alerts-policy",
       "description": "falco-agent",
-      "start": "2022-02-19T14:24:53+00:00",
+      "start": "2022-02-21T12:58:32+00:00",
       "prop": [
         {
           "name": "apiVersion",
@@ -25,6 +25,10 @@
         {
           "name": "metadata.labels.policy.kubernetes.io_engine",
           "value": "falco-agent"
+        },
+        {
+          "name": "summary.fail",
+          "value": "1"
         }
       ],
       "reviewed-controls": {
@@ -34,7 +38,7 @@
       },
       "observations": [
         {
-          "uuid": "f2202729-ceff-4d35-b8dd-659d7c8d110a",
+          "uuid": "47649b07-c965-4eb8-9641-aa86b053797c",
           "description": "falco-agent",
           "props": [
             {
@@ -93,15 +97,15 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-19T14:24:53+00:00"
+          "collected": "2022-02-21T12:58:32+00:00"
         }
       ]
     },
     {
-      "uuid": "0c8bc64b-c465-4a17-909c-dc497e4deb23",
+      "uuid": "b26b4cbb-10bc-4694-96b6-e862a276f5c2",
       "title": "falco-alerts-policy",
       "description": "falco-agent",
-      "start": "2022-02-19T14:24:53+00:00",
+      "start": "2022-02-21T12:58:32+00:00",
       "prop": [
         {
           "name": "apiVersion",
@@ -118,6 +122,10 @@
         {
           "name": "metadata.labels.policy.kubernetes.io_engine",
           "value": "falco-agent"
+        },
+        {
+          "name": "summary.fail",
+          "value": "1"
         }
       ],
       "reviewed-controls": {
@@ -127,7 +135,7 @@
       },
       "observations": [
         {
-          "uuid": "e509e17f-4e30-49da-903f-7b0e73ec8949",
+          "uuid": "75c82a8c-a075-4f7e-bffd-4ad5cb26302d",
           "description": "falco-agent",
           "props": [
             {
@@ -178,7 +186,7 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-19T14:24:53+00:00"
+          "collected": "2022-02-21T12:58:32+00:00"
         }
       ]
     }

@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "uuid": "f12edc9b-9d51-41bf-b463-0ec06db44db6",
+      "uuid": "c1e64949-a33a-42e0-824c-8acfc0a98787",
       "title": "sample-fedramp-compliance-operator",
       "description": "openshift-compliance-operator",
-      "start": "2022-02-19T14:24:53+00:00",
+      "start": "2022-02-21T12:58:32+00:00",
       "prop": [
         {
           "name": "apiVersion",
@@ -37,6 +37,26 @@
         {
           "name": "metadata.annotations.version",
           "value": "v1.5.1 - 02-14-2020"
+        },
+        {
+          "name": "summary.pass",
+          "value": "8"
+        },
+        {
+          "name": "summary.fail",
+          "value": "1"
+        },
+        {
+          "name": "summary.warn",
+          "value": "1"
+        },
+        {
+          "name": "summary.error",
+          "value": "0"
+        },
+        {
+          "name": "summary.skip",
+          "value": "0"
         }
       ],
       "reviewed-controls": {
@@ -46,7 +66,7 @@
       },
       "observations": [
         {
-          "uuid": "13f69f18-86da-40bf-bbf0-4da4682bb7e9",
+          "uuid": "3b81f454-9581-44de-a4c8-4fa47508af18",
           "description": "openshift-compliance-operator",
           "props": [
             {
@@ -81,10 +101,10 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-19T14:24:53+00:00"
+          "collected": "2022-02-21T12:58:32+00:00"
         },
         {
-          "uuid": "df2e8416-f8a1-459d-b541-3b9c23871465",
+          "uuid": "edbfa983-4a3f-4108-99ac-3e47fb22ce4e",
           "description": "openshift-compliance-operator",
           "props": [
             {
@@ -115,7 +135,7 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-19T14:24:53+00:00"
+          "collected": "2022-02-21T12:58:32+00:00"
         }
       ]
     }

@@ -136,16 +136,7 @@ class YamlToOscal:
         props = []
         self._add_prop(props, 'apiVersion', yaml_data, ['apiVersion'])
         self._add_prop(props, 'kind', yaml_data, ['kind'])
-        self._add_prop(props, 'metadata.name', yaml_data, ['metadata', 'name'])
         self._add_prop(props, 'metadata.namespace', yaml_data, ['metadata', 'namespace'])
-        self._add_prop(
-            props, 'metadata.labels.wgpolicyk8s.io/engine', yaml_data, ['metadata', 'labels', 'wgpolicyk8s.io/engine']
-        )
-        self._add_prop(
-            props,
-            'metadata.labels.policy.kubernetes.io/engine',
-            yaml_data, ['metadata', 'labels', 'policy.kubernetes.io/engine']
-        )
         self._add_prop(props, 'metadata.annotations.name', yaml_data, ['metadata', 'annotations', 'name'])
         self._add_prop(props, 'metadata.annotations.category', yaml_data, ['metadata', 'annotations', 'category'])
         self._add_prop(props, 'metadata.annotations.file', yaml_data, ['metadata', 'annotations', 'file'])

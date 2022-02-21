@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "uuid": "c1e64949-a33a-42e0-824c-8acfc0a98787",
+      "uuid": "ee655d81-c25b-4303-9c68-265df4e01c26",
       "title": "sample-fedramp-compliance-operator",
       "description": "openshift-compliance-operator",
-      "start": "2022-02-21T12:58:32+00:00",
+      "start": "2022-02-21T16:20:49+00:00",
       "prop": [
         {
           "name": "apiVersion",
@@ -13,14 +13,6 @@
         {
           "name": "kind",
           "value": "PolicyReport"
-        },
-        {
-          "name": "metadata.name",
-          "value": "sample-fedramp-compliance-operator"
-        },
-        {
-          "name": "metadata.labels.policy.kubernetes.io_engine",
-          "value": "openshift-compliance-operator"
         },
         {
           "name": "metadata.annotations.name",
@@ -66,7 +58,7 @@
       },
       "observations": [
         {
-          "uuid": "3b81f454-9581-44de-a4c8-4fa47508af18",
+          "uuid": "f8ffa814-720d-4087-ac28-4bfc2bebf9b7",
           "description": "openshift-compliance-operator",
           "props": [
             {
@@ -101,10 +93,10 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-21T12:58:32+00:00"
+          "collected": "2022-02-21T16:20:49+00:00"
         },
         {
-          "uuid": "edbfa983-4a3f-4108-99ac-3e47fb22ce4e",
+          "uuid": "fdd26e07-2a80-4584-b91d-4a345af547cf",
           "description": "openshift-compliance-operator",
           "props": [
             {
@@ -135,7 +127,7 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-21T12:58:32+00:00"
+          "collected": "2022-02-21T16:20:49+00:00"
         }
       ]
     }

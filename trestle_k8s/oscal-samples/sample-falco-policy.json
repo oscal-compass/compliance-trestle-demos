@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "uuid": "7992bcf6-dd15-4f9f-9849-fbbf7ff2a0b2",
+      "uuid": "30ed73f5-fc78-43cf-bdc3-94e73c497db5",
       "title": "falco-alerts-policy",
       "description": "falco-agent",
-      "start": "2022-02-21T12:58:32+00:00",
+      "start": "2022-02-21T16:20:49+00:00",
       "prop": [
         {
           "name": "apiVersion",
@@ -15,16 +15,8 @@
           "value": "PolicyReport"
         },
         {
-          "name": "metadata.name",
-          "value": "falco-alerts-policy"
-        },
-        {
           "name": "metadata.namespace",
           "value": "my-namespace"
-        },
-        {
-          "name": "metadata.labels.policy.kubernetes.io_engine",
-          "value": "falco-agent"
         },
         {
           "name": "summary.fail",
@@ -38,7 +30,7 @@
       },
       "observations": [
         {
-          "uuid": "47649b07-c965-4eb8-9641-aa86b053797c",
+          "uuid": "5cdb63e7-34e7-422f-8979-63a4e64b461b",
           "description": "falco-agent",
           "props": [
             {
@@ -97,15 +89,15 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-21T12:58:32+00:00"
+          "collected": "2022-02-21T16:20:49+00:00"
         }
       ]
     },
     {
-      "uuid": "b26b4cbb-10bc-4694-96b6-e862a276f5c2",
+      "uuid": "f5729c7e-a57f-4044-a515-1a6cce748856",
       "title": "falco-alerts-policy",
       "description": "falco-agent",
-      "start": "2022-02-21T12:58:32+00:00",
+      "start": "2022-02-21T16:20:49+00:00",
       "prop": [
         {
           "name": "apiVersion",
@@ -114,14 +106,6 @@
         {
           "name": "kind",
           "value": "ClusterPolicyReport"
-        },
-        {
-          "name": "metadata.name",
-          "value": "falco-alerts-policy"
-        },
-        {
-          "name": "metadata.labels.policy.kubernetes.io_engine",
-          "value": "falco-agent"
         },
         {
           "name": "summary.fail",
@@ -135,7 +119,7 @@
       },
       "observations": [
         {
-          "uuid": "75c82a8c-a075-4f7e-bffd-4ad5cb26302d",
+          "uuid": "7d8d933e-d1fb-494d-a6f2-19ad0d7132e7",
           "description": "falco-agent",
           "props": [
             {
@@ -186,7 +170,7 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-21T12:58:32+00:00"
+          "collected": "2022-02-21T16:20:49+00:00"
         }
       ]
     }

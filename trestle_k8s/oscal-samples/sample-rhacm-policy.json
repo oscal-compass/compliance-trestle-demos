@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "uuid": "66f3e132-99c8-47a3-9a4e-394087376810",
+      "uuid": "da02e59a-d90d-49ee-a9b2-37810cfc0c3c",
       "title": "sample-rhacm-policy",
       "description": "rhacm-configuration-policy",
-      "start": "2022-02-21T16:20:49+00:00",
+      "start": "2022-02-21T20:29:07+00:00",
       "prop": [
         {
           "name": "apiVersion",
@@ -15,22 +15,6 @@
           "value": "PolicyReport"
         },
         {
-          "name": "scope.apiVersion",
-          "value": "policy.open-cluster-management.io/v1"
-        },
-        {
-          "name": "scope.kind",
-          "value": "Policy"
-        },
-        {
-          "name": "scope.name",
-          "value": "policy-imagemanifestvuln"
-        },
-        {
-          "name": "scope.namespace",
-          "value": "cluster1"
-        },
-        {
           "name": "summary.pass",
           "value": "1"
         },
@@ -39,6 +23,32 @@
           "value": "11"
         }
       ],
+      "local-definitions": {
+        "inventory-items": [
+          {
+            "uuid": "3cf6099d-0d1a-4c5c-acf1-b7602385aba7",
+            "description": "inventory",
+            "props": [
+              {
+                "name": "scope.apiVersion",
+                "value": "policy.open-cluster-management.io/v1"
+              },
+              {
+                "name": "scope.kind",
+                "value": "Policy"
+              },
+              {
+                "name": "scope.name",
+                "value": "policy-imagemanifestvuln"
+              },
+              {
+                "name": "scope.namespace",
+                "value": "cluster1"
+              }
+            ]
+          }
+        ]
+      },
       "reviewed-controls": {
         "control-selections": [
           {}
@@ -46,7 +56,7 @@
       },
       "observations": [
         {
-          "uuid": "f62cedf9-ca40-488f-9079-d5fd580fcdfc",
+          "uuid": "7b70b250-ed33-4751-8f77-c1867914716f",
           "description": "rhacm-configuration-policy",
           "props": [
             {
@@ -105,7 +115,7 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-21T16:20:49+00:00"
+          "collected": "2022-02-21T20:29:07+00:00"
         }
       ]
     }

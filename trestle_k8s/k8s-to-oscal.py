@@ -21,9 +21,11 @@ import uuid
 from typing import Any, Dict, List
 
 from trestle.oscal.assessment_results import ControlSelection
+from trestle.oscal.assessment_results import LocalDefinitions1
 from trestle.oscal.assessment_results import Observation
 from trestle.oscal.assessment_results import Result
 from trestle.oscal.assessment_results import ReviewedControls
+from trestle.oscal.common import InventoryItem
 from trestle.oscal.common import Property
 from trestle.transforms.results import Results
 
@@ -142,9 +144,6 @@ class YamlToOscal:
                 'metadata.annotations.category',
                 'metadata.annotations.file',
                 'metadata.annotations.version',
-                'scope.kind',
-                'scope.name',
-                'scope.namespace',
                 'summary.pass',
                 'summary.fail',
                 'summary.warn',
@@ -153,6 +152,19 @@ class YamlToOscal:
         ]:
             self._add_prop(props, key, yaml_data, key.split('.'))
         return props
+    
+    def _get_local_definitions(self, yaml_data: Dict) -> LocalDefinitions1:
+        try:
+            props = []
+            for key in yaml_data['scope']:
+                compound_key = 'scope.' + key
+                self._add_prop(props, compound_key, yaml_data, compound_key.split('.'))
+            inventory_item = InventoryItem(uuid=self._uuid(), description='inventory', props=props)
+            rval = LocalDefinitions1()
+            rval.inventory_items = [ inventory_item ]
+        except KeyError:
+            rval = None
+        return rval
 
     def _get_result(self, yaml_data: Dict) -> Result:
         result = Result(
@@ -162,9 +174,8 @@ class YamlToOscal:
             start=_timestamp,
             reviewed_controls=self._reviewed_controls(),
         )
-        # result props
         result.prop = self._get_result_properties(yaml_data)
-        # observations
+        result.local_definitions = self._get_local_definitions(yaml_data)
         result.observations = self._get_result_observations(yaml_data)
         return result
 

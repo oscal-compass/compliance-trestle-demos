@@ -134,22 +134,24 @@ class YamlToOscal:
 
     def _get_result_properties(self, yaml_data: Dict) -> List[Property]:
         props = []
-        self._add_prop(props, 'apiVersion', yaml_data, ['apiVersion'])
-        self._add_prop(props, 'kind', yaml_data, ['kind'])
-        self._add_prop(props, 'metadata.namespace', yaml_data, ['metadata', 'namespace'])
-        self._add_prop(props, 'metadata.annotations.name', yaml_data, ['metadata', 'annotations', 'name'])
-        self._add_prop(props, 'metadata.annotations.category', yaml_data, ['metadata', 'annotations', 'category'])
-        self._add_prop(props, 'metadata.annotations.file', yaml_data, ['metadata', 'annotations', 'file'])
-        self._add_prop(props, 'metadata.annotations.version', yaml_data, ['metadata', 'annotations', 'version'])
-        self._add_prop(props, 'scope.apiVersion', yaml_data, ['scope', 'apiVersion'])
-        self._add_prop(props, 'scope.kind', yaml_data, ['scope', 'kind'])
-        self._add_prop(props, 'scope.name', yaml_data, ['scope', 'name'])
-        self._add_prop(props, 'scope.namespace', yaml_data, ['scope', 'namespace'])
-        self._add_prop(props, 'summary.pass', yaml_data, ['summary', 'pass'])
-        self._add_prop(props, 'summary.fail', yaml_data, ['summary', 'fail'])
-        self._add_prop(props, 'summary.warn', yaml_data, ['summary', 'warn'])
-        self._add_prop(props, 'summary.error', yaml_data, ['summary', 'error'])
-        self._add_prop(props, 'summary.skip', yaml_data, ['summary', 'skip'])
+        for key in [
+                'apiVersion',
+                'kind',
+                'metadata.namespace',
+                'metadata.annotations.name',
+                'metadata.annotations.category',
+                'metadata.annotations.file',
+                'metadata.annotations.version',
+                'scope.kind',
+                'scope.name',
+                'scope.namespace',
+                'summary.pass',
+                'summary.fail',
+                'summary.warn',
+                'summary.error',
+                'summary.skip',
+        ]:
+            self._add_prop(props, key, yaml_data, key.split('.'))
         return props
 
     def _get_result(self, yaml_data: Dict) -> Result:

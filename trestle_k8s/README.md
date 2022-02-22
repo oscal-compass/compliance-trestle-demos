@@ -8,7 +8,7 @@ A [spreadsheet](https://github.com/IBM/compliance-trestle-demos/trestle_k8s/Kube
 
 Sample inputs can be found [here](https://github.com/kubernetes-sigs/wg-policy-prototypes/tree/master/policy-report/samples). Sample outputs can be found [here](https://github.com/IBM/compliance-trestle-demos/trestle_k8s/oscal-samples).
 
-####Demo
+#### Demo
 
 ![image](images/k8s-to-oscal.drawio.png)
 

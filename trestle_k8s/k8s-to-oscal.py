@@ -63,6 +63,9 @@ class SourceFolder:
 class YamlToOscal:
     """Manage YAML to OSCAL transformations."""
 
+    def _ns(self) -> str:
+        return 'https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc'
+    
     def _uuid(self) -> str:
         return str(uuid.uuid4())
 
@@ -110,6 +113,15 @@ class YamlToOscal:
         except KeyError:
             pass
 
+    def _add_prop_with_ns(self, props: List[Property], name: str, yaml_data: Dict, keys: List[str], ns, class_) -> None:
+        try:
+            value = self._get_value(yaml_data, keys)
+            prop = Property(name=self._normalize(name), value=self._whitespace(value), ns=ns, class_=class_)
+            props.append(prop)
+            return prop
+        except KeyError:
+            pass
+        
     def _get_result_observations(self, yaml_data: Dict, subjects: List[SubjectReference]) -> List[Observation]:
         observations = []
         results = yaml_data['results']
@@ -132,7 +144,11 @@ class YamlToOscal:
                     for resource in resources:
                         self._add_prop(observation.props, 'results.' + key + '.' + resource, resources, [resource])
                 else:
-                    self._add_prop(observation.props, 'results.' + key, result, [key])
+                    map = { 'policy':'scc_rule', 'result':'scc_result', 'message':'scc_description'}
+                    if key in map.keys():
+                        self._add_prop_with_ns(observation.props, 'results.' + key, result, [key], self._ns() , map[key])
+                    else:
+                        self._add_prop(observation.props, 'results.' + key, result, [key])
             observations.append(observation)
         return observations
 
@@ -160,7 +176,11 @@ class YamlToOscal:
             props = []
             for key in yaml_data['scope']:
                 compound_key = 'scope.' + key
-                self._add_prop(props, compound_key, yaml_data, compound_key.split('.'))
+                map = { 'namespace':'scc_scope' }
+                if key in map.keys():
+                    self._add_prop_with_ns(props, compound_key, yaml_data, compound_key.split('.'), self._ns() , map[key])
+                else:
+                    self._add_prop(props, compound_key, yaml_data, compound_key.split('.'))
             inventory_item = InventoryItem(uuid=self._uuid(), description='inventory', props=props)
             rval = LocalDefinitions1()
             rval.inventory_items = [inventory_item]

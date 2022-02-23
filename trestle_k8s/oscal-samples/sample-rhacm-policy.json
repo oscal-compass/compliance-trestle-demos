@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "uuid": "e8c42f95-e9c2-43b6-b9c1-58ba21c72b14",
+      "uuid": "ff4b5418-d429-4254-8121-d8b4bba3232f",
       "title": "sample-rhacm-policy",
       "description": "rhacm-configuration-policy",
-      "start": "2022-02-21T21:50:31+00:00",
+      "start": "2022-02-23T12:32:46+00:00",
       "prop": [
         {
           "name": "apiVersion",
@@ -26,7 +26,7 @@
       "local-definitions": {
         "inventory-items": [
           {
-            "uuid": "a7450777-bf0f-4268-94d6-2bed9914f118",
+            "uuid": "62460372-5f80-4e69-91fe-c403db0f3b8b",
             "description": "inventory",
             "props": [
               {
@@ -43,7 +43,9 @@
               },
               {
                 "name": "scope.namespace",
-                "value": "cluster1"
+                "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+                "value": "cluster1",
+                "class": "scc_scope"
               }
             ]
           }
@@ -56,20 +58,26 @@
       },
       "observations": [
         {
-          "uuid": "4a1f78c2-7e85-4b06-ac78-466f84f3cde2",
+          "uuid": "f6e2163e-903c-4413-b4e1-c30b60b1ca21",
           "description": "rhacm-configuration-policy",
           "props": [
             {
               "name": "results.policy",
-              "value": "mustnothaveimagevuln"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "mustnothaveimagevuln",
+              "class": "scc_rule"
             },
             {
               "name": "results.message",
-              "value": "must not have imagemanifestvulns"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "must not have imagemanifestvulns",
+              "class": "scc_description"
             },
             {
               "name": "results.result",
-              "value": "fail"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "fail",
+              "class": "scc_result"
             },
             {
               "name": "results.scored",
@@ -117,11 +125,11 @@
           ],
           "subjects": [
             {
-              "subject-uuid": "a7450777-bf0f-4268-94d6-2bed9914f118",
+              "subject-uuid": "62460372-5f80-4e69-91fe-c403db0f3b8b",
               "type": "inventory-item"
             }
           ],
-          "collected": "2022-02-21T21:50:31+00:00"
+          "collected": "2022-02-23T12:32:46+00:00"
         }
       ]
     }

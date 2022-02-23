@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "uuid": "840195ca-3ceb-42e3-a40c-7d643a6600f9",
+      "uuid": "92a3672f-7d10-4738-8cd1-5a080468c0f1",
       "title": "sample-cis-bench-api-server",
       "description": "kube-cis",
-      "start": "2022-02-21T16:20:49+00:00",
+      "start": "2022-02-23T12:32:46+00:00",
       "prop": [
         {
           "name": "apiVersion",
@@ -54,20 +54,26 @@
       },
       "observations": [
         {
-          "uuid": "01f587ea-3a49-453b-b7cf-555ebff3ae6c",
+          "uuid": "a6412809-b357-4bd6-a260-354605f66b5e",
           "description": "kube-cis",
           "props": [
             {
               "name": "results.policy",
-              "value": "api-server:anonymous-auth"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "api-server:anonymous-auth",
+              "class": "scc_rule"
             },
             {
               "name": "results.message",
-              "value": "ensure that --anonymous-auth argument is set to false"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "ensure that --anonymous-auth argument is set to false",
+              "class": "scc_description"
             },
             {
               "name": "results.result",
-              "value": "warn"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "warn",
+              "class": "scc_result"
             },
             {
               "name": "results.scored",
@@ -85,23 +91,29 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-21T16:20:49+00:00"
+          "collected": "2022-02-23T12:32:46+00:00"
         },
         {
-          "uuid": "f1ced0f1-ce1c-4980-95af-3a5fc02ca083",
+          "uuid": "cfbf4e94-3d89-4420-87cb-73cfd1f1c2d3",
           "description": "kube-cis",
           "props": [
             {
               "name": "results.policy",
-              "value": "api-server:basic-auth-file"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "api-server:basic-auth-file",
+              "class": "scc_rule"
             },
             {
               "name": "results.message",
-              "value": "ensure that --basic-auth-file argument is not set"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "ensure that --basic-auth-file argument is not set",
+              "class": "scc_description"
             },
             {
               "name": "results.result",
-              "value": "fail"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "fail",
+              "class": "scc_result"
             },
             {
               "name": "results.scored",
@@ -119,23 +131,29 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-21T16:20:49+00:00"
+          "collected": "2022-02-23T12:32:46+00:00"
         },
         {
-          "uuid": "2b9baba5-9f40-4419-b357-7e1923c53fc5",
+          "uuid": "72bac34a-665d-42d5-845c-cfc59a2c25f3",
           "description": "kube-cis",
           "props": [
             {
               "name": "results.policy",
-              "value": "api-server:token-auth-file"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "api-server:token-auth-file",
+              "class": "scc_rule"
             },
             {
               "name": "results.message",
-              "value": "ensure that --token-auth-file argument is not set"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "ensure that --token-auth-file argument is not set",
+              "class": "scc_description"
             },
             {
               "name": "results.result",
-              "value": "warn"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "warn",
+              "class": "scc_result"
             },
             {
               "name": "results.scored",
@@ -153,7 +171,7 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-21T16:20:49+00:00"
+          "collected": "2022-02-23T12:32:46+00:00"
         }
       ]
     }

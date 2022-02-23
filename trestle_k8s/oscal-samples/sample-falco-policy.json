@@ -1,10 +1,10 @@
 {
   "results": [
     {
-      "uuid": "30ed73f5-fc78-43cf-bdc3-94e73c497db5",
+      "uuid": "6bd25f89-4a80-45c9-b0c5-138304e98c6e",
       "title": "falco-alerts-policy",
       "description": "falco-agent",
-      "start": "2022-02-21T16:20:49+00:00",
+      "start": "2022-02-23T12:32:46+00:00",
       "prop": [
         {
           "name": "apiVersion",
@@ -30,20 +30,26 @@
       },
       "observations": [
         {
-          "uuid": "5cdb63e7-34e7-422f-8979-63a4e64b461b",
+          "uuid": "fe919a82-879e-4b0f-9851-b02ae369696f",
           "description": "falco-agent",
           "props": [
             {
               "name": "results.policy",
-              "value": "Change thread namespace"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "Change thread namespace",
+              "class": "scc_rule"
             },
             {
               "name": "results.message",
-              "value": "Falco alert created due to the Change thread namespace rule"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "Falco alert created due to the Change thread namespace rule",
+              "class": "scc_description"
             },
             {
               "name": "results.result",
-              "value": "fail"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "fail",
+              "class": "scc_result"
             },
             {
               "name": "results.scored",
@@ -89,15 +95,15 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-21T16:20:49+00:00"
+          "collected": "2022-02-23T12:32:46+00:00"
         }
       ]
     },
     {
-      "uuid": "f5729c7e-a57f-4044-a515-1a6cce748856",
+      "uuid": "75462c11-d166-4ce6-9a45-c3c677bc4c37",
       "title": "falco-alerts-policy",
       "description": "falco-agent",
-      "start": "2022-02-21T16:20:49+00:00",
+      "start": "2022-02-23T12:32:46+00:00",
       "prop": [
         {
           "name": "apiVersion",
@@ -119,20 +125,26 @@
       },
       "observations": [
         {
-          "uuid": "7d8d933e-d1fb-494d-a6f2-19ad0d7132e7",
+          "uuid": "44d0d935-51e1-4343-8eb7-4460286bfade",
           "description": "falco-agent",
           "props": [
             {
               "name": "results.policy",
-              "value": "audit"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "audit",
+              "class": "scc_rule"
             },
             {
               "name": "results.message",
-              "value": "audit rule violation from the kubernetes api server"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "audit rule violation from the kubernetes api server",
+              "class": "scc_description"
             },
             {
               "name": "results.result",
-              "value": "fail"
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "fail",
+              "class": "scc_result"
             },
             {
               "name": "results.scored",
@@ -170,7 +182,7 @@
           "methods": [
             "TEST-AUTOMATED"
           ],
-          "collected": "2022-02-21T16:20:49+00:00"
+          "collected": "2022-02-23T12:32:46+00:00"
         }
       ]
     }

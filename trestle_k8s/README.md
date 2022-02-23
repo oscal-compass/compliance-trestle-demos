@@ -8,6 +8,8 @@ A [spreadsheet](https://github.com/IBM/compliance-trestle-demos/trestle_k8s/Kube
 
 Sample inputs can be found [here](https://github.com/kubernetes-sigs/wg-policy-prototypes/tree/master/policy-report/samples). Sample outputs can be found [here](https://github.com/IBM/compliance-trestle-demos/trestle_k8s/oscal-samples).
 
+Policy Report CRD - OSCAL by the Kubernetes Policy Working Group is [here](https://docs.google.com/document/d/1RdxSz5kEdOPWPVCRNXWBM3AmeU2iBxRAKe89hN3JrtE/edit#).
+
 #### Demo
 
 ![image](images/k8s-to-oscal.drawio.png)

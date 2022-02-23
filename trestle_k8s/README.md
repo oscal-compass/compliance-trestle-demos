@@ -10,6 +10,15 @@ Sample inputs can be found [here](https://github.com/kubernetes-sigs/wg-policy-p
 
 Policy Report CRD - OSCAL by the Kubernetes Policy Working Group is [here](https://docs.google.com/document/d/1RdxSz5kEdOPWPVCRNXWBM3AmeU2iBxRAKe89hN3JrtE/edit#).
 
+#### Prerequisites
+
+Python 3.7, 3.8, or 3.9.
+
+```
+> python -V
+Python 3.9.9
+```
+
 #### Demo
 
 ![image](images/k8s-to-oscal.drawio.png)

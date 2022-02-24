@@ -68,6 +68,12 @@ This [demonstration](./trestle_task_spread_sheet_to_component_definition) shows 
 
 This [demonstration](./trestle_task_osco_to_oscal) shows how to use the `trestle task osco-to-oscal` functionality.
 
+## Trestle as Foundation Examples
+
+*Convert Kubernetes results into partial OSCAL `assessment-results`*
+
+This [demonstration](./trestle_k8s) shows how to use `trestle` functionality to create a Kubernetes results (YAML) to OSCAL (JSON) transformer.
+
 ## License & Authors
 
 If you would like to see the detailed LICENSE click [here](LICENSE).

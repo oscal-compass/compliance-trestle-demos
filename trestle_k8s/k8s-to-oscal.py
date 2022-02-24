@@ -64,15 +64,19 @@ class YamlToOscal:
     """Manage YAML to OSCAL transformations."""
 
     def _ns(self) -> str:
+        """Return namespace."""
         return 'https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc'
-    
+
     def _uuid(self) -> str:
+        """Return uuid."""
         return str(uuid.uuid4())
 
     def _title(self, yaml_data: Dict) -> str:
+        """Return title."""
         return self._get_value(yaml_data, ['metadata', 'name'])
 
     def _description(self, yaml_data: Dict) -> str:
+        """Return description."""
         for label in ['wgpolicyk8s.io/engine', 'policy.kubernetes.io/engine']:
             try:
                 return self._get_value(yaml_data, ['metadata', 'labels', label])
@@ -81,21 +85,26 @@ class YamlToOscal:
         return None
 
     def _control_selections(self) -> List[ControlSelection]:
+        """Return control-selection list."""
         rval = []
         rval.append(ControlSelection())
         return rval
 
     def _reviewed_controls(self) -> ReviewedControls:
+        """Return reviewed controls."""
         rval = ReviewedControls(control_selections=self._control_selections())
         return rval
 
     def _whitespace(self, text: str) -> str:
+        """Replace line ends with blanks."""
         return str(text).replace('\n', ' ')
 
     def _normalize(self, text: str) -> str:
+        """Replace slashes with underscores."""
         return text.replace('/', '_')
 
     def _get_value(self, yaml_data: Dict, keys: List[str]) -> Any:
+        """Descend yaml layers to get value for order list of keys."""
         try:
             value = yaml_data
             for key in keys:
@@ -104,25 +113,28 @@ class YamlToOscal:
             raise KeyError
         return value
 
-    def _add_prop(self, props: List[Property], name: str, yaml_data: Dict, keys: List[str]) -> None:
+    def _add_prop(self, props: List[Property], name: str, yaml_data: Dict, keys: List[str]) -> Property:
+        """Add property to list."""
         try:
             value = self._get_value(yaml_data, keys)
             prop = Property(name=self._normalize(name), value=self._whitespace(value))
             props.append(prop)
             return prop
         except KeyError:
-            pass
+            return None
 
     def _add_prop_with_ns(self, props: List[Property], name: str, yaml_data: Dict, keys: List[str], ns, class_) -> None:
+        """Add property with ns and class to list."""
         try:
             value = self._get_value(yaml_data, keys)
             prop = Property(name=self._normalize(name), value=self._whitespace(value), ns=ns, class_=class_)
             props.append(prop)
             return prop
         except KeyError:
-            pass
-        
+            return None
+
     def _get_result_observations(self, yaml_data: Dict, subjects: List[SubjectReference]) -> List[Observation]:
+        """Return result observations list."""
         observations = []
         results = yaml_data['results']
         for result in results:
@@ -144,15 +156,18 @@ class YamlToOscal:
                     for resource in resources:
                         self._add_prop(observation.props, 'results.' + key + '.' + resource, resources, [resource])
                 else:
-                    map = { 'policy':'scc_rule', 'result':'scc_result', 'message':'scc_description'}
-                    if key in map.keys():
-                        self._add_prop_with_ns(observation.props, 'results.' + key, result, [key], self._ns() , map[key])
+                    class_map = {'policy': 'scc_rule', 'result': 'scc_result', 'message': 'scc_description'}
+                    if key in class_map.keys():
+                        self._add_prop_with_ns(
+                            observation.props, 'results.' + key, result, [key], self._ns(), class_map[key]
+                        )
                     else:
                         self._add_prop(observation.props, 'results.' + key, result, [key])
             observations.append(observation)
         return observations
 
     def _get_result_properties(self, yaml_data: Dict) -> List[Property]:
+        """Return result property list."""
         props = []
         for key in [
                 'apiVersion',
@@ -172,13 +187,16 @@ class YamlToOscal:
         return props
 
     def _get_local_definitions(self, yaml_data: Dict) -> LocalDefinitions1:
+        """Return local definitions."""
         try:
             props = []
             for key in yaml_data['scope']:
                 compound_key = 'scope.' + key
-                map = { 'namespace':'scc_scope' }
-                if key in map.keys():
-                    self._add_prop_with_ns(props, compound_key, yaml_data, compound_key.split('.'), self._ns() , map[key])
+                class_map = {'namespace': 'scc_scope'}
+                if key in class_map.keys():
+                    self._add_prop_with_ns(
+                        props, compound_key, yaml_data, compound_key.split('.'), self._ns(), class_map[key]
+                    )
                 else:
                     self._add_prop(props, compound_key, yaml_data, compound_key.split('.'))
             inventory_item = InventoryItem(uuid=self._uuid(), description='inventory', props=props)
@@ -189,6 +207,7 @@ class YamlToOscal:
         return rval
 
     def _get_subjects(self, local_definitions: List[LocalDefinitions1]) -> List[SubjectReference]:
+        """Return subject list."""
         try:
             subjects = []
             for item in local_definitions.inventory_items:
@@ -201,6 +220,7 @@ class YamlToOscal:
         return subjects
 
     def _get_result(self, yaml_data: Dict) -> Result:
+        """Return result."""
         result = Result(
             uuid=self._uuid(),
             title=self._title(yaml_data),
@@ -215,7 +235,7 @@ class YamlToOscal:
         return result
 
     def transform(self, yaml_data_list: List[Dict]) -> Results:
-        """Transform."""
+        """Transform yaml to OSCAL json."""
         results = Results()
         for yaml_data in yaml_data_list:
             result = self._get_result(yaml_data)

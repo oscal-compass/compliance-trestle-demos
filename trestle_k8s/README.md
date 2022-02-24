@@ -4,9 +4,9 @@
 
 This demo showcases using *k8s-to-oscal.py* (built utilizing trestle functionality) to consume YAML results files and produce (partial) OSCAL assessment results.
 
-A [spreadsheet](https://github.com/IBM/compliance-trestle-demos/trestle_k8s/Kubernetes-Yaml-to-OSCAL-Mapping.xlsx) shows the mapping from YAML to OSCAL.
+A [spreadsheet](https://github.com/IBM/compliance-trestle-demos/blob/fixk8s-to-oscal-links/trestle_k8s/Kubernetes-Yaml-to-OSCAL-Mapping.xlsx) shows the mapping from YAML to OSCAL.
 
-Sample inputs can be found [here](https://github.com/kubernetes-sigs/wg-policy-prototypes/tree/master/policy-report/samples). Sample outputs can be found [here](https://github.com/IBM/compliance-trestle-demos/trestle_k8s/oscal-samples).
+Sample inputs can be found [here](https://github.com/kubernetes-sigs/wg-policy-prototypes/tree/master/policy-report/samples). Sample outputs can be found [here](https://github.com/IBM/compliance-trestle-demos/tree/fixk8s-to-oscal-links/trestle_k8s/oscal-samples).
 
 Policy Report CRD - OSCAL by the Kubernetes Policy Working Group is [here](https://docs.google.com/document/d/1RdxSz5kEdOPWPVCRNXWBM3AmeU2iBxRAKe89hN3JrtE/edit#).
 

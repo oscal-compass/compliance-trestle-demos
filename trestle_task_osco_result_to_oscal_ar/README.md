@@ -1,4 +1,4 @@
-# compliance-trestle-task-osco-to-oscal-demo
+# compliance-trestle-task-osco-result-to-oscal-ar-demo
 
 Simple example of using trestle to facilitate transforming OSCO results to OSCAL (partial) results.
 
@@ -27,15 +27,15 @@ Running the demo
 
 ```
 > cd
-> cd git/compliance-trestle-demos/trestle_task_osco_to_oscal
+> cd git/compliance-trestle-demos/trestle_task_osco_result_to_oscal_ar
 > trestle init
-> trestle task osco-to-oscal -c ./demo-osco-to-oscal.config
+> trestle task osco-result-to-oscal-ar -c ./demo-osco-result-to-oscal-ar.config
 
 output: osco/runtime/ssg-ocp4-ds-cis-111.222.333.444-pod.oscal.json
 inventory: 1
 observations: 125
 results: {}
-Task: osco-to-oscal executed successfully.
+Task: osco-result-to-oscal-ar executed successfully.
 ```
 
 Viewing the result

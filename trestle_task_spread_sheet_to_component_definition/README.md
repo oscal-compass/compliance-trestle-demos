@@ -23,7 +23,7 @@ Running the demo
 
     > cd
     > cd git/compliance-trestle-demos/trestle_task_spread_sheet_to_component_definition
-    > trestle task xlsx-to-oscal-component-definition -c ./demo-xlsx-to-component-definition.config
+    > trestle task xlsx-to-oscal-cd -c ./demo-xlsx-to-cd.config
     
 	catalog: trestle-workspace/catalogs/nist-sp-800-53-rev4/catalog.json
 	input: demo.xlsx
@@ -39,7 +39,7 @@ Running the demo
 	rows missing parameters: [2, 7, 8]
 	rows missing parameters values: [5]
 	output: trestle-workspace/catalogs/catalog.json
-	Task: xlsx-to-oscal-component-definition executed successfully.
+	Task: xlsx-to-oscal-cd executed successfully.
 
 Viewing the result
 

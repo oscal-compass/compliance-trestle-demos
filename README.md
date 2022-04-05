@@ -66,7 +66,7 @@ This [demonstration](./trestle_task_spread_sheet_to_component_definition) shows 
 
 *Convert an OpenShift Compliance Operator (OSCO) results into a partial `assessment-results`*
 
-This [demonstration](./trestle_task_osco_to_oscal) shows how to use the `trestle task osco-to-oscal` functionality.
+This [demonstration](./trestle_task_osco_result_to_oscal_ar) shows how to use the `trestle task osco-to-oscal` functionality.
 
 ## Trestle as Foundation Examples
 

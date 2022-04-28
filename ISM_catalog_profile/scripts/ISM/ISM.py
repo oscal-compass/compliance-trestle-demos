@@ -73,13 +73,18 @@ class ISMManager():
     def fetch_ism(self, url):
         """Fetch an Australian government ISM and covert to a dict."""
         logger.debug('Fetching ISM from: ' + url)
-        request_url = urllib.request.urlopen(url)
+        try:
+            request_url = urllib.request.urlopen(url)
+        except Exception as e:
+            logger.error(f'Error fetching url {url}: {e}')
+            return 1
         document = request_url.read()
         zipfile_content = zipfile.ZipFile(io.BytesIO(document))
         content_list = zipfile_content.namelist()
         xml_files = [x for x in content_list if '.xml' in x]
         assert len(xml_files) == 1
         self.ism_xml = xmltodict.parse(zipfile_content.open(xml_files[0]).read())
+        return 0
 
     def _populate_control_list(self, control, raw_id):
         """Populate control lists based on a dict from the xml version of the ISM."""
@@ -240,7 +245,8 @@ class ISM(Command):
             logger.info(ism_file)
             url = ism_file['version_url']
             ism_manager = ISMManager()
-            ism_manager.fetch_ism(url)
+            if ism_manager.fetch_ism(url):
+                continue
             revision_date = ism_file['version_name'].split()
             revision_string = revision_date[0] + '_' + revision_date[1]
             logger.info(f'Revision date: {revision_date}')

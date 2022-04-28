@@ -1,11 +1,23 @@
-# ps-9 - Personnel Security Position Descriptions
+---
+sort-id: ps-09
+x-trestle-sections:
+  guidance: Control Guidance
+---
 
-## Control Description
+# ps-9 - \[Personnel Security\] Position Descriptions
 
-- Incorporate security and privacy roles and responsibilities into organizational position descriptions.
+## Control Statement
+
+Incorporate security and privacy roles and responsibilities into organizational position descriptions.
+
+## Control Control Guidance
+
+Specification of security and privacy roles in individual organizational position descriptions facilitates clarity in understanding the security or privacy responsibilities associated with the roles and the role-based security and privacy training requirements for the roles.
 
 ______________________________________________________________________
 
-## ps-9 What is the solution and how is it implemented?
+## What is the solution and how is it implemented?
+
+Add control implementation description here for control ps-9
 
 ______________________________________________________________________

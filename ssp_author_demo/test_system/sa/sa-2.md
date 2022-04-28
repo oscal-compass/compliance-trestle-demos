@@ -1,31 +1,45 @@
-# sa-2 - System and Services Acquisition Allocation of Resources
+---
+sort-id: sa-02
+x-trestle-sections:
+  guidance: Control Guidance
+---
 
-## Control Description
+# sa-2 - \[System and Services Acquisition\] Allocation of Resources
+
+## Control Statement
 
 - \[a.\] Determine the high-level information security and privacy requirements for the system or system service in mission and business process planning;
+
 - \[b.\] Determine, document, and allocate the resources required to protect the system or system service as part of the organizational capital planning and investment control process; and
+
 - \[c.\] Establish a discrete line item for information security and privacy in organizational programming and budgeting documentation.
 
-______________________________________________________________________
+## Control Control Guidance
 
-## sa-2 What is the solution and how is it implemented?
-
-______________________________________________________________________
-
-### Part a.
-
-Add control implementation description here for statement sa-2_smt.a
+Resource allocation for information security and privacy includes funding for system and services acquisition, sustainment, and supply chain-related risks throughout the system development life cycle.
 
 ______________________________________________________________________
 
-### Part b.
+## What is the solution and how is it implemented?
 
-Add control implementation description here for statement sa-2_smt.b
+<!-- Please leave this section blank and enter implementation details in the parts below. -->
 
 ______________________________________________________________________
 
-### Part c.
+## Implementation a.
 
-Add control implementation description here for statement sa-2_smt.c
+Add control implementation description here for item sa-2_smt.a
+
+______________________________________________________________________
+
+## Implementation b.
+
+Add control implementation description here for item sa-2_smt.b
+
+______________________________________________________________________
+
+## Implementation c.
+
+Add control implementation description here for item sa-2_smt.c
 
 ______________________________________________________________________

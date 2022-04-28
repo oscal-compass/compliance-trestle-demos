@@ -1,6 +1,12 @@
-# ir-8 - Incident Response Incident Response Plan
+---
+sort-id: ir-08
+x-trestle-sections:
+  guidance: Control Guidance
+---
 
-## Control Description
+# ir-8 - \[Incident Response\] Incident Response Plan
+
+## Control Statement
 
 - \[a.\] Develop an incident response plan that:
 
@@ -12,49 +18,55 @@
   - \[6.\] Provides metrics for measuring the incident response capability within the organization;
   - \[7.\] Defines the resources and management support needed to effectively maintain and mature an incident response capability;
   - \[8.\] Addresses the sharing of incident information;
-  - \[9.\] Is reviewed and approved by \[ir-8_prm_1 = organization-defined personnel or roles\] \[ir-8_prm_2 = organization-defined frequency\]; and
-  - \[10.\] Explicitly designates responsibility for incident response to \[ir-8_prm_3 = organization-defined entities, personnel, or roles\].
+  - \[9.\] Is reviewed and approved by organization-defined personnel or roles organization-defined frequency; and
+  - \[10.\] Explicitly designates responsibility for incident response to organization-defined entities, personnel, or roles.
 
-- \[b.\] Distribute copies of the incident response plan to \[ir-8_prm_4 = organization-defined incident response personnel (identified by name and/or by role) and organizational elements\];
+- \[b.\] Distribute copies of the incident response plan to organization-defined incident response personnel (identified by name and/or by role) and organizational elements;
 
 - \[c.\] Update the incident response plan to address system and organizational changes or problems encountered during plan implementation, execution, or testing;
 
-- \[d.\] Communicate incident response plan changes to \[ir-8_prm_5 = organization-defined incident response personnel (identified by name and/or by role) and organizational elements\]; and
+- \[d.\] Communicate incident response plan changes to organization-defined incident response personnel (identified by name and/or by role) and organizational elements; and
 
 - \[e.\] Protect the incident response plan from unauthorized disclosure and modification.
 
-______________________________________________________________________
+## Control Control Guidance
 
-## ir-8 What is the solution and how is it implemented?
-
-______________________________________________________________________
-
-### Part a.
-
-Add control implementation description here for statement ir-8_smt.a
+It is important that organizations develop and implement a coordinated approach to incident response. Organizational mission and business functions determine the structure of incident response capabilities. As part of the incident response capabilities, organizations consider the coordination and sharing of information with external organizations, including external service providers and other organizations involved in the supply chain. For incidents involving personally identifiable information (i.e., breaches), include a process to determine whether notice to oversight organizations or affected individuals is appropriate and provide that notice accordingly.
 
 ______________________________________________________________________
 
-### Part b.
+## What is the solution and how is it implemented?
 
-Add control implementation description here for statement ir-8_smt.b
-
-______________________________________________________________________
-
-### Part c.
-
-Add control implementation description here for statement ir-8_smt.c
+<!-- Please leave this section blank and enter implementation details in the parts below. -->
 
 ______________________________________________________________________
 
-### Part d.
+## Implementation a.
 
-Add control implementation description here for statement ir-8_smt.d
+Add control implementation description here for item ir-8_smt.a
 
 ______________________________________________________________________
 
-### Part e.
+## Implementation b.
 
-Add control implementation description here for statement ir-8_smt.e
+Add control implementation description here for item ir-8_smt.b
+
+______________________________________________________________________
+
+## Implementation c.
+
+Add control implementation description here for item ir-8_smt.c
+
+______________________________________________________________________
+
+## Implementation d.
+
+Add control implementation description here for item ir-8_smt.d
+
+______________________________________________________________________
+
+## Implementation e.
+
+Add control implementation description here for item ir-8_smt.e
 
 ______________________________________________________________________

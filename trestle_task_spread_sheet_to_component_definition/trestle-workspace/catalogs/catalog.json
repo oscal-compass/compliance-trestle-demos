@@ -1,10 +1,10 @@
 {
   "catalog": {
-    "uuid": "e5a4f808-ff84-4379-9f89-bfa4a6fc0f09",
+    "uuid": "a9960dd3-1e4e-464e-a2d5-e825b623d144",
     "metadata": {
       "title": "Component Parameters",
-      "last-modified": "2021-07-28T13:22:19.000+00:00",
-      "version": "0.20.0",
+      "last-modified": "2022-03-23T10:17:14+00:00",
+      "version": "0.35.0",
       "oscal-version": "1.0.0"
     },
     "params": [

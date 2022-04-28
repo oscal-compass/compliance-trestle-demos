@@ -56,7 +56,7 @@
         },
         "imports": [
             {
-                "href": "800-53.json",
+                "href": "trestle://catalogs/800-53/catalog.json",
                 "include-controls": [
                     {
                         "with-ids": [

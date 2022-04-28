@@ -4,6 +4,8 @@
 
 This demo showcases using *k8s-to-oscal.py* (built utilizing trestle functionality) to consume YAML results files and produce (partial) OSCAL assessment results.
 
+This demo is based on OSCAL 1.0.2 and requires trestle 1.0.x for support of AssessmentResults.
+
 A [spreadsheet](https://github.com/IBM/compliance-trestle-demos/blob/fixk8s-to-oscal-links/trestle_k8s/Kubernetes-Yaml-to-OSCAL-Mapping.xlsx) shows the mapping from YAML to OSCAL.
 
 Sample inputs can be found [here](https://github.com/kubernetes-sigs/wg-policy-prototypes/tree/master/policy-report/samples). Sample outputs can be found [here](https://github.com/IBM/compliance-trestle-demos/tree/fixk8s-to-oscal-links/trestle_k8s/oscal-samples).
@@ -61,4 +63,3 @@ List the output files.
 > ls oscal
 sample-cis-k8s.json  sample-co.json  sample-falco-policy.json  sample-rhacm-policy.json
 ```
-

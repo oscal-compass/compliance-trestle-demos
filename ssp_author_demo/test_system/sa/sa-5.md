@@ -1,6 +1,12 @@
-# sa-5 - System and Services Acquisition System Documentation
+---
+sort-id: sa-05
+x-trestle-sections:
+  guidance: Control Guidance
+---
 
-## Control Description
+# sa-5 - \[System and Services Acquisition\] System Documentation
+
+## Control Statement
 
 - \[a.\] Obtain or develop administrator documentation for the system, system component, or system service that describes:
 
@@ -14,36 +20,42 @@
   - \[2.\] Methods for user interaction, which enables individuals to use the system, component, or service in a more secure manner and protect individual privacy; and
   - \[3.\] User responsibilities in maintaining the security of the system, component, or service and privacy of individuals;
 
-- \[c.\] Document attempts to obtain system, system component, or system service documentation when such documentation is either unavailable or nonexistent and take \[sa-5_prm_1 = organization-defined actions\] in response; and
+- \[c.\] Document attempts to obtain system, system component, or system service documentation when such documentation is either unavailable or nonexistent and take organization-defined actions in response; and
 
-- \[d.\] Distribute documentation to \[sa-5_prm_2 = organization-defined personnel or roles\].
+- \[d.\] Distribute documentation to organization-defined personnel or roles.
 
-______________________________________________________________________
+## Control Control Guidance
 
-## sa-5 What is the solution and how is it implemented?
-
-______________________________________________________________________
-
-### Part a.
-
-Add control implementation description here for statement sa-5_smt.a
+System documentation helps personnel understand the implementation and operation of controls. Organizations consider establishing specific measures to determine the quality and completeness of the content provided. System documentation may be used to support the management of supply chain risk, incident response, and other functions. Personnel or roles that require documentation include system owners, system security officers, and system administrators. Attempts to obtain documentation include contacting manufacturers or suppliers and conducting web-based searches. The inability to obtain documentation may occur due to the age of the system or component or the lack of support from developers and contractors. When documentation cannot be obtained, organizations may need to recreate the documentation if it is essential to the implementation or operation of the controls. The protection provided for the documentation is commensurate with the security category or classification of the system. Documentation that addresses system vulnerabilities may require an increased level of protection. Secure operation of the system includes initially starting the system and resuming secure system operation after a lapse in system operation.
 
 ______________________________________________________________________
 
-### Part b.
+## What is the solution and how is it implemented?
 
-Add control implementation description here for statement sa-5_smt.b
-
-______________________________________________________________________
-
-### Part c.
-
-Add control implementation description here for statement sa-5_smt.c
+<!-- Please leave this section blank and enter implementation details in the parts below. -->
 
 ______________________________________________________________________
 
-### Part d.
+## Implementation a.
 
-Add control implementation description here for statement sa-5_smt.d
+Add control implementation description here for item sa-5_smt.a
+
+______________________________________________________________________
+
+## Implementation b.
+
+Add control implementation description here for item sa-5_smt.b
+
+______________________________________________________________________
+
+## Implementation c.
+
+Add control implementation description here for item sa-5_smt.c
+
+______________________________________________________________________
+
+## Implementation d.
+
+Add control implementation description here for item sa-5_smt.d
 
 ______________________________________________________________________

@@ -1,8 +1,14 @@
-# ac-8 - Access Control System Use Notification
+---
+sort-id: ac-08
+x-trestle-sections:
+  guidance: Control Guidance
+---
 
-## Control Description
+# ac-8 - \[Access Control\] System Use Notification
 
-- \[a.\] Display \[ac-8_prm_1 = organization-defined system use notification message or banner\] to users before granting access to the system that provides privacy and security notices consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines and state that:
+## Control Statement
+
+- \[a.\] Display organization-defined system use notification message or banner to users before granting access to the system that provides privacy and security notices consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines and state that:
 
   - \[1.\] Users are accessing a U.S. Government system;
   - \[2.\] System usage may be monitored, recorded, and subject to audit;
@@ -13,30 +19,36 @@
 
 - \[c.\] For publicly accessible systems:
 
-  - \[1.\] Display system use information \[ac-8_prm_2 = organization-defined conditions\], before granting further access to the publicly accessible system;
+  - \[1.\] Display system use information organization-defined conditions, before granting further access to the publicly accessible system;
   - \[2.\] Display references, if any, to monitoring, recording, or auditing that are consistent with privacy accommodations for such systems that generally prohibit those activities; and
   - \[3.\] Include a description of the authorized uses of the system.
 
-______________________________________________________________________
+## Control Control Guidance
 
-## ac-8 What is the solution and how is it implemented?
-
-______________________________________________________________________
-
-### Part a.
-
-Add control implementation description here for statement ac-8_smt.a
+System use notifications can be implemented using messages or warning banners displayed before individuals log in to systems. System use notifications are used only for access via logon interfaces with human users. Notifications are not required when human interfaces do not exist. Based on an assessment of risk, organizations consider whether or not a secondary system use notification is needed to access applications or other system resources after the initial network logon. Organizations consider system use notification messages or banners displayed in multiple languages based on organizational needs and the demographics of system users. Organizations consult with the privacy office for input regarding privacy messaging and the Office of the General Counsel or organizational equivalent for legal review and approval of warning banner content.
 
 ______________________________________________________________________
 
-### Part b.
+## What is the solution and how is it implemented?
 
-Add control implementation description here for statement ac-8_smt.b
+<!-- Please leave this section blank and enter implementation details in the parts below. -->
 
 ______________________________________________________________________
 
-### Part c.
+## Implementation a.
 
-Add control implementation description here for statement ac-8_smt.c
+Add control implementation description here for item ac-8_smt.a
+
+______________________________________________________________________
+
+## Implementation b.
+
+Add control implementation description here for item ac-8_smt.b
+
+______________________________________________________________________
+
+## Implementation c.
+
+Add control implementation description here for item ac-8_smt.c
 
 ______________________________________________________________________

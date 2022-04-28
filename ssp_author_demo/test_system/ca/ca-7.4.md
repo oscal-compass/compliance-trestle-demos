@@ -1,33 +1,47 @@
-# ca-7.4 - Assessment, Authorization, and Monitoring Risk Monitoring
+---
+sort-id: ca-07.04
+x-trestle-sections:
+  guidance: Control Guidance
+---
 
-## Control Description
+# ca-7.4 - \[Assessment, Authorization, and Monitoring\] Risk Monitoring
 
-- Ensure risk monitoring is an integral part of the continuous monitoring strategy that includes the following:
+## Control Statement
 
-  - \[(a)\] Effectiveness monitoring;
-  - \[(b)\] Compliance monitoring; and
-  - \[(c)\] Change monitoring.
+Ensure risk monitoring is an integral part of the continuous monitoring strategy that includes the following:
 
-______________________________________________________________________
+- \[(a)\] Effectiveness monitoring;
 
-## ca-7.4 What is the solution and how is it implemented?
+- \[(b)\] Compliance monitoring; and
 
-______________________________________________________________________
+- \[(c)\] Change monitoring.
 
-### Part (a)
+## Control Control Guidance
 
-Add control implementation description here for statement ca-7.4_smt.a
-
-______________________________________________________________________
-
-### Part (b)
-
-Add control implementation description here for statement ca-7.4_smt.b
+Risk monitoring is informed by the established organizational risk tolerance. Effectiveness monitoring determines the ongoing effectiveness of the implemented risk response measures. Compliance monitoring verifies that required risk response measures are implemented. It also verifies that security and privacy requirements are satisfied. Change monitoring identifies changes to organizational systems and environments of operation that may affect security and privacy risk.
 
 ______________________________________________________________________
 
-### Part (c)
+## What is the solution and how is it implemented?
 
-Add control implementation description here for statement ca-7.4_smt.c
+<!-- Please leave this section blank and enter implementation details in the parts below. -->
+
+______________________________________________________________________
+
+## Implementation (a)
+
+Add control implementation description here for item ca-7.4_smt.a
+
+______________________________________________________________________
+
+## Implementation (b)
+
+Add control implementation description here for item ca-7.4_smt.b
+
+______________________________________________________________________
+
+## Implementation (c)
+
+Add control implementation description here for item ca-7.4_smt.c
 
 ______________________________________________________________________

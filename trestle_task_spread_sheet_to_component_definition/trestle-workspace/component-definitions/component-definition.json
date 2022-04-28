@@ -1,11 +1,11 @@
 {
   "component-definition": {
-    "uuid": "75c68a4b-9395-470d-9653-0ae99c93f558",
+    "uuid": "e758d759-8deb-4802-a947-1ff5ddcdcda0",
     "metadata": {
       "title": "Component definition for NIST Special Publication 800-53 Revision 4 profiles",
-      "last-modified": "2021-07-28T13:22:19.000+00:00",
-      "version": "0.20.0",
-      "oscal-version": "1.0.0",
+      "last-modified": "2022-04-28T03:10:43+00:00",
+      "version": "1.0.1",
+      "oscal-version": "1.0.2",
       "roles": [
         {
           "id": "prepared-by",
@@ -22,19 +22,19 @@
       ],
       "parties": [
         {
-          "uuid": "38cada78-a368-4cc1-8771-66f1f8ccd5ad",
+          "uuid": "cf5bff42-97a6-4100-8c26-9eb621c9e682",
           "type": "organization",
           "name": "International Business Machines",
           "remarks": "IBM"
         },
         {
-          "uuid": "a733c127-9ebb-46cf-9721-00b5f5497dfa",
+          "uuid": "8f78022f-ffba-4071-932f-5eeb21c727fe",
           "type": "organization",
           "name": "Customer",
           "remarks": "organization to be customized at account creation only for their Component Definition"
         },
         {
-          "uuid": "eaff49fd-268f-4111-a47a-7c76c0e78215",
+          "uuid": "6d90257e-4194-4d05-8b8f-0dd6bcaff52f",
           "type": "organization",
           "name": "ISV",
           "remarks": "organization to be customized at ISV subscription only for their Component Definition"
@@ -44,302 +44,252 @@
         {
           "role-id": "prepared-by",
           "party-uuids": [
-            "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+            "cf5bff42-97a6-4100-8c26-9eb621c9e682"
           ]
         },
         {
           "role-id": "prepared-for",
           "party-uuids": [
-            "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-            "eaff49fd-268f-4111-a47a-7c76c0e78215"
+            "8f78022f-ffba-4071-932f-5eeb21c727fe",
+            "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
           ]
         },
         {
           "role-id": "content-approver",
           "party-uuids": [
-            "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+            "cf5bff42-97a6-4100-8c26-9eb621c9e682"
           ]
         }
       ]
     },
     "components": [
       {
-        "uuid": "cbbc3510-bd0f-413b-8059-8bc45c1f1648",
-        "type": "Service",
-        "title": "SYSTEM",
-        "description": "SYSTEM",
-        "control-implementations": [
-          {
-            "uuid": "15ae6381-89ff-487c-b1b4-804c26f91d52",
-            "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json",
-            "description": "SYSTEM implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.\"",
-            "implemented-requirements": [
-              {
-                "uuid": "1c5a0e52-ef81-48fe-9158-24b8b2c3d4c7",
-                "control-id": "cm-2",
-                "description": "cm-2",
-                "props": [
-                  {
-                    "name": "goal_name_id",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "3000036",
-                    "class": "scc_goal_name_id",
-                    "remarks": "Ensure the EU supported setting is enabled in account settings"
-                  },
-                  {
-                    "name": "goal_version",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "1.0",
-                    "class": "scc_goal_version",
-                    "remarks": "3000036"
-                  }
-                ],
-                "responsible-roles": [
-                  {
-                    "role-id": "prepared-by",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  },
-                  {
-                    "role-id": "prepared-for",
-                    "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
-                    ]
-                  },
-                  {
-                    "role-id": "content-approver",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "uuid": "993fd731-66c4-40b2-bb4b-fbfda070c08e",
+        "uuid": "04a346f8-d032-4d58-b3d7-cfe91f19ad98",
         "type": "Service",
         "title": "CLOUDANT",
         "description": "CLOUDANT",
         "control-implementations": [
           {
-            "uuid": "e10807d1-2531-47be-b574-6815f2100968",
+            "uuid": "902a7cc8-1e05-484d-a4e6-8a221edcd50a",
             "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json",
-            "description": "CLOUDANT implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.\"",
-            "implemented-requirements": [
+            "description": "CLOUDANT implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.",
+            "set-parameters": [
               {
-                "uuid": "740185ed-a9e4-48ba-9e7f-f2fcab147a1e",
-                "control-id": "ac-2",
-                "description": "ac-2",
-                "props": [
-                  {
-                    "name": "goal_name_id",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "cloudant_admin_role_user_maxcount",
-                    "class": "scc_goal_name_id",
-                    "remarks": "Ensure Cloudant has no more than # users with the IAM administrator role"
-                  },
-                  {
-                    "name": "goal_version",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "1.0",
-                    "class": "scc_goal_version",
-                    "remarks": "cloudant_admin_role_user_maxcount"
-                  }
-                ],
-                "set-parameters": [
-                  {
-                    "param-id": "no_of_admins_for_cloudant_db",
-                    "values": [
-                      "3"
-                    ]
-                  }
-                ],
-                "responsible-roles": [
-                  {
-                    "role-id": "prepared-by",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  },
-                  {
-                    "role-id": "prepared-for",
-                    "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
-                    ]
-                  },
-                  {
-                    "role-id": "content-approver",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  }
+                "param-id": "no_of_admins_for_cloudant_db",
+                "values": [
+                  "3"
                 ]
               },
               {
-                "uuid": "520146cc-a3c6-4baa-b27c-64a55548531a",
-                "control-id": "ac-3",
-                "description": "ac-3",
-                "props": [
-                  {
-                    "name": "goal_name_id",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "cloudant_admin_role_user_maxcount",
-                    "class": "scc_goal_name_id",
-                    "remarks": "Ensure Cloudant has no more than # users with the IAM administrator role"
-                  },
-                  {
-                    "name": "goal_version",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "1.0",
-                    "class": "scc_goal_version",
-                    "remarks": "cloudant_admin_role_user_maxcount"
-                  }
-                ],
-                "set-parameters": [
-                  {
-                    "param-id": "no_of_admins_for_cloudant_db",
-                    "values": [
-                      "3"
-                    ]
-                  }
-                ],
-                "responsible-roles": [
-                  {
-                    "role-id": "prepared-by",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  },
-                  {
-                    "role-id": "prepared-for",
-                    "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
-                    ]
-                  },
-                  {
-                    "role-id": "content-approver",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  }
-                ]
-              },
-              {
-                "uuid": "73690552-5712-4e86-8645-6475458cbb1f",
-                "control-id": "ac-5",
-                "description": "ac-5",
-                "props": [
-                  {
-                    "name": "goal_name_id",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "cloudant_admin_role_user_maxcount",
-                    "class": "scc_goal_name_id",
-                    "remarks": "Ensure Cloudant has no more than # users with the IAM administrator role"
-                  },
-                  {
-                    "name": "goal_version",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "1.0",
-                    "class": "scc_goal_version",
-                    "remarks": "cloudant_admin_role_user_maxcount"
-                  }
-                ],
-                "set-parameters": [
-                  {
-                    "param-id": "no_of_admins_for_cloudant_db",
-                    "values": [
-                      "3"
-                    ]
-                  }
-                ],
-                "responsible-roles": [
-                  {
-                    "role-id": "prepared-by",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  },
-                  {
-                    "role-id": "prepared-for",
-                    "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
-                    ]
-                  },
-                  {
-                    "role-id": "content-approver",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  }
-                ]
-              },
-              {
-                "uuid": "f319c316-3f3c-439f-a63b-b6a31b557e81",
-                "control-id": "ac-6",
-                "description": "ac-6",
-                "props": [
-                  {
-                    "name": "goal_name_id",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "cloudant_admin_role_user_maxcount",
-                    "class": "scc_goal_name_id",
-                    "remarks": "Ensure Cloudant has no more than # users with the IAM administrator role"
-                  },
-                  {
-                    "name": "goal_version",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "1.0",
-                    "class": "scc_goal_version",
-                    "remarks": "cloudant_admin_role_user_maxcount"
-                  }
-                ],
-                "set-parameters": [
-                  {
-                    "param-id": "no_of_admins_for_cloudant_db",
-                    "values": [
-                      "3"
-                    ]
-                  }
-                ],
-                "responsible-roles": [
-                  {
-                    "role-id": "prepared-by",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  },
-                  {
-                    "role-id": "prepared-for",
-                    "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
-                    ]
-                  },
-                  {
-                    "role-id": "content-approver",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  }
+                "param-id": "no_of_service_id_admins_for_cloudant_db",
+                "values": [
+                  "3"
                 ]
               }
-            ]
-          },
-          {
-            "uuid": "17209916-bde1-44a2-890e-77d3f3026ac4",
-            "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json",
-            "description": "CLOUDANT implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.\"",
+            ],
             "implemented-requirements": [
               {
-                "uuid": "fe9137b4-35b2-4469-9328-bdafeb0a4b2a",
+                "uuid": "09cc0396-4798-4a5d-898a-8c0b94df16f2",
+                "control-id": "ac-2",
+                "description": "ac-2",
+                "props": [
+                  {
+                    "name": "goal_name_id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "cloudant_admin_role_user_maxcount",
+                    "class": "scc_goal_name_id",
+                    "remarks": "Ensure Cloudant has no more than # users with the IAM administrator role"
+                  },
+                  {
+                    "name": "goal_version",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "1.0",
+                    "class": "scc_goal_version",
+                    "remarks": "cloudant_admin_role_user_maxcount"
+                  }
+                ],
+                "set-parameters": [
+                  {
+                    "param-id": "no_of_admins_for_cloudant_db",
+                    "values": [
+                      "3"
+                    ]
+                  }
+                ],
+                "responsible-roles": [
+                  {
+                    "role-id": "prepared-by",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  },
+                  {
+                    "role-id": "prepared-for",
+                    "party-uuids": [
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
+                    ]
+                  },
+                  {
+                    "role-id": "content-approver",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "c051898f-ea1a-4766-bca5-3cce11d4b54b",
+                "control-id": "ac-3",
+                "description": "ac-3",
+                "props": [
+                  {
+                    "name": "goal_name_id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "cloudant_admin_role_user_maxcount",
+                    "class": "scc_goal_name_id",
+                    "remarks": "Ensure Cloudant has no more than # users with the IAM administrator role"
+                  },
+                  {
+                    "name": "goal_version",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "1.0",
+                    "class": "scc_goal_version",
+                    "remarks": "cloudant_admin_role_user_maxcount"
+                  }
+                ],
+                "set-parameters": [
+                  {
+                    "param-id": "no_of_admins_for_cloudant_db",
+                    "values": [
+                      "3"
+                    ]
+                  }
+                ],
+                "responsible-roles": [
+                  {
+                    "role-id": "prepared-by",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  },
+                  {
+                    "role-id": "prepared-for",
+                    "party-uuids": [
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
+                    ]
+                  },
+                  {
+                    "role-id": "content-approver",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "ae77fcfd-5efa-4780-9129-1b4b88176089",
+                "control-id": "ac-5",
+                "description": "ac-5",
+                "props": [
+                  {
+                    "name": "goal_name_id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "cloudant_admin_role_user_maxcount",
+                    "class": "scc_goal_name_id",
+                    "remarks": "Ensure Cloudant has no more than # users with the IAM administrator role"
+                  },
+                  {
+                    "name": "goal_version",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "1.0",
+                    "class": "scc_goal_version",
+                    "remarks": "cloudant_admin_role_user_maxcount"
+                  }
+                ],
+                "set-parameters": [
+                  {
+                    "param-id": "no_of_admins_for_cloudant_db",
+                    "values": [
+                      "3"
+                    ]
+                  }
+                ],
+                "responsible-roles": [
+                  {
+                    "role-id": "prepared-by",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  },
+                  {
+                    "role-id": "prepared-for",
+                    "party-uuids": [
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
+                    ]
+                  },
+                  {
+                    "role-id": "content-approver",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "0722e15d-e3e6-4788-a2a3-16c4a025deef",
+                "control-id": "ac-6",
+                "description": "ac-6",
+                "props": [
+                  {
+                    "name": "goal_name_id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "cloudant_admin_role_user_maxcount",
+                    "class": "scc_goal_name_id",
+                    "remarks": "Ensure Cloudant has no more than # users with the IAM administrator role"
+                  },
+                  {
+                    "name": "goal_version",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "1.0",
+                    "class": "scc_goal_version",
+                    "remarks": "cloudant_admin_role_user_maxcount"
+                  }
+                ],
+                "set-parameters": [
+                  {
+                    "param-id": "no_of_admins_for_cloudant_db",
+                    "values": [
+                      "3"
+                    ]
+                  }
+                ],
+                "responsible-roles": [
+                  {
+                    "role-id": "prepared-by",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  },
+                  {
+                    "role-id": "prepared-for",
+                    "party-uuids": [
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
+                    ]
+                  },
+                  {
+                    "role-id": "content-approver",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "051be9b1-dfce-413d-8cf7-c3b63a408e71",
                 "control-id": "ac-2",
                 "description": "ac-2",
                 "props": [
@@ -370,26 +320,26 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ]
               },
               {
-                "uuid": "7b313fb1-424d-4fce-b4b6-365ed852992c",
+                "uuid": "1629383c-a753-4e5d-8aa5-4e6fa4a3c6ed",
                 "control-id": "ac-3",
                 "description": "ac-3",
                 "props": [
@@ -420,26 +370,26 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ]
               },
               {
-                "uuid": "57cb4d07-d1a7-41d4-8b7d-6289eb4053f7",
+                "uuid": "bb4acf21-940e-44bb-95a2-4e5b7d8e22e6",
                 "control-id": "ac-5",
                 "description": "ac-5",
                 "props": [
@@ -470,26 +420,26 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ]
               },
               {
-                "uuid": "6d14c2dc-0fc5-4ae7-8fde-9c746d6ef64b",
+                "uuid": "9a20e506-94b6-40b0-9de6-abd21edaf78c",
                 "control-id": "ac-6",
                 "description": "ac-6",
                 "props": [
@@ -520,20 +470,20 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ]
@@ -543,18 +493,18 @@
         ]
       },
       {
-        "uuid": "6590f4cc-cf1e-48d0-99b3-bee36b18507b",
+        "uuid": "5c2cf2ef-7936-4d3e-bd8c-466be30305a9",
         "type": "Service",
         "title": "CIS",
         "description": "CIS",
         "control-implementations": [
           {
-            "uuid": "85c03c42-d13f-4595-b6b4-4b0805e93070",
+            "uuid": "56512b09-f956-4069-91a8-474cb6e11813",
             "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json",
-            "description": "CIS implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.\"",
+            "description": "CIS implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.",
             "implemented-requirements": [
               {
-                "uuid": "23ffbdd2-de43-412a-b600-25b509308495",
+                "uuid": "444b5df8-cdf6-4f1d-9359-a5695448904b",
                 "control-id": "ac-17.2",
                 "description": "ac-17(2)",
                 "props": [
@@ -577,26 +527,26 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ]
               },
               {
-                "uuid": "ce5bdd8d-cf8d-4b5b-8c7b-6479a451510c",
+                "uuid": "daed1ea6-034f-44fe-b8fe-7c0d880c48aa",
                 "control-id": "sc-8",
                 "description": "sc-8",
                 "props": [
@@ -619,26 +569,26 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ]
               },
               {
-                "uuid": "12bb2d23-3825-4f55-a7aa-857af7a4bc1b",
+                "uuid": "bfecd906-34d7-44ab-97f8-35447bac595e",
                 "control-id": "sc-8.1",
                 "description": "sc-8(1)",
                 "props": [
@@ -661,26 +611,26 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ]
               },
               {
-                "uuid": "ff78475f-5ba7-4a32-afec-e508b0e55c16",
+                "uuid": "a1c7dd27-2eba-475b-aa8a-cdfeb33bf316",
                 "control-id": "sc-13",
                 "description": "sc-13",
                 "props": [
@@ -703,26 +653,26 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ]
               },
               {
-                "uuid": "3e8b9d82-1afe-41a7-818d-477208528f48",
+                "uuid": "49b23066-fcc7-4936-96ce-92e50b7865f0",
                 "control-id": "sc-23",
                 "description": "sc-23",
                 "props": [
@@ -745,20 +695,20 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ]
@@ -768,466 +718,277 @@
         ]
       },
       {
-        "uuid": "a4df5e5f-16ec-4989-9766-cdd8b17e40a4",
-        "type": "Service",
-        "title": "IKS ",
-        "description": "IKS ",
-        "control-implementations": [
-          {
-            "uuid": "5259ced8-40da-4070-9d01-8a98d34f1cf6",
-            "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json",
-            "description": "IKS  implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.\"",
-            "implemented-requirements": [
-              {
-                "uuid": "7d38e269-4107-49c0-a9ca-717062356932",
-                "control-id": "ac-17.2",
-                "description": "ac-17(2)",
-                "props": [
-                  {
-                    "name": "goal_name_id",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "kubernetes_service_ingress_tls_configured",
-                    "class": "scc_goal_name_id",
-                    "remarks": "Ensure Kubernetes Service Ingress is configured only with TLS v1.2 for all inbound traffic"
-                  },
-                  {
-                    "name": "goal_version",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "1.0",
-                    "class": "scc_goal_version",
-                    "remarks": "kubernetes_service_ingress_tls_configured"
-                  }
-                ],
-                "set-parameters": [
-                  {
-                    "param-id": "iks_ingress_tls_versions",
-                    "values": [
-                      "1.2"
-                    ]
-                  }
-                ],
-                "responsible-roles": [
-                  {
-                    "role-id": "prepared-by",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  },
-                  {
-                    "role-id": "prepared-for",
-                    "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
-                    ]
-                  },
-                  {
-                    "role-id": "content-approver",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  }
-                ]
-              },
-              {
-                "uuid": "2376ed33-f600-42b7-88f2-e04872680ce2",
-                "control-id": "sc-8",
-                "description": "sc-8",
-                "props": [
-                  {
-                    "name": "goal_name_id",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "kubernetes_service_ingress_tls_configured",
-                    "class": "scc_goal_name_id",
-                    "remarks": "Ensure Kubernetes Service Ingress is configured only with TLS v1.2 for all inbound traffic"
-                  },
-                  {
-                    "name": "goal_version",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "1.0",
-                    "class": "scc_goal_version",
-                    "remarks": "kubernetes_service_ingress_tls_configured"
-                  }
-                ],
-                "set-parameters": [
-                  {
-                    "param-id": "iks_ingress_tls_versions",
-                    "values": [
-                      "1.2"
-                    ]
-                  }
-                ],
-                "responsible-roles": [
-                  {
-                    "role-id": "prepared-by",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  },
-                  {
-                    "role-id": "prepared-for",
-                    "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
-                    ]
-                  },
-                  {
-                    "role-id": "content-approver",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  }
-                ]
-              },
-              {
-                "uuid": "86570177-c8c6-4760-a758-dc1d259b0772",
-                "control-id": "sc-8.1",
-                "description": "sc-8(1)",
-                "props": [
-                  {
-                    "name": "goal_name_id",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "kubernetes_service_ingress_tls_configured",
-                    "class": "scc_goal_name_id",
-                    "remarks": "Ensure Kubernetes Service Ingress is configured only with TLS v1.2 for all inbound traffic"
-                  },
-                  {
-                    "name": "goal_version",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "1.0",
-                    "class": "scc_goal_version",
-                    "remarks": "kubernetes_service_ingress_tls_configured"
-                  }
-                ],
-                "set-parameters": [
-                  {
-                    "param-id": "iks_ingress_tls_versions",
-                    "values": [
-                      "1.2"
-                    ]
-                  }
-                ],
-                "responsible-roles": [
-                  {
-                    "role-id": "prepared-by",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  },
-                  {
-                    "role-id": "prepared-for",
-                    "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
-                    ]
-                  },
-                  {
-                    "role-id": "content-approver",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  }
-                ]
-              },
-              {
-                "uuid": "7e4d90b1-b3d4-4a64-82d4-5ae4043478dc",
-                "control-id": "sc-13",
-                "description": "sc-13",
-                "props": [
-                  {
-                    "name": "goal_name_id",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "kubernetes_service_ingress_tls_configured",
-                    "class": "scc_goal_name_id",
-                    "remarks": "Ensure Kubernetes Service Ingress is configured only with TLS v1.2 for all inbound traffic"
-                  },
-                  {
-                    "name": "goal_version",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "1.0",
-                    "class": "scc_goal_version",
-                    "remarks": "kubernetes_service_ingress_tls_configured"
-                  }
-                ],
-                "set-parameters": [
-                  {
-                    "param-id": "iks_ingress_tls_versions",
-                    "values": [
-                      "1.2"
-                    ]
-                  }
-                ],
-                "responsible-roles": [
-                  {
-                    "role-id": "prepared-by",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  },
-                  {
-                    "role-id": "prepared-for",
-                    "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
-                    ]
-                  },
-                  {
-                    "role-id": "content-approver",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  }
-                ]
-              },
-              {
-                "uuid": "c224f653-a525-4cb1-ba14-484f1062f8d9",
-                "control-id": "sc-23",
-                "description": "sc-23",
-                "props": [
-                  {
-                    "name": "goal_name_id",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "kubernetes_service_ingress_tls_configured",
-                    "class": "scc_goal_name_id",
-                    "remarks": "Ensure Kubernetes Service Ingress is configured only with TLS v1.2 for all inbound traffic"
-                  },
-                  {
-                    "name": "goal_version",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "1.0",
-                    "class": "scc_goal_version",
-                    "remarks": "kubernetes_service_ingress_tls_configured"
-                  }
-                ],
-                "set-parameters": [
-                  {
-                    "param-id": "iks_ingress_tls_versions",
-                    "values": [
-                      "1.2"
-                    ]
-                  }
-                ],
-                "responsible-roles": [
-                  {
-                    "role-id": "prepared-by",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  },
-                  {
-                    "role-id": "prepared-for",
-                    "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
-                    ]
-                  },
-                  {
-                    "role-id": "content-approver",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "uuid": "cde1dd1c-ae34-49ac-9ecd-942fad70927b",
-        "type": "Service",
-        "title": "VPC",
-        "description": "VPC",
-        "control-implementations": [
-          {
-            "uuid": "3064f2e1-40ef-4626-9a64-30e0534da6c4",
-            "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json",
-            "description": "VPC implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.\"",
-            "implemented-requirements": [
-              {
-                "uuid": "4e91d5be-eb9a-4194-83b1-746d54ac1162",
-                "control-id": "ac-4",
-                "description": "ac-4",
-                "props": [
-                  {
-                    "name": "goal_name_id",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "vpc_no_inbound_ports_public",
-                    "class": "scc_goal_name_id",
-                    "remarks": "Ensure Virtual Private Cloud (VPC) security groups have no inbound ports open to the internet (0.0.0.0/0)"
-                  },
-                  {
-                    "name": "goal_version",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "1.0",
-                    "class": "scc_goal_version",
-                    "remarks": "vpc_no_inbound_ports_public"
-                  }
-                ],
-                "responsible-roles": [
-                  {
-                    "role-id": "prepared-by",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  },
-                  {
-                    "role-id": "prepared-for",
-                    "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
-                    ]
-                  },
-                  {
-                    "role-id": "content-approver",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  }
-                ]
-              },
-              {
-                "uuid": "33632f3d-ee7d-472a-8433-edfd1a58f9d1",
-                "control-id": "cm-2",
-                "description": "cm-2",
-                "props": [
-                  {
-                    "name": "goal_name_id",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "vpc_no_inbound_ports_public",
-                    "class": "scc_goal_name_id",
-                    "remarks": "Ensure Virtual Private Cloud (VPC) security groups have no inbound ports open to the internet (0.0.0.0/0)"
-                  },
-                  {
-                    "name": "goal_version",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "1.0",
-                    "class": "scc_goal_version",
-                    "remarks": "vpc_no_inbound_ports_public"
-                  }
-                ],
-                "responsible-roles": [
-                  {
-                    "role-id": "prepared-by",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  },
-                  {
-                    "role-id": "prepared-for",
-                    "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
-                    ]
-                  },
-                  {
-                    "role-id": "content-approver",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  }
-                ]
-              },
-              {
-                "uuid": "7829dc2b-0b78-4727-997c-bba65abd1edb",
-                "control-id": "sc-7",
-                "description": "sc-7",
-                "props": [
-                  {
-                    "name": "goal_name_id",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "vpc_no_inbound_ports_public",
-                    "class": "scc_goal_name_id",
-                    "remarks": "Ensure Virtual Private Cloud (VPC) security groups have no inbound ports open to the internet (0.0.0.0/0)"
-                  },
-                  {
-                    "name": "goal_version",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "1.0",
-                    "class": "scc_goal_version",
-                    "remarks": "vpc_no_inbound_ports_public"
-                  }
-                ],
-                "responsible-roles": [
-                  {
-                    "role-id": "prepared-by",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  },
-                  {
-                    "role-id": "prepared-for",
-                    "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
-                    ]
-                  },
-                  {
-                    "role-id": "content-approver",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  }
-                ]
-              },
-              {
-                "uuid": "785818cc-5132-4571-a8c9-d60b3075e687",
-                "control-id": "sc-7.3",
-                "description": "sc-7(3)",
-                "props": [
-                  {
-                    "name": "goal_name_id",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "vpc_no_inbound_ports_public",
-                    "class": "scc_goal_name_id",
-                    "remarks": "Ensure Virtual Private Cloud (VPC) security groups have no inbound ports open to the internet (0.0.0.0/0)"
-                  },
-                  {
-                    "name": "goal_version",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "1.0",
-                    "class": "scc_goal_version",
-                    "remarks": "vpc_no_inbound_ports_public"
-                  }
-                ],
-                "responsible-roles": [
-                  {
-                    "role-id": "prepared-by",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  },
-                  {
-                    "role-id": "prepared-for",
-                    "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
-                    ]
-                  },
-                  {
-                    "role-id": "content-approver",
-                    "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "uuid": "facd71a7-6e02-40fb-85cd-c0e2bec038a4",
+        "uuid": "87311f4a-6edf-4559-9ff8-801aeddca61b",
         "type": "Service",
         "title": "IKS",
         "description": "IKS",
         "control-implementations": [
           {
-            "uuid": "4bd18df4-175a-4f45-9ae8-cc360dc54fd2",
+            "uuid": "6f93810b-de3c-4337-9fd5-a26bdc90b817",
             "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json",
-            "description": "IKS implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.\"",
+            "description": "IKS implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.",
+            "set-parameters": [
+              {
+                "param-id": "iks_ingress_tls_versions",
+                "values": [
+                  "1.2",
+                  "1.3"
+                ]
+              }
+            ],
             "implemented-requirements": [
               {
-                "uuid": "1abeb2be-f913-41a2-af89-f27ba6bbb852",
+                "uuid": "f143b57b-a5b5-4ecf-964c-25bf924a0f5f",
+                "control-id": "ac-17.2",
+                "description": "ac-17(2)",
+                "props": [
+                  {
+                    "name": "goal_name_id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "kubernetes_service_ingress_tls_configured",
+                    "class": "scc_goal_name_id",
+                    "remarks": "Ensure Kubernetes Service Ingress is configured only with TLS v1.2 for all inbound traffic"
+                  },
+                  {
+                    "name": "goal_version",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "1.0",
+                    "class": "scc_goal_version",
+                    "remarks": "kubernetes_service_ingress_tls_configured"
+                  }
+                ],
+                "set-parameters": [
+                  {
+                    "param-id": "iks_ingress_tls_versions",
+                    "values": [
+                      "1.2"
+                    ]
+                  }
+                ],
+                "responsible-roles": [
+                  {
+                    "role-id": "prepared-by",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  },
+                  {
+                    "role-id": "prepared-for",
+                    "party-uuids": [
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
+                    ]
+                  },
+                  {
+                    "role-id": "content-approver",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "e1bfda08-1ec7-4446-98b7-0d981c45db07",
+                "control-id": "sc-8",
+                "description": "sc-8",
+                "props": [
+                  {
+                    "name": "goal_name_id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "kubernetes_service_ingress_tls_configured",
+                    "class": "scc_goal_name_id",
+                    "remarks": "Ensure Kubernetes Service Ingress is configured only with TLS v1.2 for all inbound traffic"
+                  },
+                  {
+                    "name": "goal_version",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "1.0",
+                    "class": "scc_goal_version",
+                    "remarks": "kubernetes_service_ingress_tls_configured"
+                  }
+                ],
+                "set-parameters": [
+                  {
+                    "param-id": "iks_ingress_tls_versions",
+                    "values": [
+                      "1.2"
+                    ]
+                  }
+                ],
+                "responsible-roles": [
+                  {
+                    "role-id": "prepared-by",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  },
+                  {
+                    "role-id": "prepared-for",
+                    "party-uuids": [
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
+                    ]
+                  },
+                  {
+                    "role-id": "content-approver",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "282577d1-d523-42be-9060-e438623cf39a",
+                "control-id": "sc-8.1",
+                "description": "sc-8(1)",
+                "props": [
+                  {
+                    "name": "goal_name_id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "kubernetes_service_ingress_tls_configured",
+                    "class": "scc_goal_name_id",
+                    "remarks": "Ensure Kubernetes Service Ingress is configured only with TLS v1.2 for all inbound traffic"
+                  },
+                  {
+                    "name": "goal_version",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "1.0",
+                    "class": "scc_goal_version",
+                    "remarks": "kubernetes_service_ingress_tls_configured"
+                  }
+                ],
+                "set-parameters": [
+                  {
+                    "param-id": "iks_ingress_tls_versions",
+                    "values": [
+                      "1.2"
+                    ]
+                  }
+                ],
+                "responsible-roles": [
+                  {
+                    "role-id": "prepared-by",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  },
+                  {
+                    "role-id": "prepared-for",
+                    "party-uuids": [
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
+                    ]
+                  },
+                  {
+                    "role-id": "content-approver",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "a9194b75-b2c4-40a2-bfad-3c60bec98c6c",
+                "control-id": "sc-13",
+                "description": "sc-13",
+                "props": [
+                  {
+                    "name": "goal_name_id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "kubernetes_service_ingress_tls_configured",
+                    "class": "scc_goal_name_id",
+                    "remarks": "Ensure Kubernetes Service Ingress is configured only with TLS v1.2 for all inbound traffic"
+                  },
+                  {
+                    "name": "goal_version",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "1.0",
+                    "class": "scc_goal_version",
+                    "remarks": "kubernetes_service_ingress_tls_configured"
+                  }
+                ],
+                "set-parameters": [
+                  {
+                    "param-id": "iks_ingress_tls_versions",
+                    "values": [
+                      "1.2"
+                    ]
+                  }
+                ],
+                "responsible-roles": [
+                  {
+                    "role-id": "prepared-by",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  },
+                  {
+                    "role-id": "prepared-for",
+                    "party-uuids": [
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
+                    ]
+                  },
+                  {
+                    "role-id": "content-approver",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "99cd3b0d-f296-4ff4-b38a-03b526bf7cc0",
+                "control-id": "sc-23",
+                "description": "sc-23",
+                "props": [
+                  {
+                    "name": "goal_name_id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "kubernetes_service_ingress_tls_configured",
+                    "class": "scc_goal_name_id",
+                    "remarks": "Ensure Kubernetes Service Ingress is configured only with TLS v1.2 for all inbound traffic"
+                  },
+                  {
+                    "name": "goal_version",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "1.0",
+                    "class": "scc_goal_version",
+                    "remarks": "kubernetes_service_ingress_tls_configured"
+                  }
+                ],
+                "set-parameters": [
+                  {
+                    "param-id": "iks_ingress_tls_versions",
+                    "values": [
+                      "1.2"
+                    ]
+                  }
+                ],
+                "responsible-roles": [
+                  {
+                    "role-id": "prepared-by",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  },
+                  {
+                    "role-id": "prepared-for",
+                    "party-uuids": [
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
+                    ]
+                  },
+                  {
+                    "role-id": "content-approver",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "db454007-d19c-455a-be9e-2bb8e070a59f",
                 "control-id": "cm-2",
                 "description": "cm-2",
                 "props": [
@@ -1250,26 +1011,26 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ]
               },
               {
-                "uuid": "18c88413-b780-4be4-af8a-ac3b1167710f",
+                "uuid": "3d910b1a-1167-404f-8a3d-c124f123f0f6",
                 "control-id": "cm-7",
                 "description": "cm-7",
                 "props": [
@@ -1292,33 +1053,33 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ],
                 "statements": [
                   {
                     "statement-id": "cm-7",
-                    "uuid": "6382b371-17e3-4283-88f9-2fbae8cac54a",
+                    "uuid": "f40ec95a-3f82-4ed0-ab9a-1ce70108a389",
                     "description": "IKS implements cm-7(a)"
                   }
                 ]
               },
               {
-                "uuid": "654fb9ef-ce86-452e-98d1-8eb702d9bffb",
+                "uuid": "3dfa39d6-8cfc-4fd5-9e07-fefc325ae82b",
                 "control-id": "cm-8.1",
                 "description": "cm-8(1)",
                 "props": [
@@ -1341,26 +1102,26 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ]
               },
               {
-                "uuid": "9c5278ce-d61e-437c-be12-004d127c637d",
+                "uuid": "a127c544-094b-4a8f-afc8-6ca45e630604",
                 "control-id": "cm-8.3",
                 "description": "cm-8(3)",
                 "props": [
@@ -1383,33 +1144,33 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ],
                 "statements": [
                   {
                     "statement-id": "cm-8_3",
-                    "uuid": "3b98df0d-b0b0-42f3-a40d-4002d4858df0",
+                    "uuid": "ca799938-ebd7-4c1d-93f2-5fd7a67c1cad",
                     "description": "IKS implements cm-8(3)(a)"
                   }
                 ]
               },
               {
-                "uuid": "c7cbd14f-de0c-477a-9afb-364b114658fe",
+                "uuid": "20000087-b079-4fbf-a503-7b8f144fbe14",
                 "control-id": "sa-3",
                 "description": "sa-3",
                 "props": [
@@ -1432,27 +1193,27 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ],
                 "statements": [
                   {
                     "statement-id": "sa-3",
-                    "uuid": "8953427b-d322-4ad4-a6b7-092955b99b8a",
+                    "uuid": "e2e7d523-1b54-4dde-92d8-c794b2bfb392",
                     "description": "IKS implements sa-3(a)"
                   }
                 ]
@@ -1462,18 +1223,221 @@
         ]
       },
       {
-        "uuid": "2ad1fd24-004b-4f74-adfc-182243a1b7a0",
+        "uuid": "17cd7500-5ed3-4892-80cd-32a47f959f60",
+        "type": "Service",
+        "title": "VPC",
+        "description": "VPC",
+        "control-implementations": [
+          {
+            "uuid": "c888e371-873d-4f3c-96d1-ac0da9be1115",
+            "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json",
+            "description": "VPC implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.",
+            "implemented-requirements": [
+              {
+                "uuid": "ac7675ba-f31d-4b55-acbf-7a0ac5718127",
+                "control-id": "ac-4",
+                "description": "ac-4",
+                "props": [
+                  {
+                    "name": "goal_name_id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "vpc_no_inbound_ports_public",
+                    "class": "scc_goal_name_id",
+                    "remarks": "Ensure Virtual Private Cloud (VPC) security groups have no inbound ports open to the internet (0.0.0.0/0)"
+                  },
+                  {
+                    "name": "goal_version",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "1.0",
+                    "class": "scc_goal_version",
+                    "remarks": "vpc_no_inbound_ports_public"
+                  }
+                ],
+                "responsible-roles": [
+                  {
+                    "role-id": "prepared-by",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  },
+                  {
+                    "role-id": "prepared-for",
+                    "party-uuids": [
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
+                    ]
+                  },
+                  {
+                    "role-id": "content-approver",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "90f9ade4-f3c6-411b-abd6-ffdbc31a265b",
+                "control-id": "cm-2",
+                "description": "cm-2",
+                "props": [
+                  {
+                    "name": "goal_name_id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "vpc_no_inbound_ports_public",
+                    "class": "scc_goal_name_id",
+                    "remarks": "Ensure Virtual Private Cloud (VPC) security groups have no inbound ports open to the internet (0.0.0.0/0)"
+                  },
+                  {
+                    "name": "goal_version",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "1.0",
+                    "class": "scc_goal_version",
+                    "remarks": "vpc_no_inbound_ports_public"
+                  }
+                ],
+                "responsible-roles": [
+                  {
+                    "role-id": "prepared-by",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  },
+                  {
+                    "role-id": "prepared-for",
+                    "party-uuids": [
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
+                    ]
+                  },
+                  {
+                    "role-id": "content-approver",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "32f210d6-9ac7-4324-80cc-b8769449f7dd",
+                "control-id": "sc-7",
+                "description": "sc-7",
+                "props": [
+                  {
+                    "name": "goal_name_id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "vpc_no_inbound_ports_public",
+                    "class": "scc_goal_name_id",
+                    "remarks": "Ensure Virtual Private Cloud (VPC) security groups have no inbound ports open to the internet (0.0.0.0/0)"
+                  },
+                  {
+                    "name": "goal_version",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "1.0",
+                    "class": "scc_goal_version",
+                    "remarks": "vpc_no_inbound_ports_public"
+                  }
+                ],
+                "responsible-roles": [
+                  {
+                    "role-id": "prepared-by",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  },
+                  {
+                    "role-id": "prepared-for",
+                    "party-uuids": [
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
+                    ]
+                  },
+                  {
+                    "role-id": "content-approver",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "c26919fd-08b4-408e-af6a-3957562da936",
+                "control-id": "sc-7.3",
+                "description": "sc-7(3)",
+                "props": [
+                  {
+                    "name": "goal_name_id",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "vpc_no_inbound_ports_public",
+                    "class": "scc_goal_name_id",
+                    "remarks": "Ensure Virtual Private Cloud (VPC) security groups have no inbound ports open to the internet (0.0.0.0/0)"
+                  },
+                  {
+                    "name": "goal_version",
+                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
+                    "value": "1.0",
+                    "class": "scc_goal_version",
+                    "remarks": "vpc_no_inbound_ports_public"
+                  }
+                ],
+                "responsible-roles": [
+                  {
+                    "role-id": "prepared-by",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  },
+                  {
+                    "role-id": "prepared-for",
+                    "party-uuids": [
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
+                    ]
+                  },
+                  {
+                    "role-id": "content-approver",
+                    "party-uuids": [
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "uuid": "e5f655a7-f2eb-4f7e-b95f-62d2ea2a4c4d",
         "type": "Service",
         "title": "TOOLCHAIN",
         "description": "TOOLCHAIN",
         "control-implementations": [
           {
-            "uuid": "0dd00a72-fa32-4866-8613-c369dff268c5",
+            "uuid": "cc83e4bf-e803-40ad-b76f-f41a73722e3d",
             "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json",
-            "description": "TOOLCHAIN implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.\"",
+            "description": "TOOLCHAIN implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.",
+            "set-parameters": [
+              {
+                "param-id": "source_code_scaning_vulnerability_threashhold",
+                "values": [
+                  "low",
+                  "medium",
+                  "high",
+                  "critical"
+                ]
+              },
+              {
+                "param-id": "source_code_scaning_vulnerability_threashhold",
+                "values": [
+                  "low",
+                  "medium",
+                  "high",
+                  "critical"
+                ]
+              }
+            ],
             "implemented-requirements": [
               {
-                "uuid": "619eff2d-b92a-4451-92ac-da883f918e3f",
+                "uuid": "5f0d363d-088f-4c7f-9b11-896e4ab8051a",
                 "control-id": "cm-8.3",
                 "description": "cm-8(3)",
                 "props": [
@@ -1504,33 +1468,33 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ],
                 "statements": [
                   {
                     "statement-id": "cm-8_3",
-                    "uuid": "d92fbd9a-13f3-4302-84df-a1902e8c632f",
+                    "uuid": "524f3b5f-5497-40eb-b91e-0ed94992bc54",
                     "description": "TOOLCHAIN implements cm-8(3)(a)"
                   }
                 ]
               },
               {
-                "uuid": "990f5e20-efec-44e6-b94c-16e1098a5f76",
+                "uuid": "d4609894-91a0-4f3e-b269-0b28f0ead1a4",
                 "control-id": "ra-5",
                 "description": "ra-5",
                 "props": [
@@ -1561,33 +1525,33 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ],
                 "statements": [
                   {
                     "statement-id": "ra-5",
-                    "uuid": "f7e5753b-8a8c-438a-abf8-62778b8a6370",
+                    "uuid": "f23ed392-7063-4071-8a87-fb3d35afb241",
                     "description": "TOOLCHAIN implements ra-5(a)"
                   }
                 ]
               },
               {
-                "uuid": "3467c2f9-3c8a-4def-a986-1206cfc24bf7",
+                "uuid": "2718132b-a136-4f8f-9aae-23c83b97a919",
                 "control-id": "si-2.2",
                 "description": "si-2(2)",
                 "props": [
@@ -1618,26 +1582,26 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ]
               },
               {
-                "uuid": "f6f562cd-da1e-40ec-86da-c7b21d7d925e",
+                "uuid": "71a06526-0e28-4bca-8d89-101db8672c38",
                 "control-id": "si-7.1",
                 "description": "si-7(1)",
                 "props": [
@@ -1668,33 +1632,26 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "uuid": "68ba53ce-ba46-448b-b2cf-7a3985fbc3e4",
-            "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json",
-            "description": "TOOLCHAIN implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.\"",
-            "implemented-requirements": [
+              },
               {
-                "uuid": "24491dbc-4caf-4133-9f6a-63168f16472b",
+                "uuid": "25cd90d4-b813-4c65-8488-864e5badc263",
                 "control-id": "zz-1",
                 "description": "zz-1",
                 "props": [
@@ -1725,20 +1682,20 @@
                   {
                     "role-id": "prepared-by",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   },
                   {
                     "role-id": "prepared-for",
                     "party-uuids": [
-                      "a733c127-9ebb-46cf-9721-00b5f5497dfa",
-                      "eaff49fd-268f-4111-a47a-7c76c0e78215"
+                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
+                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
                     ]
                   },
                   {
                     "role-id": "content-approver",
                     "party-uuids": [
-                      "38cada78-a368-4cc1-8771-66f1f8ccd5ad"
+                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
                     ]
                   }
                 ]

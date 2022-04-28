@@ -1,24 +1,37 @@
-# ir-6 - Incident Response Incident Reporting
+---
+sort-id: ir-06
+x-trestle-sections:
+  guidance: Control Guidance
+---
 
-## Control Description
+# ir-6 - \[Incident Response\] Incident Reporting
 
-- \[a.\] Require personnel to report suspected incidents to the organizational incident response capability within \[ir-6_prm_1 = organization-defined time period\]; and
-- \[b.\] Report incident information to \[ir-6_prm_2 = organization-defined authorities\].
+## Control Statement
+
+- \[a.\] Require personnel to report suspected incidents to the organizational incident response capability within organization-defined time period; and
+
+- \[b.\] Report incident information to organization-defined authorities.
+
+## Control Control Guidance
+
+The types of incidents reported, the content and timeliness of the reports, and the designated reporting authorities reflect applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. Incident information can inform risk assessments, control effectiveness assessments, security requirements for acquisitions, and selection criteria for technology products.
 
 ______________________________________________________________________
 
-## ir-6 What is the solution and how is it implemented?
+## What is the solution and how is it implemented?
+
+<!-- Please leave this section blank and enter implementation details in the parts below. -->
 
 ______________________________________________________________________
 
-### Part a.
+## Implementation a.
 
-Add control implementation description here for statement ir-6_smt.a
+Add control implementation description here for item ir-6_smt.a
 
 ______________________________________________________________________
 
-### Part b.
+## Implementation b.
 
-Add control implementation description here for statement ir-6_smt.b
+Add control implementation description here for item ir-6_smt.b
 
 ______________________________________________________________________

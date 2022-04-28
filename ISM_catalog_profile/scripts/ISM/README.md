@@ -7,3 +7,5 @@ This demo is not official and has not been endorsed in any way by the Australian
 ## Running this demo
 
 - From the root directory of the repository run `python scripts/ISM/ISM.py`
+
+- This demo relies on trestle version 1.0.x

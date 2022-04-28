@@ -1,38 +1,53 @@
-# ca-9 - Assessment, Authorization, and Monitoring Internal System Connections
+---
+sort-id: ca-09
+x-trestle-sections:
+  guidance: Control Guidance
+---
 
-## Control Description
+# ca-9 - \[Assessment, Authorization, and Monitoring\] Internal System Connections
 
-- \[a.\] Authorize internal connections of \[ca-9_prm_1 = organization-defined system components or classes of components\] to the system;
+## Control Statement
+
+- \[a.\] Authorize internal connections of organization-defined system components or classes of components to the system;
+
 - \[b.\] Document, for each internal connection, the interface characteristics, security and privacy requirements, and the nature of the information communicated;
-- \[c.\] Terminate internal system connections after \[ca-9_prm_2 = organization-defined conditions\]; and
-- \[d.\] Review \[ca-9_prm_3 = organization-defined frequency\] the continued need for each internal connection.
+
+- \[c.\] Terminate internal system connections after organization-defined conditions; and
+
+- \[d.\] Review organization-defined frequency the continued need for each internal connection.
+
+## Control Control Guidance
+
+Internal system connections are connections between organizational systems and separate constituent system components (i.e., connections between components that are part of the same system) including components used for system development. Intra-system connections include connections with mobile devices, notebook and desktop computers, tablets, printers, copiers, facsimile machines, scanners, sensors, and servers. Instead of authorizing each internal system connection individually, organizations can authorize internal connections for a class of system components with common characteristics and/or configurations, including printers, scanners, and copiers with a specified processing, transmission, and storage capability or smart phones and tablets with a specific baseline configuration. The continued need for an internal system connection is reviewed from the perspective of whether it provides support for organizational missions or business functions.
 
 ______________________________________________________________________
 
-## ca-9 What is the solution and how is it implemented?
+## What is the solution and how is it implemented?
+
+<!-- Please leave this section blank and enter implementation details in the parts below. -->
 
 ______________________________________________________________________
 
-### Part a.
+## Implementation a.
 
-Add control implementation description here for statement ca-9_smt.a
-
-______________________________________________________________________
-
-### Part b.
-
-Add control implementation description here for statement ca-9_smt.b
+Add control implementation description here for item ca-9_smt.a
 
 ______________________________________________________________________
 
-### Part c.
+## Implementation b.
 
-Add control implementation description here for statement ca-9_smt.c
+Add control implementation description here for item ca-9_smt.b
 
 ______________________________________________________________________
 
-### Part d.
+## Implementation c.
 
-Add control implementation description here for statement ca-9_smt.d
+Add control implementation description here for item ca-9_smt.c
+
+______________________________________________________________________
+
+## Implementation d.
+
+Add control implementation description here for item ca-9_smt.d
 
 ______________________________________________________________________

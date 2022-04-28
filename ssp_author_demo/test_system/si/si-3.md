@@ -1,44 +1,60 @@
-# si-3 - System and Information Integrity Malicious Code Protection
+---
+sort-id: si-03
+x-trestle-sections:
+  guidance: Control Guidance
+---
 
-## Control Description
+# si-3 - \[System and Information Integrity\] Malicious Code Protection
 
-- \[a.\] Implement \[si-3_prm_1 = one-or-more \['signature based', 'non-signature based'\]\] malicious code protection mechanisms at system entry and exit points to detect and eradicate malicious code;
+## Control Statement
+
+- \[a.\] Implement signature based; non-signature based malicious code protection mechanisms at system entry and exit points to detect and eradicate malicious code;
 
 - \[b.\] Automatically update malicious code protection mechanisms as new releases are available in accordance with organizational configuration management policy and procedures;
 
 - \[c.\] Configure malicious code protection mechanisms to:
 
-  - \[1.\] Perform periodic scans of the system \[si-3_prm_2 = organization-defined frequency\] and real-time scans of files from external sources at \[si-3_prm_3 = one-or-more \['endpoint', 'network entry and exit points'\]\] as the files are downloaded, opened, or executed in accordance with organizational policy; and
-  - \[2.\] \[si-3_prm_4 = one-or-more \['block malicious code', 'quarantine malicious code', 'take \[si-3_prm_5 = organization-defined action\] '\]\]; and send alert to \[si-3_prm_6 = organization-defined personnel or roles\] in response to malicious code detection; and
+  - \[1.\] Perform periodic scans of the system organization-defined frequency and real-time scans of files from external sources at endpoint; network entry and exit points as the files are downloaded, opened, or executed in accordance with organizational policy; and
+  - \[2.\] block malicious code; quarantine malicious code; take {{ insert: param, si-3_prm_5 }} ; and send alert to organization-defined personnel or roles in response to malicious code detection; and
 
 - \[d.\] Address the receipt of false positives during malicious code detection and eradication and the resulting potential impact on the availability of the system.
 
-______________________________________________________________________
+## Control Control Guidance
 
-## si-3 What is the solution and how is it implemented?
+System entry and exit points include firewalls, remote access servers, workstations, electronic mail servers, web servers, proxy servers, notebook computers, and mobile devices. Malicious code includes viruses, worms, Trojan horses, and spyware. Malicious code can also be encoded in various formats contained within compressed or hidden files or hidden in files using techniques such as steganography. Malicious code can be inserted into systems in a variety of ways, including by electronic mail, the world-wide web, and portable storage devices. Malicious code insertions occur through the exploitation of system vulnerabilities. A variety of technologies and methods exist to limit or eliminate the effects of malicious code.
 
-______________________________________________________________________
+Malicious code protection mechanisms include both signature- and nonsignature-based technologies. Nonsignature-based detection mechanisms include artificial intelligence techniques that use heuristics to detect, analyze, and describe the characteristics or behavior of malicious code and to provide controls against such code for which signatures do not yet exist or for which existing signatures may not be effective. Malicious code for which active signatures do not yet exist or may be ineffective includes polymorphic malicious code (i.e., code that changes signatures when it replicates). Nonsignature-based mechanisms also include reputation-based technologies. In addition to the above technologies, pervasive configuration management, comprehensive software integrity controls, and anti-exploitation software may be effective in preventing the execution of unauthorized code. Malicious code may be present in commercial off-the-shelf software as well as custom-built software and could include logic bombs, backdoors, and other types of attacks that could affect organizational mission and business functions.
 
-### Part a.
-
-Add control implementation description here for statement si-3_smt.a
+In situations where malicious code cannot be detected by detection methods or technologies, organizations rely on other types of controls, including secure coding practices, configuration management and control, trusted procurement processes, and monitoring practices to ensure that software does not perform functions other than the functions intended. Organizations may determine that, in response to the detection of malicious code, different actions may be warranted. For example, organizations can define actions in response to malicious code detection during periodic scans, the detection of malicious downloads, or the detection of maliciousness when attempting to open or execute files.
 
 ______________________________________________________________________
 
-### Part b.
+## What is the solution and how is it implemented?
 
-Add control implementation description here for statement si-3_smt.b
-
-______________________________________________________________________
-
-### Part c.
-
-Add control implementation description here for statement si-3_smt.c
+<!-- Please leave this section blank and enter implementation details in the parts below. -->
 
 ______________________________________________________________________
 
-### Part d.
+## Implementation a.
 
-Add control implementation description here for statement si-3_smt.d
+Add control implementation description here for item si-3_smt.a
+
+______________________________________________________________________
+
+## Implementation b.
+
+Add control implementation description here for item si-3_smt.b
+
+______________________________________________________________________
+
+## Implementation c.
+
+Add control implementation description here for item si-3_smt.c
+
+______________________________________________________________________
+
+## Implementation d.
+
+Add control implementation description here for item si-3_smt.d
 
 ______________________________________________________________________

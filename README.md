@@ -31,7 +31,7 @@ To add a demonstration in addition to opening a PR with the new demonstration in
 
 ## Simple sdk examples.
 
-[This folder](./treste_sdk_examples) contains a number of small examples for using the trestle OSCAL sdks.
+[This folder](./trestle_sdk_examples) contains a number of small examples for using the trestle OSCAL sdks.
 
 ## Australian government Information Security Manual (ISM)
 

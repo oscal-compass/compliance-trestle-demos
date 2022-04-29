@@ -1,31 +1,45 @@
-# pe-8 - Physical and Environmental Protection Visitor Access Records
+---
+sort-id: pe-08
+x-trestle-sections:
+  guidance: Guidance
+---
 
-## Control Description
+# pe-8 - \[Physical and Environmental Protection\] Visitor Access Records
 
-- \[a.\] Maintain visitor access records to the facility where the system resides for \[pe-8_prm_1 = organization-defined time period\];
-- \[b.\] Review visitor access records \[pe-8_prm_2 = organization-defined frequency\]; and
-- \[c.\] Report anomalies in visitor access records to \[pe-8_prm_3 = organization-defined personnel\].
+## Control Statement
 
-______________________________________________________________________
+- \[a.\] Maintain visitor access records to the facility where the system resides for organization-defined time period;
 
-## pe-8 What is the solution and how is it implemented?
+- \[b.\] Review visitor access records organization-defined frequency; and
 
-______________________________________________________________________
+- \[c.\] Report anomalies in visitor access records to organization-defined personnel.
 
-### Part a.
+## Control Guidance
 
-Add control implementation description here for statement pe-8_smt.a
-
-______________________________________________________________________
-
-### Part b.
-
-Add control implementation description here for statement pe-8_smt.b
+Visitor access records include the names and organizations of individuals visiting, visitor signatures, forms of identification, dates of access, entry and departure times, purpose of visits, and the names and organizations of individuals visited. Access record reviews determine if access authorizations are current and are still required to support organizational mission and business functions. Access records are not required for publicly accessible areas.
 
 ______________________________________________________________________
 
-### Part c.
+## What is the solution and how is it implemented?
 
-Add control implementation description here for statement pe-8_smt.c
+<!-- Please leave this section blank and enter implementation details in the parts below. -->
+
+______________________________________________________________________
+
+## Implementation a.
+
+Add control implementation description here for item pe-8_smt.a
+
+______________________________________________________________________
+
+## Implementation b.
+
+Add control implementation description here for item pe-8_smt.b
+
+______________________________________________________________________
+
+## Implementation c.
+
+Add control implementation description here for item pe-8_smt.c
 
 ______________________________________________________________________

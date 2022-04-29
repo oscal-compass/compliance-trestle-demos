@@ -19,8 +19,8 @@ import logging
 import pathlib
 import sys
 
-import trestle.core.parser as parser
 import trestle.oscal as oscal
+from trestle.core.remote.cache import FetcherFactory
 from trestle.core.repository import Repository
 
 logger = logging.getLogger(__name__)
@@ -40,7 +40,8 @@ def demo():
     logger.info('')
     logger.info('2. Parse an existing OSCAL catalog file into OSCAL model object')
     filepath = pathlib.Path('./NIST_SP-800-53_rev4_catalog.json')
-    model = parser.parse_file(filepath, None)
+    fetcher = FetcherFactory.get_fetcher(repo.root_dir, str(filepath))
+    model, _ = fetcher.get_oscal()
     logger.info('File successfully parsed')
 
     logger.info('')

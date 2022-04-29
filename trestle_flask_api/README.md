@@ -4,6 +4,8 @@ Simple example of using trestle to facilitate building a flask API. It exposes o
 
 This demo is a work in progress and will be expanded as appropriate.
 
+This demo requires trestle version 1.0.x
+
 ## Running the demo
 
 Use `make develop` to install the appropriate packages into your environment.

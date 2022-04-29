@@ -1,4 +1,4 @@
-# compliance-trestle-task-osco-result-to-oscal-ar-demo
+# compliance-trestle-task-osco-to-oscal-demo
 
 Simple example of using trestle to facilitate transforming OSCO results to OSCAL (partial) results.
 
@@ -27,15 +27,15 @@ Running the demo
 
 ```
 > cd
-> cd git/compliance-trestle-demos/trestle_task_osco_result_to_oscal_ar
+> cd git/compliance-trestle-demos/trestle_task_osco_to_oscal
 > trestle init
-> trestle task osco-result-to-oscal-ar -c ./demo-osco-result-to-oscal-ar.config
+> trestle task osco-result-to-oscal-ar -c ./demo-osco-to-oscal.config
 
 output: osco/runtime/ssg-ocp4-ds-cis-111.222.333.444-pod.oscal.json
 inventory: 1
 observations: 125
 results: {}
-Task: osco-result-to-oscal-ar executed successfully.
+Task: osco-to-oscal executed successfully.
 ```
 
 Viewing the result
@@ -45,28 +45,21 @@ Viewing the result
 {
   "results": [
     {
-      "uuid": "5a69ce39-9ec9-4ded-8556-2c94a5b4e554",
+      "uuid": "d86fdc41-885a-419b-a4f3-1cd3e98167bc",
       "title": "OpenShift Compliance Operator",
       "description": "OpenShift Compliance Operator Scan Results",
-      "start": "2021-09-09T19:18:09.000+00:00",
-      "end": "2021-09-09T19:18:09.000+00:00",
-      "local-definitions": {
-        "components": [
-          {
-            "uuid": "1690228d-860d-4fa0-a43b-c95f2f53410e",
-            "type": "Service",
-            "title": "Red Hat OpenShift Kubernetes Service Compliance Operator for ocp4",
-            "description": "Red Hat OpenShift Kubernetes Service Compliance Operator for ocp4",
-            "status": {
-              "state": "operational"
-            }
-          }
-        ],
-        "inventory-items": [
-          {
-            "uuid": "d4dff670-fe5e-4324-94aa-c1fffdef17c5",
-            "description": "inventory",
-            "props": [
-
+      "start": "2022-04-28T02:44:41+00:00",
+      "end": "2022-04-28T02:44:41+00:00",
+      "props": [
+        {
+          "name": "scanner_name",
+          "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal/ar/osco",
+          "value": "OpenSCAP"
+        },
+        {
+          "name": "scanner_version",
+          "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal/ar/osco",
+          "value": "1.3.3"
+        },
     ...
 ```

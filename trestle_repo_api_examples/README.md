@@ -8,7 +8,7 @@ A trestle workspace (repository) has been initialized in .`/trestle-workspace` d
 
 The `repo-examples.py` will first create a Repository object by passing the trestle workspace as input and then read the included NIST 800-53 catalog json file into a catalog object, then import it into repository and perform various operations on it using the repository API.
 
-To run the demo, execute the folloiwng command:
+To run the demo, execute the following command:
 
 ```
 python3 repo-examples.py

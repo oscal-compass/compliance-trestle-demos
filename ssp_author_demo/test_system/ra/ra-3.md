@@ -1,6 +1,12 @@
-# ra-3 - Risk Assessment Risk Assessment
+---
+sort-id: ra-03
+x-trestle-sections:
+  guidance: Guidance
+---
 
-## Control Description
+# ra-3 - \[Risk Assessment\] Risk Assessment
+
+## Control Statement
 
 - \[a.\] Conduct a risk assessment, including:
 
@@ -10,52 +16,62 @@
 
 - \[b.\] Integrate risk assessment results and risk management decisions from the organization and mission or business process perspectives with system-level risk assessments;
 
-- \[c.\] Document risk assessment results in \[ra-3_prm_1 = \['security and privacy plans', 'risk assessment report', ' \[ra-3_prm_2 = organization-defined document\] '\]\];
+- \[c.\] Document risk assessment results in security and privacy plans; risk assessment report;  {{ insert: param, ra-3_prm_2 }} ;
 
-- \[d.\] Review risk assessment results \[ra-3_prm_3 = organization-defined frequency\];
+- \[d.\] Review risk assessment results organization-defined frequency;
 
-- \[e.\] Disseminate risk assessment results to \[ra-3_prm_4 = organization-defined personnel or roles\]; and
+- \[e.\] Disseminate risk assessment results to organization-defined personnel or roles; and
 
-- \[f.\] Update the risk assessment \[ra-3_prm_5 = organization-defined frequency\] or when there are significant changes to the system, its environment of operation, or other conditions that may impact the security or privacy state of the system.
+- \[f.\] Update the risk assessment organization-defined frequency or when there are significant changes to the system, its environment of operation, or other conditions that may impact the security or privacy state of the system.
 
-______________________________________________________________________
+## Control Guidance
 
-## ra-3 What is the solution and how is it implemented?
+Risk assessments consider threats, vulnerabilities, likelihood, and impact to organizational operations and assets, individuals, other organizations, and the Nation. Risk assessments also consider risk from external parties, including contractors who operate systems on behalf of the organization, individuals who access organizational systems, service providers, and outsourcing entities.
 
-______________________________________________________________________
+Organizations can conduct risk assessments at all three levels in the risk management hierarchy (i.e., organization level, mission/business process level, or information system level) and at any stage in the system development life cycle. Risk assessments can also be conducted at various steps in the Risk Management Framework, including preparation, categorization, control selection, control implementation, control assessment, authorization, and control monitoring. Risk assessment is an ongoing activity carried out throughout the system development life cycle.
 
-### Part a.
-
-Add control implementation description here for statement ra-3_smt.a
+Risk assessments can also address information related to the system, including system design, the intended use of the system, testing results, and supply chain-related information or artifacts. Risk assessments can play an important role in control selection processes, particularly during the application of tailoring guidance and in the earliest phases of capability determination.
 
 ______________________________________________________________________
 
-### Part b.
+## What is the solution and how is it implemented?
 
-Add control implementation description here for statement ra-3_smt.b
-
-______________________________________________________________________
-
-### Part c.
-
-Add control implementation description here for statement ra-3_smt.c
+<!-- Please leave this section blank and enter implementation details in the parts below. -->
 
 ______________________________________________________________________
 
-### Part d.
+## Implementation a.
 
-Add control implementation description here for statement ra-3_smt.d
-
-______________________________________________________________________
-
-### Part e.
-
-Add control implementation description here for statement ra-3_smt.e
+Add control implementation description here for item ra-3_smt.a
 
 ______________________________________________________________________
 
-### Part f.
+## Implementation b.
 
-Add control implementation description here for statement ra-3_smt.f
+Add control implementation description here for item ra-3_smt.b
+
+______________________________________________________________________
+
+## Implementation c.
+
+Add control implementation description here for item ra-3_smt.c
+
+______________________________________________________________________
+
+## Implementation d.
+
+Add control implementation description here for item ra-3_smt.d
+
+______________________________________________________________________
+
+## Implementation e.
+
+Add control implementation description here for item ra-3_smt.e
+
+______________________________________________________________________
+
+## Implementation f.
+
+Add control implementation description here for item ra-3_smt.f
 
 ______________________________________________________________________

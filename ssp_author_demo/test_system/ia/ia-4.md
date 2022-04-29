@@ -1,40 +1,55 @@
-# ia-4 - Identification and Authentication Identifier Management
+---
+sort-id: ia-04
+x-trestle-sections:
+  guidance: Guidance
+---
 
-## Control Description
+# ia-4 - \[Identification and Authentication\] Identifier Management
 
-- Manage system identifiers by:
+## Control Statement
 
-  - \[a.\] Receiving authorization from \[ia-4_prm_1 = organization-defined personnel or roles\] to assign an individual, group, role, service, or device identifier;
-  - \[b.\] Selecting an identifier that identifies an individual, group, role, service, or device;
-  - \[c.\] Assigning the identifier to the intended individual, group, role, service, or device; and
-  - \[d.\] Preventing reuse of identifiers for \[ia-4_prm_2 = organization-defined time period\].
+Manage system identifiers by:
 
-______________________________________________________________________
+- \[a.\] Receiving authorization from organization-defined personnel or roles to assign an individual, group, role, service, or device identifier;
 
-## ia-4 What is the solution and how is it implemented?
+- \[b.\] Selecting an identifier that identifies an individual, group, role, service, or device;
 
-______________________________________________________________________
+- \[c.\] Assigning the identifier to the intended individual, group, role, service, or device; and
 
-### Part a.
+- \[d.\] Preventing reuse of identifiers for organization-defined time period.
 
-Add control implementation description here for statement ia-4_smt.a
+## Control Guidance
 
-______________________________________________________________________
-
-### Part b.
-
-Add control implementation description here for statement ia-4_smt.b
+Common device identifiers include Media Access Control (MAC) addresses, Internet Protocol (IP) addresses, or device-unique token identifiers. The management of individual identifiers is not applicable to shared system accounts. Typically, individual identifiers are the usernames of the system accounts assigned to those individuals. In such instances, the account management activities of [AC-2](#ac-2) use account names provided by [IA-4](#ia-4). Identifier management also addresses individual identifiers not necessarily associated with system accounts. Preventing the reuse of identifiers implies preventing the assignment of previously used individual, group, role, service, or device identifiers to different individuals, groups, roles, services, or devices.
 
 ______________________________________________________________________
 
-### Part c.
+## What is the solution and how is it implemented?
 
-Add control implementation description here for statement ia-4_smt.c
+<!-- Please leave this section blank and enter implementation details in the parts below. -->
 
 ______________________________________________________________________
 
-### Part d.
+## Implementation a.
 
-Add control implementation description here for statement ia-4_smt.d
+Add control implementation description here for item ia-4_smt.a
+
+______________________________________________________________________
+
+## Implementation b.
+
+Add control implementation description here for item ia-4_smt.b
+
+______________________________________________________________________
+
+## Implementation c.
+
+Add control implementation description here for item ia-4_smt.c
+
+______________________________________________________________________
+
+## Implementation d.
+
+Add control implementation description here for item ia-4_smt.d
 
 ______________________________________________________________________

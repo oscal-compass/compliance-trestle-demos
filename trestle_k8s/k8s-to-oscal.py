@@ -228,7 +228,7 @@ class YamlToOscal:
             start=_timestamp,
             reviewed_controls=self._reviewed_controls(),
         )
-        result.prop = self._get_result_properties(yaml_data)
+        result.props = self._get_result_properties(yaml_data)
         result.local_definitions = self._get_local_definitions(yaml_data)
         subjects = self._get_subjects(result.local_definitions)
         result.observations = self._get_result_observations(yaml_data, subjects)

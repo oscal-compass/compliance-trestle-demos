@@ -1,11 +1,23 @@
-# ia-8.4 - Identification and Authentication Use of Defined Profiles
+---
+sort-id: ia-08.04
+x-trestle-sections:
+  guidance: Guidance
+---
 
-## Control Description
+# ia-8.4 - \[Identification and Authentication\] Use of Defined Profiles
 
-- Conform to the following profiles for identity management \[ia-8.4_prm_1 = organization-defined identity management profiles\].
+## Control Statement
+
+Conform to the following profiles for identity management organization-defined identity management profiles.
+
+## Control Guidance
+
+Organizations define profiles for identity management based on open identity management standards. To ensure that open identity management standards are viable, robust, reliable, sustainable, and interoperable as documented, the Federal Government assesses and scopes the standards and technology implementations against applicable laws, executive orders, directives, policies, regulations, standards, and guidelines.
 
 ______________________________________________________________________
 
-## ia-8.4 What is the solution and how is it implemented?
+## What is the solution and how is it implemented?
+
+Add control implementation description here for control ia-8.4
 
 ______________________________________________________________________

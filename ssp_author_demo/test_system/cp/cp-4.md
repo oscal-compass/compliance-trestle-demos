@@ -1,7 +1,7 @@
 ---
 sort-id: cp-04
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # cp-4 - \[Contingency Planning\] Contingency Plan Testing
@@ -14,7 +14,7 @@ x-trestle-sections:
 
 - \[c.\] Initiate corrective actions, if needed.
 
-## Control Control Guidance
+## Control Guidance
 
 Methods for testing contingency plans to determine the effectiveness of the plans and identify potential weaknesses include checklists, walk-through and tabletop exercises, simulations (parallel or full interrupt), and comprehensive exercises. Organizations conduct testing based on the requirements in contingency plans and include a determination of the effects on organizational operations, assets, and individuals due to contingency operations. Organizations have flexibility and discretion in the breadth, depth, and timelines of corrective actions.
 

@@ -1,7 +1,7 @@
 ---
 sort-id: ia-02
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ia-2 - \[Identification and Authentication\] Identification and Authentication (organizational Users)
@@ -10,7 +10,7 @@ x-trestle-sections:
 
 Uniquely identify and authenticate organizational users and associate that unique identification with processes acting on behalf of those users.
 
-## Control Control Guidance
+## Control Guidance
 
 Organizations can satisfy the identification and authentication requirements by complying with the requirements in [HSPD 12](#f16e438e-7114-4144-bfe2-2dfcad8cb2d0). Organizational users include employees or individuals who organizations consider to have an equivalent status to employees (e.g., contractors and guest researchers). Unique identification and authentication of users applies to all accesses other than those that are explicitly identified in [AC-14](#ac-14) and that occur through the authorized use of group authenticators without individual authentication. Since processes execute on behalf of groups and roles, organizations may require unique identification of individuals in group accounts or for detailed accountability of individual activity.
 

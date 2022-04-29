@@ -1,7 +1,7 @@
 ---
 sort-id: ps-07
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ps-7 - \[Personnel Security\] External Personnel Security
@@ -18,7 +18,7 @@ x-trestle-sections:
 
 - \[e.\] Monitor provider compliance with personnel security requirements.
 
-## Control Control Guidance
+## Control Guidance
 
 External provider refers to organizations other than the organization operating or acquiring the system. External providers include service bureaus, contractors, and other organizations that provide system development, information technology services, testing or assessment services, outsourced applications, and network/security management. Organizations explicitly include personnel security requirements in acquisition-related documents. External providers may have personnel working at organizational facilities with credentials, badges, or system privileges issued by organizations. Notifications of external personnel changes ensure the appropriate termination of privileges and credentials. Organizations define the transfers and terminations deemed reportable by security-related characteristics that include functions, roles, and the nature of credentials or privileges associated with transferred or terminated individuals.
 

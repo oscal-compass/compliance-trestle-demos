@@ -1,7 +1,7 @@
 ---
 sort-id: ca-03
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ca-3 - \[Assessment, Authorization, and Monitoring\] Information Exchange
@@ -14,7 +14,7 @@ x-trestle-sections:
 
 - \[c.\] Review and update the agreements organization-defined frequency.
 
-## Control Control Guidance
+## Control Guidance
 
 System information exchange requirements apply to information exchanges between two or more systems. System information exchanges include connections via leased lines or virtual private networks, connections to internet service providers, database sharing or exchanges of database transaction information, connections and exchanges with cloud services, exchanges via web-based services, or exchanges of files via file transfer protocols, network protocols (e.g., IPv4, IPv6), email, or other organization-to-organization communications. Organizations consider the risk related to new or increased threats that may be introduced when systems exchange information with other systems that may have different security and privacy requirements and controls. This includes systems within the same organization and systems that are external to the organization. A joint authorization of the systems exchanging information, as described in [CA-6(1)](#ca-6.1) or [CA-6(2)](#ca-6.2), may help to communicate and reduce risk.
 

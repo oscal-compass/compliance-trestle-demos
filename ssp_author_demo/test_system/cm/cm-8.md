@@ -1,7 +1,7 @@
 ---
 sort-id: cm-08
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # cm-8 - \[Configuration Management\] System Component Inventory
@@ -18,7 +18,7 @@ x-trestle-sections:
 
 - \[b.\] Review and update the system component inventory organization-defined frequency.
 
-## Control Control Guidance
+## Control Guidance
 
 System components are discrete, identifiable information technology assets that include hardware, software, and firmware. Organizations may choose to implement centralized system component inventories that include components from all organizational systems. In such situations, organizations ensure that the inventories include system-specific information required for component accountability. The information necessary for effective accountability of system components includes the system name, software owners, software version numbers, hardware inventory specifications, software license information, and for networked components, the machine names and network addresses across all implemented protocols (e.g., IPv4, IPv6). Inventory specifications include date of receipt, cost, model, serial number, manufacturer, supplier information, component type, and physical location.
 

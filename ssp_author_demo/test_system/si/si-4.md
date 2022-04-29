@@ -1,7 +1,7 @@
 ---
 sort-id: si-04
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # si-4 - \[System and Information Integrity\] System Monitoring
@@ -28,7 +28,7 @@ x-trestle-sections:
 
 - \[g.\] Provide organization-defined system monitoring information to organization-defined personnel or roles as needed;  {{ insert: param, si-4_prm_6 }} .
 
-## Control Control Guidance
+## Control Guidance
 
 System monitoring includes external and internal monitoring. External monitoring includes the observation of events occurring at external interfaces to the system. Internal monitoring includes the observation of events occurring within the system. Organizations monitor systems by observing audit activities in real time or by observing other system aspects such as access patterns, characteristics of access, and other actions. The monitoring objectives guide and inform the determination of the events. System monitoring capabilities are achieved through a variety of tools and techniques, including intrusion detection and prevention systems, malicious code protection software, scanning tools, audit record monitoring software, and network monitoring software.
 

@@ -1,7 +1,7 @@
 ---
 sort-id: ca-05
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ca-5 - \[Assessment, Authorization, and Monitoring\] Plan of Action and Milestones
@@ -12,7 +12,7 @@ x-trestle-sections:
 
 - \[b.\] Update existing plan of action and milestones organization-defined frequency based on the findings from control assessments, independent audits or reviews, and continuous monitoring activities.
 
-## Control Control Guidance
+## Control Guidance
 
 Plans of action and milestones are useful for any type of organization to track planned remedial actions. Plans of action and milestones are required in authorization packages and subject to federal reporting requirements established by OMB.
 

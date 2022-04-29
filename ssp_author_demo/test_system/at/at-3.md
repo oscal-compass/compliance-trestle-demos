@@ -1,7 +1,7 @@
 ---
 sort-id: at-03
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # at-3 - \[Awareness and Training\] Role-based Training
@@ -17,7 +17,7 @@ x-trestle-sections:
 
 - \[c.\] Incorporate lessons learned from internal or external security incidents or breaches into role-based training.
 
-## Control Control Guidance
+## Control Guidance
 
 Organizations determine the content of training based on the assigned roles and responsibilities of individuals as well as the security and privacy requirements of organizations and the systems to which personnel have authorized access, including technical training specifically tailored for assigned duties. Roles that may require role-based training include senior leaders or management officials (e.g., head of agency/chief executive officer, chief information officer, senior accountable official for risk management, senior agency information security officer, senior agency official for privacy), system owners; authorizing officials; system security officers; privacy officers; acquisition and procurement officials; enterprise architects; systems engineers; software developers; systems security engineers; privacy engineers; system, network, and database administrators; auditors; personnel conducting configuration management activities; personnel performing verification and validation activities; personnel with access to system-level software; control assessors; personnel with contingency planning and incident response duties; personnel with privacy management responsibilities; and personnel with access to personally identifiable information.
 

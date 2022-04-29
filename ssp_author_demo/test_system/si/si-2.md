@@ -1,7 +1,7 @@
 ---
 sort-id: si-02
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # si-2 - \[System and Information Integrity\] Flaw Remediation
@@ -16,7 +16,7 @@ x-trestle-sections:
 
 - \[d.\] Incorporate flaw remediation into the organizational configuration management process.
 
-## Control Control Guidance
+## Control Guidance
 
 The need to remediate system flaws applies to all types of software and firmware. Organizations identify systems affected by software flaws, including potential vulnerabilities resulting from those flaws, and report this information to designated organizational personnel with information security and privacy responsibilities. Security-relevant updates include patches, service packs, and malicious code signatures. Organizations also address flaws discovered during assessments, continuous monitoring, incident response activities, and system error handling. By incorporating flaw remediation into configuration management processes, required remediation actions can be tracked and verified.
 

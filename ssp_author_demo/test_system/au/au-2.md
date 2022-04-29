@@ -1,7 +1,7 @@
 ---
 sort-id: au-02
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # au-2 - \[Audit and Accountability\] Event Logging
@@ -18,7 +18,7 @@ x-trestle-sections:
 
 - \[e.\] Review and update the event types selected for logging organization-defined frequency.
 
-## Control Control Guidance
+## Control Guidance
 
 An event is an observable occurrence in a system. The types of events that require logging are those events that are significant and relevant to the security of systems and the privacy of individuals. Event logging also supports specific monitoring and auditing needs. Event types include password changes, failed logons or failed accesses related to systems, security or privacy attribute changes, administrative privilege usage, PIV credential usage, data action changes, query parameters, or external credential usage. In determining the set of event types that require logging, organizations consider the monitoring and auditing appropriate for each of the controls to be implemented. For completeness, event logging includes all protocols that are operational and supported by the system.
 

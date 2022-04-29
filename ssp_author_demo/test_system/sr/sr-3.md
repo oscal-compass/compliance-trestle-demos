@@ -1,7 +1,7 @@
 ---
 sort-id: sr-03
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # sr-3 - \[Supply Chain Risk Management\] Supply Chain Controls and Processes
@@ -14,7 +14,7 @@ x-trestle-sections:
 
 - \[c.\] Document the selected and implemented supply chain processes and controls in security and privacy plans; supply chain risk management plan;  {{ insert: param, sr-3_prm_5 }} .
 
-## Control Control Guidance
+## Control Guidance
 
 Supply chain elements include organizations, entities, or tools employed for the research and development, design, manufacturing, acquisition, delivery, integration, operations and maintenance, and disposal of systems and system components. Supply chain processes include hardware, software, and firmware development processes; shipping and handling procedures; personnel security and physical security programs; configuration management tools, techniques, and measures to maintain provenance; or other programs, processes, or procedures associated with the development, acquisition, maintenance and disposal of systems and system components. Supply chain elements and processes may be provided by organizations, system integrators, or external providers. Weaknesses or deficiencies in supply chain elements or processes represent potential vulnerabilities that can be exploited by adversaries to cause harm to the organization and affect its ability to carry out its core missions or business functions. Supply chain personnel are individuals with roles and responsibilities in the supply chain.
 

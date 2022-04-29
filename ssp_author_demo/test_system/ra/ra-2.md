@@ -1,7 +1,7 @@
 ---
 sort-id: ra-02
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ra-2 - \[Risk Assessment\] Security Categorization
@@ -14,7 +14,7 @@ x-trestle-sections:
 
 - \[c.\] Verify that the authorizing official or authorizing official designated representative reviews and approves the security categorization decision.
 
-## Control Control Guidance
+## Control Guidance
 
 Security categories describe the potential adverse impacts or negative consequences to organizational operations, organizational assets, and individuals if organizational information and systems are compromised through a loss of confidentiality, integrity, or availability. Security categorization is also a type of asset loss characterization in systems security engineering processes that is carried out throughout the system development life cycle. Organizations can use privacy risk assessments or privacy impact assessments to better understand the potential adverse effects on individuals. [CNSSI 1253](#4e4fbc93-333d-45e6-a875-de36b878b6b9) provides additional guidance on categorization for national security systems.
 

@@ -1,7 +1,7 @@
 ---
 sort-id: ir-06
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ir-6 - \[Incident Response\] Incident Reporting
@@ -12,7 +12,7 @@ x-trestle-sections:
 
 - \[b.\] Report incident information to organization-defined authorities.
 
-## Control Control Guidance
+## Control Guidance
 
 The types of incidents reported, the content and timeliness of the reports, and the designated reporting authorities reflect applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. Incident information can inform risk assessments, control effectiveness assessments, security requirements for acquisitions, and selection criteria for technology products.
 

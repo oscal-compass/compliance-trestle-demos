@@ -1,7 +1,7 @@
 ---
 sort-id: pe-03
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # pe-3 - \[Physical and Environmental Protection\] Physical Access Control
@@ -25,7 +25,7 @@ x-trestle-sections:
 
 - \[g.\] Change combinations and keys organization-defined frequency and/or when keys are lost, combinations are compromised, or when individuals possessing the keys or combinations are transferred or terminated.
 
-## Control Control Guidance
+## Control Guidance
 
 Physical access control applies to employees and visitors. Individuals with permanent physical access authorizations are not considered visitors. Physical access controls for publicly accessible areas may include physical access control logs/records, guards, or physical access devices and barriers to prevent movement from publicly accessible areas to non-public areas. Organizations determine the types of guards needed, including professional security staff, system users, or administrative staff. Physical access devices include keys, locks, combinations, biometric readers, and card readers. Physical access control systems comply with applicable laws, executive orders, directives, policies, regulations, standards, and guidelines. Organizations have flexibility in the types of audit logs employed. Audit logs can be procedural, automated, or some combination thereof. Physical access points can include facility access points, interior access points to systems that require supplemental access controls, or both. Components of systems may be in areas designated as publicly accessible with organizations controlling access to the components.
 

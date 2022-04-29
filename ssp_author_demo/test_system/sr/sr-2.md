@@ -1,7 +1,7 @@
 ---
 sort-id: sr-02
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # sr-2 - \[Supply Chain Risk Management\] Supply Chain Risk Management Plan
@@ -14,7 +14,7 @@ x-trestle-sections:
 
 - \[c.\] Protect the supply chain risk management plan from unauthorized disclosure and modification.
 
-## Control Control Guidance
+## Control Guidance
 
 The dependence on products, systems, and services from external providers, as well as the nature of the relationships with those providers, present an increasing level of risk to an organization. Threat actions that may increase security or privacy risks include unauthorized production, the insertion or use of counterfeits, tampering, theft, insertion of malicious software and hardware, and poor manufacturing and development practices in the supply chain. Supply chain risks can be endemic or systemic within a system element or component, a system, an organization, a sector, or the Nation. Managing supply chain risk is a complex, multifaceted undertaking that requires a coordinated effort across an organization to build trust relationships and communicate with internal and external stakeholders. Supply chain risk management (SCRM) activities include identifying and assessing risks, determining appropriate risk response actions, developing SCRM plans to document response actions, and monitoring performance against plans. The SCRM plan (at the system-level) is implementation specific, providing policy implementation, requirements, constraints and implications. It can either be stand-alone, or incorporated into system security and privacy plans. The SCRM plan addresses managing, implementation, and monitoring of SCRM controls and the development/sustainment of systems across the SDLC to support mission and business functions.
 

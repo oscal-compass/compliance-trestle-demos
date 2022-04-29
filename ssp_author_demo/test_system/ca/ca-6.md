@@ -1,7 +1,7 @@
 ---
 sort-id: ca-06
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ca-6 - \[Assessment, Authorization, and Monitoring\] Authorization
@@ -21,7 +21,7 @@ x-trestle-sections:
 
 - \[e.\] Update the authorizations organization-defined frequency.
 
-## Control Control Guidance
+## Control Guidance
 
 Authorizations are official management decisions by senior officials to authorize operation of systems, authorize the use of common controls for inheritance by organizational systems, and explicitly accept the risk to organizational operations and assets, individuals, other organizations, and the Nation based on the implementation of agreed-upon controls. Authorizing officials provide budgetary oversight for organizational systems and common controls or assume responsibility for the mission and business functions supported by those systems or common controls. The authorization process is a federal responsibility, and therefore, authorizing officials must be federal employees. Authorizing officials are both responsible and accountable for security and privacy risks associated with the operation and use of organizational systems. Nonfederal organizations may have similar processes to authorize systems and senior officials that assume the authorization role and associated responsibilities.
 

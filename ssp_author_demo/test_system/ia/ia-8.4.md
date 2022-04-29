@@ -1,7 +1,7 @@
 ---
 sort-id: ia-08.04
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ia-8.4 - \[Identification and Authentication\] Use of Defined Profiles
@@ -10,7 +10,7 @@ x-trestle-sections:
 
 Conform to the following profiles for identity management organization-defined identity management profiles.
 
-## Control Control Guidance
+## Control Guidance
 
 Organizations define profiles for identity management based on open identity management standards. To ensure that open identity management standards are viable, robust, reliable, sustainable, and interoperable as documented, the Federal Government assesses and scopes the standards and technology implementations against applicable laws, executive orders, directives, policies, regulations, standards, and guidelines.
 

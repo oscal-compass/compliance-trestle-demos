@@ -1,7 +1,7 @@
 ---
 sort-id: au-09
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # au-9 - \[Audit and Accountability\] Protection of Audit Information
@@ -12,7 +12,7 @@ x-trestle-sections:
 
 - \[b.\] Alert organization-defined personnel or roles upon detection of unauthorized access, modification, or deletion of audit information.
 
-## Control Control Guidance
+## Control Guidance
 
 Audit information includes all information needed to successfully audit system activity, such as audit records, audit log settings, audit reports, and personally identifiable information. Audit logging tools are those programs and devices used to conduct system audit and logging activities. Protection of audit information focuses on technical protection and limits the ability to access and execute audit logging tools to authorized individuals. Physical protection of audit information is addressed by both media protection controls and physical and environmental protection controls.
 

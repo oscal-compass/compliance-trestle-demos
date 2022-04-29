@@ -1,7 +1,7 @@
 ---
 sort-id: sa-02
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # sa-2 - \[System and Services Acquisition\] Allocation of Resources
@@ -14,7 +14,7 @@ x-trestle-sections:
 
 - \[c.\] Establish a discrete line item for information security and privacy in organizational programming and budgeting documentation.
 
-## Control Control Guidance
+## Control Guidance
 
 Resource allocation for information security and privacy includes funding for system and services acquisition, sustainment, and supply chain-related risks throughout the system development life cycle.
 

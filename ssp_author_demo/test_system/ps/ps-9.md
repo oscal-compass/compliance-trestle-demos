@@ -1,7 +1,7 @@
 ---
 sort-id: ps-09
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ps-9 - \[Personnel Security\] Position Descriptions
@@ -10,7 +10,7 @@ x-trestle-sections:
 
 Incorporate security and privacy roles and responsibilities into organizational position descriptions.
 
-## Control Control Guidance
+## Control Guidance
 
 Specification of security and privacy roles in individual organizational position descriptions facilitates clarity in understanding the security or privacy responsibilities associated with the roles and the role-based security and privacy training requirements for the roles.
 

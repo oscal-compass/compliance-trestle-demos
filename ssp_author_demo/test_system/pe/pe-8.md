@@ -1,7 +1,7 @@
 ---
 sort-id: pe-08
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # pe-8 - \[Physical and Environmental Protection\] Visitor Access Records
@@ -14,7 +14,7 @@ x-trestle-sections:
 
 - \[c.\] Report anomalies in visitor access records to organization-defined personnel.
 
-## Control Control Guidance
+## Control Guidance
 
 Visitor access records include the names and organizations of individuals visiting, visitor signatures, forms of identification, dates of access, entry and departure times, purpose of visits, and the names and organizations of individuals visited. Access record reviews determine if access authorizations are current and are still required to support organizational mission and business functions. Access records are not required for publicly accessible areas.
 

@@ -1,7 +1,7 @@
 ---
 sort-id: sa-08
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # sa-8 - \[System and Services Acquisition\] Security and Privacy Engineering Principles
@@ -10,7 +10,7 @@ x-trestle-sections:
 
 Apply the following systems security and privacy engineering principles in the specification, design, development, implementation, and modification of the system and system components: organization-defined systems security and privacy engineering principles.
 
-## Control Control Guidance
+## Control Guidance
 
 Systems security and privacy engineering principles are closely related to and implemented throughout the system development life cycle (see [SA-3](#sa-3)). Organizations can apply systems security and privacy engineering principles to new systems under development or to systems undergoing upgrades. For existing systems, organizations apply systems security and privacy engineering principles to system upgrades and modifications to the extent feasible, given the current state of hardware, software, and firmware components within those systems.
 

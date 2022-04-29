@@ -1,7 +1,7 @@
 ---
 sort-id: ir-08
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ir-8 - \[Incident Response\] Incident Response Plan
@@ -29,7 +29,7 @@ x-trestle-sections:
 
 - \[e.\] Protect the incident response plan from unauthorized disclosure and modification.
 
-## Control Control Guidance
+## Control Guidance
 
 It is important that organizations develop and implement a coordinated approach to incident response. Organizational mission and business functions determine the structure of incident response capabilities. As part of the incident response capabilities, organizations consider the coordination and sharing of information with external organizations, including external service providers and other organizations involved in the supply chain. For incidents involving personally identifiable information (i.e., breaches), include a process to determine whether notice to oversight organizations or affected individuals is appropriate and provide that notice accordingly.
 

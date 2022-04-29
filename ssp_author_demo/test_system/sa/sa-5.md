@@ -1,7 +1,7 @@
 ---
 sort-id: sa-05
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # sa-5 - \[System and Services Acquisition\] System Documentation
@@ -24,7 +24,7 @@ x-trestle-sections:
 
 - \[d.\] Distribute documentation to organization-defined personnel or roles.
 
-## Control Control Guidance
+## Control Guidance
 
 System documentation helps personnel understand the implementation and operation of controls. Organizations consider establishing specific measures to determine the quality and completeness of the content provided. System documentation may be used to support the management of supply chain risk, incident response, and other functions. Personnel or roles that require documentation include system owners, system security officers, and system administrators. Attempts to obtain documentation include contacting manufacturers or suppliers and conducting web-based searches. The inability to obtain documentation may occur due to the age of the system or component or the lack of support from developers and contractors. When documentation cannot be obtained, organizations may need to recreate the documentation if it is essential to the implementation or operation of the controls. The protection provided for the documentation is commensurate with the security category or classification of the system. Documentation that addresses system vulnerabilities may require an increased level of protection. Secure operation of the system includes initially starting the system and resuming secure system operation after a lapse in system operation.
 

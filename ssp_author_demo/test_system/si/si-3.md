@@ -1,7 +1,7 @@
 ---
 sort-id: si-03
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # si-3 - \[System and Information Integrity\] Malicious Code Protection
@@ -19,7 +19,7 @@ x-trestle-sections:
 
 - \[d.\] Address the receipt of false positives during malicious code detection and eradication and the resulting potential impact on the availability of the system.
 
-## Control Control Guidance
+## Control Guidance
 
 System entry and exit points include firewalls, remote access servers, workstations, electronic mail servers, web servers, proxy servers, notebook computers, and mobile devices. Malicious code includes viruses, worms, Trojan horses, and spyware. Malicious code can also be encoded in various formats contained within compressed or hidden files or hidden in files using techniques such as steganography. Malicious code can be inserted into systems in a variety of ways, including by electronic mail, the world-wide web, and portable storage devices. Malicious code insertions occur through the exploitation of system vulnerabilities. A variety of technologies and methods exist to limit or eliminate the effects of malicious code.
 

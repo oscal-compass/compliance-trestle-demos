@@ -1,7 +1,7 @@
 ---
 sort-id: ps-08
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ps-8 - \[Personnel Security\] Personnel Sanctions
@@ -12,7 +12,7 @@ x-trestle-sections:
 
 - \[b.\] Notify organization-defined personnel or roles within organization-defined time period when a formal employee sanctions process is initiated, identifying the individual sanctioned and the reason for the sanction.
 
-## Control Control Guidance
+## Control Guidance
 
 Organizational sanctions reflect applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. Sanctions processes are described in access agreements and can be included as part of general personnel policies for organizations and/or specified in security and privacy policies. Organizations consult with the Office of the General Counsel regarding matters of employee sanctions.
 

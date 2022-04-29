@@ -34,12 +34,12 @@ Profiles from NIST do not insert parameter values by default so the profile need
 
 - First the response documents must be generated using:
   - cd to the project root directory
-  - `trestle author ssp-generate -p 800-53-low --output test_system -s 'guidance:Control Guidance'`
+  - `trestle author ssp-generate -p 800-53-low --output test_system -s 'guidance:Guidance'`
   - `--output` puts the markdown directory tree into `./test_system`
   - `-s` maps named parts names to sections in catalog to the markdown document
 - Content for the implemented requirements can now be entered into the markdown for controls
 
-### Creating the OSCAL catalog
+### Creating the OSCAL System Security Plan
 
 - Run
   - `trestle author ssp-assemble -m test_system -o acme-test-system`

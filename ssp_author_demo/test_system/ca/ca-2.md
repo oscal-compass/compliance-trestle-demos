@@ -1,7 +1,7 @@
 ---
 sort-id: ca-02
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ca-2 - \[Assessment, Authorization, and Monitoring\] Control Assessments
@@ -24,7 +24,7 @@ x-trestle-sections:
 
 - \[f.\] Provide the results of the control assessment to organization-defined individuals or roles.
 
-## Control Control Guidance
+## Control Guidance
 
 Organizations ensure that control assessors possess the required skills and technical expertise to develop effective assessment plans and to conduct assessments of system-specific, hybrid, common, and program management controls, as appropriate. The required skills include general knowledge of risk management concepts and approaches as well as comprehensive knowledge of and experience with the hardware, software, and firmware system components implemented.
 

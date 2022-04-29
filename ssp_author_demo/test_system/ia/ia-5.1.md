@@ -1,7 +1,7 @@
 ---
 sort-id: ia-05.01
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ia-5.1 - \[Identification and Authentication\] Password-based Authentication
@@ -26,7 +26,7 @@ For password-based authentication:
 
 - \[(h)\] Enforce the following composition and complexity rules: organization-defined composition and complexity rules.
 
-## Control Control Guidance
+## Control Guidance
 
 Password-based authentication applies to passwords regardless of whether they are used in single-factor or multi-factor authentication. Long passwords or passphrases are preferable over shorter passwords. Enforced composition rules provide marginal security benefits while decreasing usability. However, organizations may choose to establish certain rules for password generation (e.g., minimum character length for long passwords) under certain circumstances and can enforce this requirement in IA-5(1)(h). Account recovery can occur, for example, in situations when a password is forgotten. Cryptographically protected passwords include salted one-way cryptographic hashes of passwords. The list of commonly used, compromised, or expected passwords includes passwords obtained from previous breach corpuses, dictionary words, and repetitive or sequential characters. The list includes context-specific words, such as the name of the service, username, and derivatives thereof.
 

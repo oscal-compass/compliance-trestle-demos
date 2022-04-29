@@ -1,7 +1,7 @@
 ---
 sort-id: ca-07
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ca-7 - \[Assessment, Authorization, and Monitoring\] Continuous Monitoring
@@ -24,7 +24,7 @@ Develop a system-level continuous monitoring strategy and implement continuous m
 
 - \[g.\] Reporting the security and privacy status of the system to organization-defined personnel or roles organization-defined frequency.
 
-## Control Control Guidance
+## Control Guidance
 
 Continuous monitoring at the system level facilitates ongoing awareness of the system security and privacy posture to support organizational risk management decisions. The terms "continuous" and "ongoing" imply that organizations assess and monitor their controls and risks at a frequency sufficient to support risk-based decisions. Different types of controls may require different monitoring frequencies. The results of continuous monitoring generate risk response actions by organizations. When monitoring the effectiveness of multiple controls that have been grouped into capabilities, a root-cause analysis may be needed to determine the specific control that has failed. Continuous monitoring programs allow organizations to maintain the authorizations of systems and common controls in highly dynamic environments of operation with changing mission and business needs, threats, vulnerabilities, and technologies. Having access to security and privacy information on a continuing basis through reports and dashboards gives organizational officials the ability to make effective and timely risk management decisions, including ongoing authorization decisions.
 

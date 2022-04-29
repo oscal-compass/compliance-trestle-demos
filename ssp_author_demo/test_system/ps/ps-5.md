@@ -1,7 +1,7 @@
 ---
 sort-id: ps-05
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ps-5 - \[Personnel Security\] Personnel Transfer
@@ -16,7 +16,7 @@ x-trestle-sections:
 
 - \[d.\] Notify organization-defined personnel or roles within organization-defined time period.
 
-## Control Control Guidance
+## Control Guidance
 
 Personnel transfer applies when reassignments or transfers of individuals are permanent or of such extended duration as to make the actions warranted. Organizations define actions appropriate for the types of reassignments or transfers, whether permanent or extended. Actions that may be required for personnel transfers or reassignments to other positions within organizations include returning old and issuing new keys, identification cards, and building passes; closing system accounts and establishing new accounts; changing system access authorizations (i.e., privileges); and providing for access to official records to which individuals had access at previous work locations and in previous system accounts.
 

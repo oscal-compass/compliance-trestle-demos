@@ -1,7 +1,7 @@
 ---
 sort-id: ra-03
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ra-3 - \[Risk Assessment\] Risk Assessment
@@ -24,7 +24,7 @@ x-trestle-sections:
 
 - \[f.\] Update the risk assessment organization-defined frequency or when there are significant changes to the system, its environment of operation, or other conditions that may impact the security or privacy state of the system.
 
-## Control Control Guidance
+## Control Guidance
 
 Risk assessments consider threats, vulnerabilities, likelihood, and impact to organizational operations and assets, individuals, other organizations, and the Nation. Risk assessments also consider risk from external parties, including contractors who operate systems on behalf of the organization, individuals who access organizational systems, service providers, and outsourcing entities.
 

@@ -1,7 +1,7 @@
 ---
 sort-id: sa-04
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # sa-4 - \[System and Services Acquisition\] Acquisition Process
@@ -28,7 +28,7 @@ Include the following requirements, descriptions, and criteria, explicitly or by
 
 - \[i.\] Acceptance criteria.
 
-## Control Control Guidance
+## Control Guidance
 
 Security and privacy functional requirements are typically derived from the high-level security and privacy requirements described in [SA-2](#sa-2). The derived requirements include security and privacy capabilities, functions, and mechanisms. Strength requirements associated with such capabilities, functions, and mechanisms include degree of correctness, completeness, resistance to tampering or bypass, and resistance to direct attack. Assurance requirements include development processes, procedures, and methodologies as well as the evidence from development and assessment activities that provide grounds for confidence that the required functionality is implemented and possesses the required strength of mechanism. [SP 800-160-1](#e3cc0520-a366-4fc9-abc2-5272db7e3564) describes the process of requirements engineering as part of the system development life cycle.
 

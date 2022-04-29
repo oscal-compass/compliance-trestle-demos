@@ -1,7 +1,7 @@
 ---
 sort-id: pe-02
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # pe-2 - \[Physical and Environmental Protection\] Physical Access Authorizations
@@ -16,7 +16,7 @@ x-trestle-sections:
 
 - \[d.\] Remove individuals from the facility access list when access is no longer required.
 
-## Control Control Guidance
+## Control Guidance
 
 Physical access authorizations apply to employees and visitors. Individuals with permanent physical access authorization credentials are not considered visitors. Authorization credentials include ID badges, identification cards, and smart cards. Organizations determine the strength of authorization credentials needed consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. Physical access authorizations may not be necessary to access certain areas within facilities that are designated as publicly accessible.
 

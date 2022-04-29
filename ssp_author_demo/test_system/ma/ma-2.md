@@ -1,7 +1,7 @@
 ---
 sort-id: ma-02
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ma-2 - \[Maintenance\] Controlled Maintenance
@@ -20,7 +20,7 @@ x-trestle-sections:
 
 - \[f.\] Include the following information in organizational maintenance records: organization-defined information.
 
-## Control Control Guidance
+## Control Guidance
 
 Controlling system maintenance addresses the information security aspects of the system maintenance program and applies to all types of maintenance to system components conducted by local or nonlocal entities. Maintenance includes peripherals such as scanners, copiers, and printers. Information necessary for creating effective maintenance records includes the date and time of maintenance, a description of the maintenance performed, names of the individuals or group performing the maintenance, name of the escort, and system components or equipment that are removed or replaced. Organizations consider supply chain-related risks associated with replacement components for systems.
 

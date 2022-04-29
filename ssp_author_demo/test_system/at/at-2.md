@@ -1,7 +1,7 @@
 ---
 sort-id: at-02
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # at-2 - \[Awareness and Training\] Literacy Training and Awareness
@@ -19,7 +19,7 @@ x-trestle-sections:
 
 - \[d.\] Incorporate lessons learned from internal or external security incidents or breaches into literacy training and awareness techniques.
 
-## Control Control Guidance
+## Control Guidance
 
 Organizations provide basic and advanced levels of literacy training to system users, including measures to test the knowledge level of users. Organizations determine the content of literacy training and awareness based on specific organizational requirements, the systems to which personnel have authorized access, and work environments (e.g., telework). The content includes an understanding of the need for security and privacy as well as actions by users to maintain security and personal privacy and to respond to suspected incidents. The content addresses the need for operations security and the handling of personally identifiable information.
 

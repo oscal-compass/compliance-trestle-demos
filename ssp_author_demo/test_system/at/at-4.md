@@ -1,7 +1,7 @@
 ---
 sort-id: at-04
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # at-4 - \[Awareness and Training\] Training Records
@@ -12,7 +12,7 @@ x-trestle-sections:
 
 - \[b.\] Retain individual training records for organization-defined time period.
 
-## Control Control Guidance
+## Control Guidance
 
 Documentation for specialized training may be maintained by individual supervisors at the discretion of the organization. The National Archives and Records Administration provides guidance on records retention for federal agencies.
 

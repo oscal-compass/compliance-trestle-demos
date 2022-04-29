@@ -1,7 +1,7 @@
 ---
 sort-id: cp-02
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # cp-2 - \[Contingency Planning\] Contingency Plan
@@ -32,7 +32,7 @@ x-trestle-sections:
 
 - \[h.\] Protect the contingency plan from unauthorized disclosure and modification.
 
-## Control Control Guidance
+## Control Guidance
 
 Contingency planning for systems is part of an overall program for achieving continuity of operations for organizational mission and business functions. Contingency planning addresses system restoration and implementation of alternative mission or business processes when systems are compromised or breached. Contingency planning is considered throughout the system development life cycle and is a fundamental part of the system design. Systems can be designed for redundancy, to provide backup capabilities, and for resilience. Contingency plans reflect the degree of restoration required for organizational systems since not all systems need to fully recover to achieve the level of continuity of operations desired. System recovery objectives reflect applicable laws, executive orders, directives, regulations, policies, standards, guidelines, organizational risk tolerance, and system impact level.
 

@@ -1,7 +1,7 @@
 ---
 sort-id: ac-02
 x-trestle-sections:
-  guidance: Control Guidance
+  guidance: Guidance
 ---
 
 # ac-2 - \[Access Control\] Account Management
@@ -44,7 +44,7 @@ x-trestle-sections:
 
 - \[l.\] Align account management processes with personnel termination and transfer processes.
 
-## Control Control Guidance
+## Control Guidance
 
 Examples of system account types include individual, shared, group, system, guest, anonymous, emergency, developer, temporary, and service. Identification of authorized system users and the specification of access privileges reflect the requirements in other controls in the security plan. Users requiring administrative privileges on system accounts receive additional scrutiny by organizational personnel responsible for approving such accounts and privileged access, including system owner, mission or business owner, senior agency information security officer, or senior agency official for privacy. Types of accounts that organizations may wish to prohibit due to increased risk include shared, group, emergency, anonymous, temporary, and guest accounts.
 

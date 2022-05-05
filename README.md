@@ -1,77 +1,100 @@
-<!-- This should be the location of the title of the repository, normally the short name -->
-# repo-template
+# compliance-trestle-demos
 
-<!-- Build Status, is a great thing to have at the top of your repository, it shows that you take your CI/CD as first class citizens -->
-<!-- [![Build Status](https://travis-ci.org/jjasghar/ibm-cloud-cli.svg?branch=master)](https://travis-ci.org/jjasghar/ibm-cloud-cli) -->
+This project captures a number of demos, and sample set of content for [compliance-trestle](https://ibm.github.io/compliance-trestle). Each of the folders in the top level of this project is a self contained demonstration.
 
-<!-- Not always needed, but a scope helps the user understand in a short sentance like below, why this repo exists -->
-## Scope
+These demos are designed to work with trestle version 1.0.x
 
-The purpose of this project is to provide a template for new open source repositories.
+## Using / management of this repository
 
-<!-- A more detailed Usage or detailed explaination of the repository here -->
-## Usage
+This project follows the same methodologies as within the main trestle project in terms of [contributing and developer setup](https://ibm.github.io/compliance-trestle/contributing/mkdocs_contributing/). Please submit [issues here](https://github.com/IBM/compliance-trestle/issues/new/choose) relating to this project.
 
-This repository contains some example best practices for open source repositories:
+The top level project itself is a container for a set of demonstrations. At a high level all files are expected to pass:
 
-* [LICENSE](LICENSE)
-* [README.md](README.md)
-* [CONTRIBUTING.md](CONTRIBUTING.md)
-* [MAINTAINERS.md](MAINTAINERS.md)
-<!-- A Changelog allows you to track major changes and things that happen, https://github.com/github-changelog-generator/github-changelog-generator can help automate the process -->
-* [CHANGELOG.md](CHANGELOG.md)
+- mdformat setup
+- code-linting for python files (using `flake8`)
+- code-formatting for python files (using `yapf`)
 
-> These are optional
+All content provided here is 'as is' and is maintained on a best effort basis.
 
-<!-- The following are OPTIONAL, but strongly suggested to have in your repository. -->
-* [dco.yml](.github/dco.yml) - This enables DCO bot for you, please take a look https://github.com/probot/dco for more details.
-* [travis.yml](.travis.yml) - This is a example `.travis.yml`, please take a look https://docs.travis-ci.com/user/tutorial/ for more details.
+To add a demonstration in addition to opening a PR with the new demonstration in a single folder within the top level project:
 
-These may be copied into a new or existing project to make it easier for developers not on a project team to collaborate.
+- The demonstration folder must have it's own [README.md](ISM_catalog_profile/README.md)
+- The list of demonstrations in this folder must be updated.
+- A PR must be opened to update
 
-<!-- A notes section is useful for anything that isn't covered in the Usage or Scope. Like what we have below. -->
-## Notes
+### Demos with CICD
 
-**NOTE: While this boilerplate project uses the Apache 2.0 license, when
-establishing a new repo using this template, please use the
-license that was approved for your project.**
+- Some of the demonstrations may integrate with CICD systems (e.g. travis / github actions / circle CI)
+- To simplify this project, demonstrations highlighting CICD tooling will be included in this project as a git submodule from an independent repository.
 
-**NOTE: This repository has been configured with the [DCO bot](https://github.com/probot/dco).
-When you set up a new repository that uses the Apache license, you should
-use the DCO to manage contributions. The DCO bot will help enforce that.
-Please contact one of the IBM GH Org stewards.**
+# Demonstrations
 
-<!-- Questions can be useful but optional, this gives you a place to say, "This is how to contact this project maintainers or create PRs -->
-If you have any questions or issues you can create a new [issue here][issues].
+## Simple sdk examples.
 
-Pull requests are very welcome! Make sure your patches are well tested.
-Ideally create a topic branch for every separate change you make. For
-example:
+[This folder](./trestle_sdk_examples) contains a number of small examples for using the trestle OSCAL sdks.
 
-1. Fork the repo
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+## Australian government Information Security Manual (ISM)
 
-## License
+This demonstration uses trestle as an SDK for generating OSCAL files. This demonstration downloads all currently available versions of the Australian Government ISM from [ACSC](https://www.acsc.gov.au) and converts those documents to a set of OSCAL catalogs and profiles. [Read more about the demo here](ISM_catalog_profile).
 
-All source files must include a Copyright and License header. The SPDX license header is 
-preferred because it can be easily scanned.
+## arc42 architectural template enforcement using trestle author.
+
+[arc42](https://arc42.org/) have created a set open-source architecture documentation templates. This [demonstration](./arc42-author-demo)
+uses `trestle author` to enforce use of the (modified) arc42 templates.
+
+A CICD pipeline (using github actions) is used for this demonstration. The full repository, including working CICD is [here](https://github.com/IBM/compliance-trestle-arc42-demo). Read more about the demo [here](https://github.com/IBM/compliance-trestle-arc42-demo).
+
+## Trestle flask microservice demonstation.
+
+`trestle` uses a python library called [pydantic](https://pydantic-docs.helpmanual.io/) to form the underlying OSCAL object models. [flask-pydantic](https://github.com/bauerji/flask_pydantic) introduces a mechanism which integrates pydantic models into flask, providing automated user input validation in one line of code. This demo accepts a catalog as a POSTed object, throwing errors if the catalog does not meet the schema, and returns the catalog in the response.
+
+## Creating a CIS controls catalog from an excel spreadsheet.
+
+The Centre for Internet Security (CIS) produce a number of cross industry standards for IT security including their [platform specific benchmarks](https://www.cisecurity.org/cis-benchmarks/) and a suite of [controls](https://www.cisecurity.org/controls/). [This demo](./CIS_controls) converts a spreadsheet of those controls into a a catalog and three profiles.
+
+## Creating an SSP using trestle author.
+
+`trestle author ssp-generate` and `trestle author ssp-author` allow users to generate first a set of markdown documents to allow easy editing of control responses and second to reassemble that information up into an OSCAL ssp document. [This is a 'baseline' demonstration](./ssp_author_demo) with more sophisticated updates expected in the near term.
+
+## Trestle repository api (`trestle.core.repository`)
+
+`trestle.core.repository` is an API which abstracts users from the file system of a trestle repository. It provides a way for external developers to access a trestle repository without relying on presumptions (such as cwd being within the repository). Find the demo [here](./trestle_repo_api_examples).
+
+## Task Examples
+
+*Convert a spreadsheet into a `component-definition`*
+
+This [demonstration](./trestle_task_spread_sheet_to_component_definition) shows how to use the `trestle task xlsx-to-oscal-component-definition` functionality.
+
+*Convert an OpenShift Compliance Operator (OSCO) results into a partial `assessment-results`*
+
+This [demonstration](./trestle_task_osco_to_oscal) shows how to use the `trestle task osco-to-oscal` functionality.
+
+## Trestle as Foundation Examples
+
+*Convert Kubernetes results into partial OSCAL `assessment-results`*
+
+This [demonstration](./trestle_k8s) shows how to use `trestle` functionality to create a Kubernetes results (YAML) to OSCAL (JSON) transformer.
+
+## License & Authors
 
 If you would like to see the detailed LICENSE click [here](LICENSE).
+Consult [contributors](https://github.com/IBM/compliance-trestle/graphs/contributors) for a list of authors and [maintainers](MAINTAINERS.md) for the core team.
+
+Note that some content referenced within this repository is under separate licenses and is annotated as such.
 
 ```text
+# Copyight (c) 2021 IBM Corp. All rights reserved.
 #
-# Copyright 2020- IBM Inc. All rights reserved
-# SPDX-License-Identifier: Apache2.0
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 ```
-## Authors
-
-Optionally, you may include a list of authors, though this is redundant with the built-in
-GitHub list of contributors.
-
-- Author: New OpenSource IBMer <new-opensource-ibmer@ibm.com>
-
-[issues]: https://github.com/IBM/repo-template/issues/new

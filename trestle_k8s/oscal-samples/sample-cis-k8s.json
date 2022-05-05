@@ -1,0 +1,179 @@
+{
+  "results": [
+    {
+      "uuid": "92a3672f-7d10-4738-8cd1-5a080468c0f1",
+      "title": "sample-cis-bench-api-server",
+      "description": "kube-cis",
+      "start": "2022-02-23T12:32:46+00:00",
+      "prop": [
+        {
+          "name": "apiVersion",
+          "value": "wgpolicyk8s.io/v1alpha2"
+        },
+        {
+          "name": "kind",
+          "value": "PolicyReport"
+        },
+        {
+          "name": "metadata.annotations.name",
+          "value": "CIS Kubernetes Benchmarks"
+        },
+        {
+          "name": "metadata.annotations.category",
+          "value": "API Server"
+        },
+        {
+          "name": "metadata.annotations.version",
+          "value": "v1.5.1 - 02-14-2020"
+        },
+        {
+          "name": "summary.pass",
+          "value": "8"
+        },
+        {
+          "name": "summary.fail",
+          "value": "2"
+        },
+        {
+          "name": "summary.warn",
+          "value": "0"
+        },
+        {
+          "name": "summary.error",
+          "value": "0"
+        },
+        {
+          "name": "summary.skip",
+          "value": "0"
+        }
+      ],
+      "reviewed-controls": {
+        "control-selections": [
+          {}
+        ]
+      },
+      "observations": [
+        {
+          "uuid": "a6412809-b357-4bd6-a260-354605f66b5e",
+          "description": "kube-cis",
+          "props": [
+            {
+              "name": "results.policy",
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "api-server:anonymous-auth",
+              "class": "scc_rule"
+            },
+            {
+              "name": "results.message",
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "ensure that --anonymous-auth argument is set to false",
+              "class": "scc_description"
+            },
+            {
+              "name": "results.result",
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "warn",
+              "class": "scc_result"
+            },
+            {
+              "name": "results.scored",
+              "value": "True"
+            },
+            {
+              "name": "results.properties.category",
+              "value": "API Server"
+            },
+            {
+              "name": "results.properties.index",
+              "value": "1.2.2"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "collected": "2022-02-23T12:32:46+00:00"
+        },
+        {
+          "uuid": "cfbf4e94-3d89-4420-87cb-73cfd1f1c2d3",
+          "description": "kube-cis",
+          "props": [
+            {
+              "name": "results.policy",
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "api-server:basic-auth-file",
+              "class": "scc_rule"
+            },
+            {
+              "name": "results.message",
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "ensure that --basic-auth-file argument is not set",
+              "class": "scc_description"
+            },
+            {
+              "name": "results.result",
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "fail",
+              "class": "scc_result"
+            },
+            {
+              "name": "results.scored",
+              "value": "True"
+            },
+            {
+              "name": "results.properties.category",
+              "value": "API Server"
+            },
+            {
+              "name": "results.properties.index",
+              "value": "1.2.2"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "collected": "2022-02-23T12:32:46+00:00"
+        },
+        {
+          "uuid": "72bac34a-665d-42d5-845c-cfc59a2c25f3",
+          "description": "kube-cis",
+          "props": [
+            {
+              "name": "results.policy",
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "api-server:token-auth-file",
+              "class": "scc_rule"
+            },
+            {
+              "name": "results.message",
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "ensure that --token-auth-file argument is not set",
+              "class": "scc_description"
+            },
+            {
+              "name": "results.result",
+              "ns": "https://kubernetes.github.io/compliance-trestle/schemas/oscal/ar/scc",
+              "value": "warn",
+              "class": "scc_result"
+            },
+            {
+              "name": "results.scored",
+              "value": "False"
+            },
+            {
+              "name": "results.properties.category",
+              "value": "API Server"
+            },
+            {
+              "name": "results.properties.index",
+              "value": "1.2.2"
+            }
+          ],
+          "methods": [
+            "TEST-AUTOMATED"
+          ],
+          "collected": "2022-02-23T12:32:46+00:00"
+        }
+      ]
+    }
+  ]
+}

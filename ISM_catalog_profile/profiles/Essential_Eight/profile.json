@@ -1,0 +1,59 @@
+{
+    "profile": {
+        "uuid": "e5e39800-1e2b-4e85-b6df-ce0dc5040e2a",
+        "metadata": {
+            "title": "(Unofficial) Austrlian Government Essential Eight profile",
+            "last-modified": "2021-09-03T04:32:06.679+00:00",
+            "version": "June 2020",
+            "oscal-version": "1.0.0",
+            "links": [
+                {
+                    "uri": "https://www.cyber.gov.au/sites/default/files/2020-06/PROTECT%20-%20Essential%20Eight%20to%20ISM%20Mapping%20%28June%202020%29.pdf",
+                    "rel": "reference",
+                    "media-type": "application/pdf"
+                }
+            ],
+            "remarks": "Created based on [Essential 8 to ISM Mapping](https://www.cyber.gov.au/sites/default/files/2020-06/PROTECT%20-%20Essential%20Eight%20to%20ISM%20Mapping%20%28June%202020%29.pdf), download on 2021-09-03."
+        },
+        "imports": [
+            {
+                "href": "trestle://catalogs/ISM_June_2020/catalog.json",
+                "include-controls": [
+                    {
+                        "with-ids": [
+                            "control-0843",
+                            "control-1490",
+                            "control-1544",
+                            "control-1144",
+                            "control-1497",
+                            "control-0304",
+                            "control-1487",
+                            "control-1488",
+                            "control-1489",
+                            "control-1484",
+                            "control-1485",
+                            "control-1486",
+                            "control-1541",
+                            "control-1542",
+                            "control-1507",
+                            "control-1508",
+                            "control-1175",
+                            "control-1494",
+                            "control-1500",
+                            "control-1501",
+                            "control-1173",
+                            "control-1504",
+                            "control-1505",
+                            "control-1401",
+                            "control-1511",
+                            "control-1512",
+                            "control-1514",
+                            "control-1515",
+                            "control-1516"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -130,14 +130,14 @@ class ISMManager():
             - below this will be parts
         """
         # Get list of top level controls
-        tl_group_titles = set(map(lambda x: x['Guideline'], ism_controls))
+        tl_group_titles = {x['Guideline'] for x in ism_controls}
         groups = []
         for tl_group_name in tl_group_titles:
             group = catalog.Group(id=self._name_clean(tl_group_name), title=tl_group_name)
             # now add l2 groups
             control_subset = list(filter(lambda x: x['Guideline'] == tl_group_name, ism_controls))
             # get set l2 group names.
-            l2_group_titles = set(map(lambda x: x[l2_group_key], control_subset))
+            l2_group_titles = {x[l2_group_key] for x in control_subset}
             l2_groups = []
             for l2_group_name in l2_group_titles:
                 clean_id = self._name_clean(l2_group_name)

@@ -1,6 +1,16 @@
 {
     "isms": [
         {
+            "version_name": "June 2022",
+            "version_url": "https://www.cyber.gov.au/sites/default/files/2022-06/Information%20Security%20Manual%20%28June%202022%29.zip"
+
+        },
+        {
+            "version_name": "March 2022",
+            "version_url": "https://www.cyber.gov.au/sites/default/files/2022-03/Information%20Security%20Manual%20%28March%202022%29.zip"
+
+        },
+        {
             "version_name": "September 2021",
             "version_url": "https://www.cyber.gov.au/sites/default/files/2021-09/ISM%20September%202021%20%28September%202021%29.zip"
 

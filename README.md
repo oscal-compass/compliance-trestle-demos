@@ -74,7 +74,7 @@ This [demonstration](./trestle_task_osco_result_to_oscal_ar) shows how to use th
 
 *Convert Kubernetes results into partial OSCAL `assessment-results`*
 
-This [demonstration](./trestle_k8s) shows how to use `trestle` functionality to create a Kubernetes results (YAML) to OSCAL (JSON) transformer.
+Visit this external site [Kubernetes WG Policy: OSCAL transformer](https://github.com/kubernetes-sigs/wg-policy-prototypes/tree/master/policy-report/oscal-transformer) for a demo of using `trestle` functionality to create a Kubernetes results (YAML) to OSCAL (JSON) transformer.
 
 ## License & Authors
 

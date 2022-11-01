@@ -16,7 +16,7 @@
 
 install:
 	python -m pip install  --upgrade pip setuptools
-	python -m pip install compliance-trestle
+	python -m pip install git+https://github.com/IBM/compliance-trestle.git@develop
 	python -m pip install pre-commit
 
 pre-commit: 

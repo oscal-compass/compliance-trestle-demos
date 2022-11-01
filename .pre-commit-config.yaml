@@ -33,7 +33,7 @@ repos:
         exclude: "(oscal|third_party)"
         stages: [commit]
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.14 # Do not change version. 0.6.0 introduces breaking changes.
+    rev: 0.7.16
     hooks:
     - id: mdformat
       exclude: "CHANGELOG.md|docs/mkdocs_code_of_conduct.md|docs/api_reference|tests/data/md"

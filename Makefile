@@ -22,8 +22,11 @@ install:
 pre-commit: 
 	pre-commit install
 
-code-format:
+pre-commit-update:
+	pre-commit autoupdate
+
+code-format: pre-commit-update
 	pre-commit run yapf --all-files
 
-code-lint:
+code-lint: pre-commit-update
 	pre-commit run flake8 --all-files

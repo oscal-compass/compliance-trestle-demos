@@ -6,8 +6,8 @@ repos:
         args: [--in-place, --parallel, --recursive, --style, .yapf-config]
         exclude: "(oscal|third_party)"
         stages: [commit]
-  - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.9.2
+  - repo: https://github.com/PyCQA/flake8
+    rev: 5.0.4
     hooks:
       - id: flake8
         args: [--extend-ignore, "P1,C812,C813,C814,C815,C816,W503,W605"]

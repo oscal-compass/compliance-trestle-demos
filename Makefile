@@ -25,8 +25,8 @@ pre-commit:
 pre-commit-update:
 	pre-commit autoupdate
 
-code-format: pre-commit-update
+code-format:
 	pre-commit run yapf --all-files
 
-code-lint: pre-commit-update
+code-lint:
 	pre-commit run flake8 --all-files

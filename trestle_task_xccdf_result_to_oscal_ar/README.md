@@ -1,6 +1,6 @@
-# compliance-trestle-task-osco-to-oscal-demo
+# compliance-trestle-task-xccdf-to-oscal-demo
 
-Simple example of using trestle to facilitate transforming OSCO results to OSCAL (partial) results.
+Simple example of using trestle to facilitate transforming XCCDF results to OSCAL (partial) results.
 
 ## Prerequisites
 
@@ -27,21 +27,21 @@ Running the demo
 
 ```
 > cd
-> cd git/compliance-trestle-demos/trestle_task_osco_to_oscal
+> cd git/compliance-trestle-demos/trestle_task_xccdf_result_to_oscal_ar
 > trestle init
-> trestle task osco-result-to-oscal-ar -c ./demo-osco-to-oscal.config
+> trestle task xccdf-result-to-oscal-ar -c ./demo-xccdf-result-to-oscal-ar.config
 
-output: osco/runtime/ssg-ocp4-ds-cis-111.222.333.444-pod.oscal.json
+output: xccdf/runtime/ssg-ocp4-ds-cis-111.222.333.444-pod.oscal.json
 inventory: 1
 observations: 125
 results: {}
-Task: osco-to-oscal executed successfully.
+Task: xccdf-to-oscal executed successfully.
 ```
 
 Viewing the result
 
 ```
-> cat osco/runtime/ssg-ocp4-ds-cis-111.222.333.444-pod.oscal.json
+> cat xccdf/runtime/ssg-ocp4-ds-cis-111.222.333.444-pod.oscal.json
 {
   "results": [
     {
@@ -53,12 +53,12 @@ Viewing the result
       "props": [
         {
           "name": "scanner_name",
-          "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal/ar/osco",
+          "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal/ar/xccdf",
           "value": "OpenSCAP"
         },
         {
           "name": "scanner_version",
-          "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal/ar/osco",
+          "ns": "https://ibm.github.io/compliance-trestle/schemas/oscal/ar/xccdf",
           "value": "1.3.3"
         },
     ...

@@ -66,9 +66,9 @@ The Centre for Internet Security (CIS) produce a number of cross industry standa
 
 This [demonstration](./trestle_task_spread_sheet_to_component_definition) shows how to use the `trestle task xlsx-to-oscal-cd` functionality.
 
-*Convert an OpenShift Compliance Operator (OSCO) results into a partial `assessment-results`*
+*Convert an `xccdf` results into a partial `assessment-results`*
 
-This [demonstration](./trestle_task_osco_result_to_oscal_ar) shows how to use the `trestle task osco_result_to_oscal_ar` functionality.
+This [demonstration](./trestle_task_xccdf_result_to_oscal_ar) shows how to use the `trestle task xccdf_result_to_oscal_ar` functionality.
 
 ## Trestle as Foundation Examples
 

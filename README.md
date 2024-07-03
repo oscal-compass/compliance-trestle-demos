@@ -33,10 +33,6 @@ To add a demonstration in addition to opening a PR with the new demonstration in
 
 [This folder](./trestle_sdk_examples) contains a number of small examples for using the trestle OSCAL sdks.
 
-## Australian government Information Security Manual (ISM)
-
-This demonstration uses trestle as an SDK for generating OSCAL files. This demonstration downloads all currently available versions of the Australian Government ISM from [ACSC](https://www.acsc.gov.au) and converts those documents to a set of OSCAL catalogs and profiles. [Read more about the demo here](ISM_catalog_profile).
-
 ## arc42 architectural template enforcement using trestle author.
 
 [arc42](https://arc42.org/) have created a set open-source architecture documentation templates. This [demonstration](./arc42-author-demo)

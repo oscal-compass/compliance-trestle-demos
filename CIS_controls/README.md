@@ -1,14 +1,36 @@
 # CIS Controls conversion script
 
-The Centre for Internet Security (CIS) produce a number of cross industry standards for IT security including their [platform specific benchmarks](https://www.cisecurity.org/cis-benchmarks/) and a suite of [controls](https://www.cisecurity.org/controls/). This demo converts a spreadsheet of those controls into a a catalog and three profiles.
+The Centre for Internet Security (CIS) produce a number of cross industry standards for IT security including their [platform specific benchmarks](https://www.cisecurity.org/cis-benchmarks/) and a suite of [controls](https://www.cisecurity.org/controls/). This demo converts a spreadsheet of those controls into a catalog and three profiles.
 
-## Using this demonstration
+## Prerequisites
 
-Download the CIS controls excel spreadsheet to your chosen location. Run the script by
+Download the [CIS controls Excel spreadsheet](https://www.cisecurity.org/controls/) to your chosen location.
 
-1. Running `make install` to ensure all dependencies are installed.
+Download this repo
 
-1. Run the script by `python create_cis_catalogs_profiles.py -i path_to_cis_spreadsheet.xlsx -o output_directory_defaults_to_cwd`
+```
+> cd
+> mkdir git
+> cd git
+> git clone https://github.com/oscal-compass/compliance-trestle-demos.git
+```
+
+Install compliance trestle, ideally in a python virtual environment.
+
+```
+> cd
+> python -m venv venv.compliance-trestle-demos
+> source venv.compliance-trestle-demos/bin/activate
+> cd git/compliance-trestle-demos
+> make install
+```
+
+## Running the demo
+
+```
+> cd CIS_controls
+> python create_cis_catalogs_profiles.py -i path_to_cis_spreadsheet.xlsx -o output_directory_defaults_to_cwd
+```
 
 In the chosen output directory 1 catalog and 3 profiles will be created.
 

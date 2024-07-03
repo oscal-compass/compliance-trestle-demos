@@ -135,7 +135,7 @@ def run(input_xls: pathlib.Path, output_directory: pathlib.Path, cis_version: st
 def write_profile(profile: ospro.Profile, control_list: List[str], path: pathlib.Path):
     """Fill in control list and write the profile."""
     include_controls: List[str] = []
-    selector = ospro.SelectControlById()
+    selector = ospro.SelectControl()
     selector.with_ids = control_list
     include_controls.append(selector)
     profile.imports[0].include_controls = include_controls

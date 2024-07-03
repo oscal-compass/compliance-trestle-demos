@@ -2,7 +2,7 @@
 
 This project captures a number of demos, and sample set of content for [compliance-trestle](https://ibm.github.io/compliance-trestle). Each of the folders in the top level of this project is a self contained demonstration.
 
-These demos are designed to work with trestle version 1.0.x
+These demos are designed to work with trestle version 3.x.x
 
 ## Using / management of this repository
 

@@ -75,7 +75,7 @@ Visit external site [Kubernetes WG Policy: OSCAL transformer](https://github.com
 ## License & Authors
 
 If you would like to see the detailed LICENSE click [here](LICENSE).
-Consult [contributors](https://github.com/oscal-compass/compliance-trestle/graphs/contributors) for a list of authors and [maintainers](https://github.com/oscal-compass/community/blob/main/MAINTAINERS.md) for the core team.
+Consult [contributors](https://github.com/oscal-compass/compliance-trestle-demos/graphs/contributors) for a list of authors and [maintainers](MAINTAINERS.md) for the core team.
 
 ```text
 # Copyright (c) 2024 The OSCAL Compass Authors. All rights reserved.
@@ -97,6 +97,11 @@ Consult [contributors](https://github.com/oscal-compass/compliance-trestle/graph
 ______________________________________________________________________
 
 We are a Cloud Native Computing Foundation sandbox project.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://www.cncf.io/wp-content/uploads/2022/07/cncf-white-logo.svg">
+  <img src="https://www.cncf.io/wp-content/uploads/2022/07/cncf-color-bg.svg" width=300 />
+</picture>
 
 The Linux Foundation® (TLF) has registered trademarks and uses trademarks. For a list of TLF trademarks, see [Trademark Usage](https://www.linuxfoundation.org/legal/trademark-usage)".
 

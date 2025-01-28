@@ -16,6 +16,9 @@ Download this repo
 
 ### Swagger demo
 
+This swagger demo can take any CIS Benchmark (xlsx) and transform it into an OSCAL Component Definition (json).
+
+
 ```
 > make
 => create python virtual environment
@@ -57,7 +60,9 @@ In web browser, enter: http://localhost:5000/apidocs/
 
 ### Command line demo
 
-Install compliance-trestle, ideally in a python virtual environment.
+This command line demo takes a sample CIS Benchmark (xlsx) and uses the trestle command line to transform into an OSCAL Component Definition (json)
+
+- Install compliance-trestle, ideally in a python virtual environment.
 
 ```
 > python -m venv venv.compliance-trestle-demos
@@ -65,7 +70,7 @@ Install compliance-trestle, ideally in a python virtual environment.
 > pip install compliance-trestle
 ```
 
-Running the demo
+- Running the demo
 
 ```
 > mkdir trestle-workspace
@@ -77,7 +82,7 @@ output: component-definitions/CIS_IBM_Db2_11_Benchmark_v1.1.0/component-definiti
 Task: cis-xlsx-to-oscal-cd executed successfully.
 ```
 
-Viewing the result
+- Viewing the result
 
 ```
 > cat component-definitions/CIS_IBM_Db2_11_Benchmark_v1.1.0/component-definition.json

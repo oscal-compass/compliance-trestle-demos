@@ -50,7 +50,10 @@ In web browser, enter: http://localhost:5000/apidocs/
 - click on "Download file"
 ```
 
-<p style="color:red;">Note: The sample CIS Benchmark is just a small snippet of the actual CIS Benchmark</p>
+<img src="images/note.png" height=30 />
+
+<br>
+<br>
 
 <img src="images/swagger.png" height=600 />
 

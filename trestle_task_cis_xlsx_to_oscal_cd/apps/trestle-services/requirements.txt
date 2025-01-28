@@ -1,0 +1,6 @@
+flask>=2.0  
+Werkzeug>=2.0
+Flask-RESTful
+flasgger
+gunicorn
+compliance-trestle

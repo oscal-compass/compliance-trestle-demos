@@ -11,7 +11,51 @@ Download this repo
 > mkdir git
 > cd git
 > git clone https://github.com/IBM/compliance-trestle-demos
+> cd compliance-trestle-demos
 ```
+
+### Swagger demo
+
+```
+> make
+=> create python virtual environment
+=> install prereqs
+echo "=> launch flask"
+source /tmp/venv.trestle/bin/activate
+python apps/trestle-services/app.py
+
+=> launch flask
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 142-906-892
+
+```
+
+```
+In web browser, enter: http://localhost:5000/apidocs/
+
+- click on POST
+- click on "Try it out"
+- click on "Choose File"
+- navigate to: git/compliance-trestle-demos/CIS_IBM_Db2_11_Benchmark_v1.1.0.xlsx
+- click on Execute (blue bar)
+- click on "Download file"
+```
+
+<img src="images/swagger.png" height=600 />
+
+<br>
+<br>
+
+<img src="images/component-definition.png" height=600 />
+
+
+### Command line demo
 
 Install compliance-trestle, ideally in a python virtual environment.
 

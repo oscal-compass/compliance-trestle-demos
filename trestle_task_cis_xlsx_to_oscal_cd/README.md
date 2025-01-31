@@ -45,7 +45,7 @@ In web browser, enter: http://localhost:5000/apidocs/
 - click on POST
 - click on "Try it out"
 - click on "Choose File"
-- navigate to: git/compliance-trestle-demos/CIS_Red_Hat_OpenShift_Container_Platform_Benchmark_v1.7.0.xlsx
+- navigate to: git/compliance-trestle-demos/CIS_Sample_Red_Hat_OpenShift_Container_Platform_Benchmark_v1.7.0.xlsx
 - click on Execute (blue bar)
 - click on "Download file"
 ```
@@ -70,6 +70,7 @@ This command line demo takes a sample CIS Benchmark (xlsx) and uses the trestle 
 - Install compliance-trestle, ideally in a python virtual environment.
 
 ```
+> cd trestle_task_cis_xlsx_to_oscal_cd
 > python -m venv venv.compliance-trestle-demos
 > source venv.compliance-trestle-demos/bin/activate
 > pip install compliance-trestle
@@ -82,7 +83,7 @@ This command line demo takes a sample CIS Benchmark (xlsx) and uses the trestle 
 > cd trestle-workspace
 > trestle init
 > trestle task cis-xlsx-to-oscal-cd -c  ../cis-xlsx-to-oscal-cd.snippet.config
-input: /tmp/tmp39ynmxp5/CIS_Red_Hat_OpenShift_Container_Platform_Benchmark_v1.7.0.csv
+input: /tmp/tmp39ynmxp5/CIS_Sample_Red_Hat_OpenShift_Container_Platform_Benchmark_v1.7.0.csv
 output: component-definitions/CIS_Red_Hat_OpenShift_Container_Platform_Benchmark_v1.7.0/component-definition.json
 Task: cis-xlsx-to-oscal-cd executed successfully.
 ```

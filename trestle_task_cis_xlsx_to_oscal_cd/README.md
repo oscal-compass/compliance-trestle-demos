@@ -10,7 +10,7 @@ Download this repo
 > cd
 > mkdir git
 > cd git
-> git clone https://github.com/IBM/compliance-trestle-demos
+> git clone https://github.com/oscal-compass/compliance-trestle-demos
 > cd compliance-trestle-demos
 ```
 
@@ -20,6 +20,7 @@ This swagger demo can take any CIS Benchmark (xlsx) and transform it into an OSC
 
 
 ```
+> cd trestle_task_cis_xlsx_to_oscal_cd
 > make
 => create python virtual environment
 => install prereqs

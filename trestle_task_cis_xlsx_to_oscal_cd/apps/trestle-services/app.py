@@ -279,8 +279,8 @@ def task_cis_xlsx_to_oscal_cd():
                 mimetype='application/json'
             )
             return message, 200
-    except Exception:
-        return jsonify({'message': 'Server error'}), 500
+    except Exception as e:
+        return jsonify({'message': f'Server error: {e}'}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)

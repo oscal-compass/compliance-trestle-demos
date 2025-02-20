@@ -231,18 +231,17 @@ def task_cis_xlsx_to_oscal_cd():
         description: Server error
     """
     try:
-        # check if the file part is present in the request
-        if 'file' not in request.files:
-            return jsonify({'message': 'No file part'}), 400
-        file = request.files['file']
-        # check if no file is selected
-        if file.filename == '':
-            return jsonify({'message': 'No selected file'}), 400
-        # check if the file is allowed
-        if not allowed_file(file.filename, ALLOWED_EXTENSIONS_CISB):
-            return jsonify({'message': 'Invalid file format'}), 400
-        # process file
         with tempfile.TemporaryDirectory() as tmpdirname:
+            # check if the file part is present in the request
+            if 'file' not in request.files:
+                return jsonify({'message': 'No file part'}), 400
+            file = request.files['file']
+            # check if no file is selected
+            if file.filename == '':
+                return jsonify({'message': 'No selected file'}), 400
+            # check if the file is allowed
+            if not allowed_file(file.filename, ALLOWED_EXTENSIONS_CISB):
+                return jsonify({'message': 'Invalid file format'}), 400
             # save src file
             src_filename = secure_filename(file.filename)
             file.save(os.path.join(tmpdirname, src_filename))
@@ -279,8 +278,104 @@ def task_cis_xlsx_to_oscal_cd():
                 mimetype='application/json'
             )
             return message, 200
-    except Exception:
-        return jsonify({'message': 'Server error'}), 500
+    except Exception as e:
+        return jsonify({'message': f'Server error: {e}'}), 500
+
+@app.route('/cis-xlsx-to-oscal-cd-batch', methods=['POST'])
+def task_cis_xlsx_to_oscal_cd_batch():
+    """
+    Transform CIS Benchmarks (.xlsx) in input folder to corresponding OSCAL Component Definitions (.json) in oouput folder
+    ---
+    tags: 
+      - CIS Benchmark to OSCAL Component Definition
+    parameters:
+      - name: input-folder
+        in: formData
+        type: string
+        required: true
+        description: Path to the input folder comprising CIS Benchmarks (in xlsx format)
+      - name: output-folder
+        in: formData
+        type: string
+        required: true
+        description: Path to the output folder for receiving OSCAL Component Definitions (in json format)
+      - name: component-type
+        in: query
+        type: string
+        required: false
+        description: The component-type for the OSCAL Component Definition (optional); default is "software".
+      - name: namespace
+        in: query
+        type: string
+        required: false
+        description: The namespace for the OSCAL Component Definition (optional); default is "https://oscal-compass/compliance-trestle/schemas/oscal/cd".
+      - name: profile-source
+        in: query
+        type: string
+        required: false
+        description: The profile-source for the OSCAL Component Definition (optional); default is "data/catalogs/CIS_controls_v8/catalog.json".
+      - name: profile-version
+        in: query
+        type: string
+        required: false
+        description: The profile-version for the OSCAL Component Definition (optional); default is derived from profile-source, e.g. "v8".
+      - name: profile-description
+        in: query
+        type: string
+        required: false
+        description: The profile-description for the OSCAL Component Definition (optional); default is derived from profile-source, e.g. "CIS controls v8".
+    responses:
+      200:
+        description: File(s) uploaded and transformed successfully
+      400:
+        description: File(s) missing or invalid, or a default value could not be properly inferred for an optional field that was left blank
+      500:
+        description: Server error
+    """
+    try:
+        with tempfile.TemporaryDirectory() as tmpdirname:
+            # input and output folders
+            input_folder = request.form['input-folder']
+            output_folder = request.form['output-folder']
+            if not os.path.isdir(input_folder):
+                return jsonify({'message': 'Invalid input folder path'}), 400
+            if not os.path.isdir(output_folder):
+                return jsonify({'message': 'Invalid output folder path'}), 400
+            # process files
+            files_processed = []
+            for filename in os.listdir(input_folder):
+                sub_folder = filename.replace('.xlsx', '')
+                dest_folder = os.path.join(output_folder, sub_folder)
+                src_file = os.path.join(input_folder, filename)
+                if not allowed_file(filename, ALLOWED_EXTENSIONS_CISB):
+                    return jsonify({'message': f'Invalid input file extension: {filename}'}), 400
+                # create cfg file
+                cfg_filename = 'task.config'
+                cfg_filepath = os.path.join(tmpdirname, cfg_filename)
+                status = create_trestle_task_config_file(dest_folder, cfg_filepath, src_file)
+                if status:
+                    text = f'Unable to create {cfg_filepath}: {status}'
+                    return jsonify({'message': f'{text}'}), 400
+                # change working directory
+                cwd = os.getcwd()
+                os.chdir(tmpdirname)
+                # trestle init
+                command = 'trestle init'
+                result = subprocess.run(command, shell=True, capture_output=True, text=True)
+                text = f'{command} rc={result.returncode}, stdout={result.stdout} stderr={result.stderr}'
+                if result.returncode != 0:
+                    return jsonify({'message': f'{text}'}), 400
+                # trestle task
+                command = f'trestle task cis-xlsx-to-oscal-cd -c {cfg_filepath}'
+                result = subprocess.run(command, shell=True, capture_output=True, text=True)
+                text = f'{command} rc={result.returncode}, stdout={result.stdout} stderr={result.stderr}'
+                if result.returncode != 0:
+                    return jsonify({'message': f'{text}'}), 400
+                files_processed.append(filename)
+            count = len(files_processed)
+            return jsonify({'message': f'{count} files processed'}), 200
+    except Exception as e:
+        return jsonify({'message': f'Server error: {e}'}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)

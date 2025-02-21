@@ -336,11 +336,10 @@ def task_cis_xlsx_to_oscal_cd_batch():
         with tempfile.TemporaryDirectory() as tmpdirname:
             # input and output folders
             input_folder = request.form['input-folder']
-            output_folder = request.form['output-folder']
             if not os.path.isdir(input_folder):
                 return jsonify({'message': 'Invalid input folder path'}), 400
-            if not os.path.isdir(output_folder):
-                return jsonify({'message': 'Invalid output folder path'}), 400
+            output_folder = request.form['output-folder']
+            os.makedirs(output_folder)
             # process files
             files_processed = []
             for filename in os.listdir(input_folder):

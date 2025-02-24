@@ -339,10 +339,12 @@ def task_cis_xlsx_to_oscal_cd_batch():
             if not os.path.isdir(input_folder):
                 return jsonify({'message': 'Invalid input folder path'}), 400
             output_folder = request.form['output-folder']
-            os.makedirs(output_folder)
+            os.makedirs(output_folder, exist_ok=True)
             # process files
             files_processed = []
             for filename in os.listdir(input_folder):
+                if not filename.endswith('.xlsx'):
+                    continue
                 sub_folder = filename.replace('.xlsx', '')
                 dest_folder = os.path.join(output_folder, sub_folder)
                 src_file = os.path.join(input_folder, filename)

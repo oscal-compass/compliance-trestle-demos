@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import os
+import pathlib
 import subprocess
-import tempfile
 from typing import List
 
 from flask import Flask, request, jsonify, send_file
@@ -164,6 +164,12 @@ def get_output_overwrite() -> str:
     rval = 'true'
     return rval
 
+def get_working_dir() -> pathlib.Path:
+    """Get working dir."""
+    rval = pathlib.Path('/tmp') / 'demo-trestle-task-cis-xlsx-to-oscal-cd'
+    os.makedirs(rval, exist_ok=True)
+    return rval
+
 @app.route('/cis-xlsx-to-oscal-cd', methods=['POST'])
 def task_cis_xlsx_to_oscal_cd():
     """
@@ -231,7 +237,8 @@ def task_cis_xlsx_to_oscal_cd():
         description: Server error
     """
     try:
-        with tempfile.TemporaryDirectory() as tmpdirname:
+        workdir = get_working_dir()
+        with workdir as tmpdirname:
             # check if the file part is present in the request
             if 'file' not in request.files:
                 return jsonify({'message': 'No file part'}), 400
@@ -333,16 +340,19 @@ def task_cis_xlsx_to_oscal_cd_batch():
         description: Server error
     """
     try:
-        with tempfile.TemporaryDirectory() as tmpdirname:
+        workdir = get_working_dir()
+        with workdir as tmpdirname:
             # input and output folders
             input_folder = request.form['input-folder']
             if not os.path.isdir(input_folder):
                 return jsonify({'message': 'Invalid input folder path'}), 400
             output_folder = request.form['output-folder']
-            os.makedirs(output_folder)
+            os.makedirs(output_folder, exist_ok=True)
             # process files
             files_processed = []
             for filename in os.listdir(input_folder):
+                if not filename.endswith('.xlsx'):
+                    continue
                 sub_folder = filename.replace('.xlsx', '')
                 dest_folder = os.path.join(output_folder, sub_folder)
                 src_file = os.path.join(input_folder, filename)

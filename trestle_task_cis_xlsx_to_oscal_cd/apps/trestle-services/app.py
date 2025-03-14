@@ -11,13 +11,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+"""Swagger for CIS Benchmarks to OSCAL Component Definitions."""
+
 import os
 import pathlib
 import subprocess
 from typing import List
 
-from flask import Flask, request, jsonify, send_file
 from flasgger import Swagger
+
+from flask import Flask, jsonify, request, send_file
+
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
@@ -35,11 +39,13 @@ swagger = Swagger(app)
 # define allowed extensions
 ALLOWED_EXTENSIONS_CISB = {'xlsx'}
 
+
 def allowed_file(filename: str, allowed_extenstions: List[str]) -> bool:
-    """Allowed file."""
+    """Check for allowed file."""
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in allowed_extenstions
 
-def create_trestle_task_config_file(tmpdirname: str, cfg_filepath: str, src_filename: str) -> str:
+
+def create_trestle_task_config_file(work_dir: str, cfg_filepath: str, src_filename: str) -> str:
     """Create trestle task config file."""
     rval = None
     with open(cfg_filepath, 'w') as task_config_file:
@@ -54,20 +60,23 @@ def create_trestle_task_config_file(tmpdirname: str, cfg_filepath: str, src_file
         tcf_kvp(task_config_file, 'profile-source', get_profile_source())
         tcf_kvp(task_config_file, 'profile-version', get_profile_version())
         tcf_kvp(task_config_file, 'profile-description', get_profile_description())
-        tcf_kvp(task_config_file, 'output-dir', get_output_dir(tmpdirname))
+        tcf_kvp(task_config_file, 'output-dir', get_output_dir(work_dir))
         tcf_kvp(task_config_file, 'output-overwrite', get_output_overwrite())
     return rval
+
 
 def tcf_line(task_config_file, line: str) -> None:
     """Write line to task config file."""
     if line:
         task_config_file.write(f'{line}\n')
-        
+
+
 def tcf_kvp(task_config_file, key: str, value: str) -> None:
     """Write key:value to task config file."""
     if value:
         task_config_file.write(f'{key} = {value}\n')
-                
+
+
 def get_benchmark_title(src_filename: str) -> str:
     """Get benchmark title."""
     try:
@@ -81,6 +90,7 @@ def get_benchmark_title(src_filename: str) -> str:
     rval = request.args.get('benchmark-title', default)
     return rval
 
+
 def get_benchmark_version(src_filename: str) -> str:
     """Get benchmark version."""
     try:
@@ -91,6 +101,7 @@ def get_benchmark_version(src_filename: str) -> str:
         default = None
     rval = request.args.get('benchmark-version', default)
     return rval
+
 
 def get_component_name(src_filename: str) -> str:
     """Get component name."""
@@ -103,7 +114,8 @@ def get_component_name(src_filename: str) -> str:
         default = None
     rval = request.args.get('component-name', default)
     return rval
-                
+
+
 def get_component_description(src_filename: str) -> str:
     """Get component description."""
     try:
@@ -116,11 +128,13 @@ def get_component_description(src_filename: str) -> str:
     rval = request.args.get('component-description', default)
     return rval
 
+
 def get_component_type() -> str:
     """Get component-type."""
     default = 'software'
     rval = request.args.get('component-type', default)
     return rval
+
 
 def get_namespace() -> str:
     """Get namespace."""
@@ -128,11 +142,13 @@ def get_namespace() -> str:
     rval = request.args.get('namespace', default)
     return rval
 
+
 def get_profile_source() -> str:
     """Get profile-source."""
     default = 'data/catalogs/CIS_controls_v8/catalog.json'
     rval = request.args.get('profile-source', default)
     return rval
+
 
 def get_profile_version() -> str:
     """Get profile-version."""
@@ -144,6 +160,7 @@ def get_profile_version() -> str:
     rval = request.args.get('profile-version', default)
     return rval
 
+
 def get_profile_description() -> str:
     """Get profile-description."""
     try:
@@ -154,28 +171,33 @@ def get_profile_description() -> str:
     rval = request.args.get('profile-description', default)
     return rval
 
-def get_output_dir(tmpdirname: str) -> str:
+
+def get_output_dir(work_dir: str) -> str:
     """Get output-dir."""
-    rval = tmpdirname
+    rval = work_dir
     return rval
+
 
 def get_output_overwrite() -> str:
     """Get output-overwrite."""
     rval = 'true'
     return rval
 
-def get_working_dir() -> pathlib.Path:
-    """Get working dir."""
+
+def get_work_path() -> pathlib.Path:
+    """Get work path."""
     rval = pathlib.Path('/tmp') / 'demo-trestle-task-cis-xlsx-to-oscal-cd'
     os.makedirs(rval, exist_ok=True)
     return rval
 
+
 @app.route('/cis-xlsx-to-oscal-cd', methods=['POST'])
 def task_cis_xlsx_to_oscal_cd():
     """
-    Upload CIS Benchmark (.xlsx); return corresponding OSCAL Component Definition (.json)
+    Upload CIS Benchmark (.xlsx); return corresponding OSCAL Component Definition (.json).
+
     ---
-    tags: 
+    tags:
       - CIS Benchmark to OSCAL Component Definition
     parameters:
       - name: file
@@ -237,63 +259,64 @@ def task_cis_xlsx_to_oscal_cd():
         description: Server error
     """
     try:
-        workdir = get_working_dir()
-        with workdir as tmpdirname:
-            # check if the file part is present in the request
-            if 'file' not in request.files:
-                return jsonify({'message': 'No file part'}), 400
-            file = request.files['file']
-            # check if no file is selected
-            if file.filename == '':
-                return jsonify({'message': 'No selected file'}), 400
-            # check if the file is allowed
-            if not allowed_file(file.filename, ALLOWED_EXTENSIONS_CISB):
-                return jsonify({'message': 'Invalid file format'}), 400
-            # save src file
-            src_filename = secure_filename(file.filename)
-            file.save(os.path.join(tmpdirname, src_filename))
-            # create cfg file
-            cfg_filename = 'task.config'
-            cfg_filepath = os.path.join(tmpdirname, cfg_filename)
-            status = create_trestle_task_config_file(tmpdirname, cfg_filepath, src_filename)
-            if status:
-                text = f'Unable to create {cfg_filepath}: {status}'
-                return jsonify({'message': f'{text}'}), 400
-            # change working directory
-            cwd = os.getcwd()
-            os.chdir(tmpdirname)
-            # trestle init
-            command = 'trestle init'
-            result = subprocess.run(command, shell=True, capture_output=True, text=True)
-            text = f'{command} rc={result.returncode}, stdout={result.stdout} stderr={result.stderr}'
-            if result.returncode != 0:
-                return jsonify({'message': f'{text}'}), 400
-            # trestle task
-            command = f'trestle task cis-xlsx-to-oscal-cd -c {cfg_filename}'
-            result = subprocess.run(command, shell=True, capture_output=True, text=True)
-            text = f'{command} rc={result.returncode}, stdout={result.stdout} stderr={result.stderr}'
-            if result.returncode != 0:
-                return jsonify({'message': f'{text}'}), 400
-            # OSCAL component-defintion.json
-            json_filename = 'component-definition.json'
-            json_file_path = os.path.join(tmpdirname, json_filename)
-            # send file
-            message = send_file(
-                json_file_path,
-                as_attachment=True,
-                download_name=json_filename,  # this will be the filename on the client
-                mimetype='application/json'
-            )
-            return message, 200
+        work_path = get_work_path()
+        work_dir = str(work_path)
+        # check if the file part is present in the request
+        if 'file' not in request.files:
+            return jsonify({'message': 'No file part'}), 400
+        file = request.files['file']
+        # check if no file is selected
+        if file.filename == '':
+            return jsonify({'message': 'No selected file'}), 400
+        # check if the file is allowed
+        if not allowed_file(file.filename, ALLOWED_EXTENSIONS_CISB):
+            return jsonify({'message': 'Invalid file format'}), 400
+        # save src file
+        src_filename = secure_filename(file.filename)
+        file.save(os.path.join(work_dir, src_filename))
+        # create cfg file
+        cfg_filename = 'task.config'
+        cfg_filepath = os.path.join(work_dir, cfg_filename)
+        status = create_trestle_task_config_file(work_dir, cfg_filepath, src_filename)
+        if status:
+            text = f'Unable to create {cfg_filepath}: {status}'
+            return jsonify({'message': f'{text}'}), 400
+        # change working directory
+        os.chdir(work_dir)
+        # trestle init
+        command = 'trestle init'
+        result = subprocess.run(command, shell=True, capture_output=True, text=True)
+        text = f'{command} rc={result.returncode}, stdout={result.stdout} stderr={result.stderr}'
+        if result.returncode != 0:
+            return jsonify({'message': f'{text}'}), 400
+        # trestle task
+        command = f'trestle task cis-xlsx-to-oscal-cd -c {cfg_filename}'
+        result = subprocess.run(command, shell=True, capture_output=True, text=True)
+        text = f'{command} rc={result.returncode}, stdout={result.stdout} stderr={result.stderr}'
+        if result.returncode != 0:
+            return jsonify({'message': f'{text}'}), 400
+        # OSCAL component-defintion.json
+        json_filename = 'component-definition.json'
+        json_file_path = os.path.join(work_dir, json_filename)
+        # send file
+        message = send_file(
+            json_file_path,
+            as_attachment=True,
+            download_name=json_filename,  # this will be the filename on the client
+            mimetype='application/json'
+        )
+        return message, 200
     except Exception as e:
         return jsonify({'message': f'Server error: {e}'}), 500
+
 
 @app.route('/cis-xlsx-to-oscal-cd-batch', methods=['POST'])
 def task_cis_xlsx_to_oscal_cd_batch():
     """
-    Transform CIS Benchmarks (.xlsx) in input folder to corresponding OSCAL Component Definitions (.json) in oouput folder
+    Transform CIS Benchmarks (.xlsx) in input folder to corresponding OSCAL Component Definitions (.json) in oouput folder.
+
     ---
-    tags: 
+    tags:
       - CIS Benchmark to OSCAL Component Definition
     parameters:
       - name: input-folder
@@ -340,51 +363,51 @@ def task_cis_xlsx_to_oscal_cd_batch():
         description: Server error
     """
     try:
-        workdir = get_working_dir()
-        with workdir as tmpdirname:
-            # input and output folders
-            input_folder = request.form['input-folder']
-            if not os.path.isdir(input_folder):
-                return jsonify({'message': 'Invalid input folder path'}), 400
-            output_folder = request.form['output-folder']
-            os.makedirs(output_folder, exist_ok=True)
-            # process files
-            files_processed = []
-            for filename in os.listdir(input_folder):
-                if not filename.endswith('.xlsx'):
-                    continue
-                sub_folder = filename.replace('.xlsx', '')
-                dest_folder = os.path.join(output_folder, sub_folder)
-                src_file = os.path.join(input_folder, filename)
-                if not allowed_file(filename, ALLOWED_EXTENSIONS_CISB):
-                    return jsonify({'message': f'Invalid input file extension: {filename}'}), 400
-                # create cfg file
-                cfg_filename = 'task.config'
-                cfg_filepath = os.path.join(tmpdirname, cfg_filename)
-                status = create_trestle_task_config_file(dest_folder, cfg_filepath, src_file)
-                if status:
-                    text = f'Unable to create {cfg_filepath}: {status}'
-                    return jsonify({'message': f'{text}'}), 400
-                # change working directory
-                cwd = os.getcwd()
-                os.chdir(tmpdirname)
-                # trestle init
-                command = 'trestle init'
-                result = subprocess.run(command, shell=True, capture_output=True, text=True)
-                text = f'{command} rc={result.returncode}, stdout={result.stdout} stderr={result.stderr}'
-                if result.returncode != 0:
-                    return jsonify({'message': f'{text}'}), 400
-                # trestle task
-                command = f'trestle task cis-xlsx-to-oscal-cd -c {cfg_filepath}'
-                result = subprocess.run(command, shell=True, capture_output=True, text=True)
-                text = f'{command} rc={result.returncode}, stdout={result.stdout} stderr={result.stderr}'
-                if result.returncode != 0:
-                    return jsonify({'message': f'{text}'}), 400
-                files_processed.append(filename)
-            count = len(files_processed)
-            return jsonify({'message': f'{count} files processed'}), 200
+        work_path = get_work_path()
+        work_dir = str(work_path)
+        # input and output folders
+        input_folder = request.form['input-folder']
+        if not os.path.isdir(input_folder):
+            return jsonify({'message': 'Invalid input folder path'}), 400
+        output_folder = request.form['output-folder']
+        os.makedirs(output_folder, exist_ok=True)
+        # process files
+        files_processed = []
+        for filename in os.listdir(input_folder):
+            if not filename.endswith('.xlsx'):
+                continue
+            sub_folder = filename.replace('.xlsx', '')
+            dest_folder = os.path.join(output_folder, sub_folder)
+            src_file = os.path.join(input_folder, filename)
+            if not allowed_file(filename, ALLOWED_EXTENSIONS_CISB):
+                return jsonify({'message': f'Invalid input file extension: {filename}'}), 400
+            # create cfg file
+            cfg_filename = 'task.config'
+            cfg_filepath = os.path.join(work_dir, cfg_filename)
+            status = create_trestle_task_config_file(dest_folder, cfg_filepath, src_file)
+            if status:
+                text = f'Unable to create {cfg_filepath}: {status}'
+                return jsonify({'message': f'{text}'}), 400
+            # change working directory
+            os.chdir(work_dir)
+            # trestle init
+            command = 'trestle init'
+            result = subprocess.run(command, shell=True, capture_output=True, text=True)
+            text = f'{command} rc={result.returncode}, stdout={result.stdout} stderr={result.stderr}'
+            if result.returncode != 0:
+                return jsonify({'message': f'{text}'}), 400
+            # trestle task
+            command = f'trestle task cis-xlsx-to-oscal-cd -c {cfg_filepath}'
+            result = subprocess.run(command, shell=True, capture_output=True, text=True)
+            text = f'{command} rc={result.returncode}, stdout={result.stdout} stderr={result.stderr}'
+            if result.returncode != 0:
+                return jsonify({'message': f'{text}'}), 400
+            files_processed.append(filename)
+        count = len(files_processed)
+        return jsonify({'message': f'{count} files processed'}), 200
     except Exception as e:
         return jsonify({'message': f'Server error: {e}'}), 500
 
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)

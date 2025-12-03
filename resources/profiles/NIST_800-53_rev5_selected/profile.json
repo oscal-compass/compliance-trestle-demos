@@ -1,0 +1,278 @@
+{
+  "profile": {
+    "uuid": "c675b9ed-fcc8-40f8-8458-4a61c586476e",
+    "metadata": {
+      "title": "NIST SP 800-53 Rev 5 Controls, selected",
+      "last-modified": "2025-03-29T11:10:44.084066+00:00",
+      "version": "0.1.6",
+      "oscal-version": "1.1.3"
+    },
+    "imports": [
+      {
+        "href": "catalogs/NIST_800-53_rev5/catalog.json",
+        "include-controls": [
+          {
+            "with-ids": [
+              "ac-1",
+              "ac-2",
+              "ac-2.1",
+              "ac-2.5",
+              "ac-3",
+              "ac-5",
+              "ac-6",
+              "ac-6.2",
+              "ac-6.5",
+              "ac-11",
+              "ac-11.1",
+              "ac-12",
+              "ac-17.2",
+              "au-2",
+              "au-3",
+              "au-3.1",
+              "au-7",
+              "au-12",
+              "cm-1",
+              "cm-2",
+              "cm-6",
+              "cm-7",
+              "cm-7.1",
+              "cm-9",
+              "ia-5",
+              "ia-5.1",
+              "mp-2",
+              "sa-3",
+              "sa-8",
+              "sa-10",
+              "sc-8",
+              "sc-8.1",
+              "sc-28",
+              "sc-28.1"
+            ]
+          }
+        ]
+      }
+    ],
+    "modify": {
+      "set-parameters": [
+        {
+          "param-id": "ac-01_odp.01",
+          "values": [
+            "Test Value"
+          ]
+        },
+        {
+          "param-id": "ac-01_odp.03"
+        },
+        {
+          "param-id": "ac-01_odp.04"
+        },
+        {
+          "param-id": "ac-01_odp.05"
+        },
+        {
+          "param-id": "ac-01_odp.06"
+        },
+        {
+          "param-id": "ac-01_odp.07"
+        },
+        {
+          "param-id": "ac-01_odp.08"
+        },
+        {
+          "param-id": "ac-1_prm_1"
+        },
+        {
+          "param-id": "ac-11_odp.01"
+        },
+        {
+          "param-id": "ac-11_odp.02"
+        },
+        {
+          "param-id": "ac-12_odp"
+        },
+        {
+          "param-id": "ac-02_odp.01"
+        },
+        {
+          "param-id": "ac-02_odp.02"
+        },
+        {
+          "param-id": "ac-02_odp.03"
+        },
+        {
+          "param-id": "ac-02_odp.04"
+        },
+        {
+          "param-id": "ac-02_odp.05"
+        },
+        {
+          "param-id": "ac-02_odp.06"
+        },
+        {
+          "param-id": "ac-02_odp.07"
+        },
+        {
+          "param-id": "ac-02_odp.08"
+        },
+        {
+          "param-id": "ac-02_odp.09"
+        },
+        {
+          "param-id": "ac-02_odp.10"
+        },
+        {
+          "param-id": "ac-02.01_odp"
+        },
+        {
+          "param-id": "ac-02.05_odp"
+        },
+        {
+          "param-id": "ac-05_odp"
+        },
+        {
+          "param-id": "ac-06.02_odp"
+        },
+        {
+          "param-id": "ac-06.05_odp"
+        },
+        {
+          "param-id": "au-12_odp.01"
+        },
+        {
+          "param-id": "au-12_odp.02"
+        },
+        {
+          "param-id": "au-02_odp.01"
+        },
+        {
+          "param-id": "au-02_odp.04"
+        },
+        {
+          "param-id": "au-2_prm_2"
+        },
+        {
+          "param-id": "au-03.01_odp"
+        },
+        {
+          "param-id": "cm-01_odp.03"
+        },
+        {
+          "param-id": "cm-01_odp.04"
+        },
+        {
+          "param-id": "cm-01_odp.05"
+        },
+        {
+          "param-id": "cm-01_odp.06"
+        },
+        {
+          "param-id": "cm-01_odp.07"
+        },
+        {
+          "param-id": "cm-01_odp.08"
+        },
+        {
+          "param-id": "cm-1_prm_1"
+        },
+        {
+          "param-id": "cm-02_odp.01"
+        },
+        {
+          "param-id": "cm-02_odp.02"
+        },
+        {
+          "param-id": "cm-06_odp.01"
+        },
+        {
+          "param-id": "cm-06_odp.02"
+        },
+        {
+          "param-id": "cm-06_odp.03"
+        },
+        {
+          "param-id": "cm-07_odp.01"
+        },
+        {
+          "param-id": "cm-7_prm_2"
+        },
+        {
+          "param-id": "cm-07.01_odp.01"
+        },
+        {
+          "param-id": "cm-7.1_prm_2"
+        },
+        {
+          "param-id": "cm-09_odp"
+        },
+        {
+          "param-id": "ia-05_odp.01"
+        },
+        {
+          "param-id": "ia-05_odp.02"
+        },
+        {
+          "param-id": "ia-05.01_odp.01"
+        },
+        {
+          "param-id": "ia-05.01_odp.02"
+        },
+        {
+          "param-id": "mp-2_prm_1"
+        },
+        {
+          "param-id": "mp-2_prm_2"
+        },
+        {
+          "param-id": "sa-10_odp.01"
+        },
+        {
+          "param-id": "sa-10_odp.02"
+        },
+        {
+          "param-id": "sa-10_odp.03"
+        },
+        {
+          "param-id": "sa-03_odp"
+        },
+        {
+          "param-id": "sa-8_prm_1"
+        },
+        {
+          "param-id": "sc-28_odp.01"
+        },
+        {
+          "param-id": "sc-28_odp.02"
+        },
+        {
+          "param-id": "sc-28.01_odp.01"
+        },
+        {
+          "param-id": "sc-28.01_odp.02"
+        },
+        {
+          "param-id": "sc-08_odp"
+        },
+        {
+          "param-id": "sc-08.01_odp"
+        }
+      ],
+      "alters": [
+        {
+          "control-id": "ac-1",
+          "adds": [
+            {
+              "position": "ending",
+              "parts": [
+                {
+                  "id": "ac-1_my_guidance",
+                  "name": "my_guidance",
+                  "prose": "This is a test guidance."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

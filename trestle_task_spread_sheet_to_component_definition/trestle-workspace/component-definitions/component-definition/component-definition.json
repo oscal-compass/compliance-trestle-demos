@@ -2,7 +2,7 @@
   "component-definition": {
     "uuid": "e758d759-8deb-4802-a947-1ff5ddcdcda0",
     "metadata": {
-      "title": "Component definition for NIST Special Publication 800-53 Revision 4 profiles",
+      "title": "Component definition for NIST Special Publication 800-53 Revision 5 profiles",
       "last-modified": "2022-04-28T03:10:43+00:00",
       "version": "1.0.1",
       "oscal-version": "1.0.2",
@@ -13,7 +13,7 @@
         },
         {
           "id": "prepared-for",
-          "title": "Indicates the organization for which this content was created.."
+          "title": "Indicates the organization for which this content was created."
         },
         {
           "id": "content-approver",
@@ -71,8 +71,8 @@
         "control-implementations": [
           {
             "uuid": "902a7cc8-1e05-484d-a4e6-8a221edcd50a",
-            "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json",
-            "description": "CLOUDANT implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.",
+            "source": "https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json",
+            "description": "CLOUDANT implemented controls for NIST Special Publication 800-53 Revision 5. It includes assessment asset configuration for CICD.",
             "set-parameters": [
               {
                 "param-id": "no_of_admins_for_cloudant_db",
@@ -500,8 +500,8 @@
         "control-implementations": [
           {
             "uuid": "56512b09-f956-4069-91a8-474cb6e11813",
-            "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json",
-            "description": "CIS implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.",
+            "source": "https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json",
+            "description": "CIS implemented controls for NIST Special Publication 800-53 Revision 5. It includes assessment asset configuration for CICD.",
             "implemented-requirements": [
               {
                 "uuid": "444b5df8-cdf6-4f1d-9359-a5695448904b",
@@ -725,8 +725,8 @@
         "control-implementations": [
           {
             "uuid": "6f93810b-de3c-4337-9fd5-a26bdc90b817",
-            "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json",
-            "description": "IKS implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.",
+            "source": "https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json",
+            "description": "IKS implemented controls for NIST Special Publication 800-53 Revision 5. It includes assessment asset configuration for CICD.",
             "set-parameters": [
               {
                 "param-id": "iks_ingress_tls_versions",
@@ -1230,8 +1230,8 @@
         "control-implementations": [
           {
             "uuid": "c888e371-873d-4f3c-96d1-ac0da9be1115",
-            "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json",
-            "description": "VPC implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.",
+            "source": "https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json",
+            "description": "VPC implemented controls for NIST Special Publication 800-53 Revision 5. It includes assessment asset configuration for CICD.",
             "implemented-requirements": [
               {
                 "uuid": "ac7675ba-f31d-4b55-acbf-7a0ac5718127",
@@ -1413,20 +1413,11 @@
         "control-implementations": [
           {
             "uuid": "cc83e4bf-e803-40ad-b76f-f41a73722e3d",
-            "source": "https://github.com/usnistgov/oscal-content/blob/master/nist.gov/SP800-53/rev4/json/NIST_SP-800-53_rev4_catalog.json",
-            "description": "TOOLCHAIN implemented controls for NIST Special Publication 800-53 Revision 4. It includes assessment asset configuration for CICD.",
+            "source": "https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json",
+            "description": "TOOLCHAIN implemented controls for NIST Special Publication 800-53 Revision 5. It includes assessment asset configuration for CICD.",
             "set-parameters": [
               {
-                "param-id": "source_code_scaning_vulnerability_threashhold",
-                "values": [
-                  "low",
-                  "medium",
-                  "high",
-                  "critical"
-                ]
-              },
-              {
-                "param-id": "source_code_scaning_vulnerability_threashhold",
+                "param-id": "source_code_scanning_vulnerability_threashhold",
                 "values": [
                   "low",
                   "medium",
@@ -1458,7 +1449,7 @@
                 ],
                 "set-parameters": [
                   {
-                    "param-id": "source_code_scaning_vulnerability_threashhold",
+                    "param-id": "source_code_scanning_vulnerability_threashhold",
                     "values": [
                       "low"
                     ]
@@ -1515,7 +1506,7 @@
                 ],
                 "set-parameters": [
                   {
-                    "param-id": "source_code_scaning_vulnerability_threashhold",
+                    "param-id": "source_code_scanning_vulnerability_threashhold",
                     "values": [
                       "low"
                     ]
@@ -1572,7 +1563,7 @@
                 ],
                 "set-parameters": [
                   {
-                    "param-id": "source_code_scaning_vulnerability_threashhold",
+                    "param-id": "source_code_scanning_vulnerability_threashhold",
                     "values": [
                       "low"
                     ]
@@ -1622,57 +1613,7 @@
                 ],
                 "set-parameters": [
                   {
-                    "param-id": "source_code_scaning_vulnerability_threashhold",
-                    "values": [
-                      "low"
-                    ]
-                  }
-                ],
-                "responsible-roles": [
-                  {
-                    "role-id": "prepared-by",
-                    "party-uuids": [
-                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
-                    ]
-                  },
-                  {
-                    "role-id": "prepared-for",
-                    "party-uuids": [
-                      "8f78022f-ffba-4071-932f-5eeb21c727fe",
-                      "6d90257e-4194-4d05-8b8f-0dd6bcaff52f"
-                    ]
-                  },
-                  {
-                    "role-id": "content-approver",
-                    "party-uuids": [
-                      "cf5bff42-97a6-4100-8c26-9eb621c9e682"
-                    ]
-                  }
-                ]
-              },
-              {
-                "uuid": "25cd90d4-b813-4c65-8488-864e5badc263",
-                "control-id": "zz-1",
-                "description": "zz-1",
-                "props": [
-                  {
-                    "name": "goal_name_id",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "continuous_delivery_toolchain_sourcecode_scan_severity_configured",
-                    "class": "scc_goal_name_id",
-                    "remarks": "Nonsense"
-                  },
-                  {
-                    "name": "goal_version",
-                    "ns": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud",
-                    "value": "1.0",
-                    "class": "scc_goal_version",
-                    "remarks": "continuous_delivery_toolchain_sourcecode_scan_severity_configured"
-                  }
-                ],
-                "set-parameters": [
-                  {
-                    "param-id": "source_code_scaning_vulnerability_threashhold",
+                    "param-id": "source_code_scanning_vulnerability_threashhold",
                     "values": [
                       "low"
                     ]

@@ -39,7 +39,7 @@ def demo():
 
     logger.info('')
     logger.info('2. Parse an existing OSCAL catalog file into OSCAL model object')
-    filepath = pathlib.Path('./NIST_SP-800-53_rev4_catalog.json')
+    filepath = pathlib.Path('./NIST_SP-800-53_rev5_catalog.json')
     fetcher = FetcherFactory.get_fetcher(repo.root_dir, str(filepath))
     model, _ = fetcher.get_oscal()
     logger.info('File successfully parsed')

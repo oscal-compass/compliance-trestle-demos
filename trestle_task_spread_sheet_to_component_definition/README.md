@@ -30,7 +30,7 @@ Running the demo
 > cd git/compliance-trestle-demos/trestle_task_spread_sheet_to_component_definition
 > trestle task xlsx-to-oscal-cd -c ./demo-xlsx-to-component-definition.config
 
-catalog: trestle-workspace/catalogs/nist-sp-800-53-rev4/catalog.json
+catalog: trestle-workspace/catalogs/nist-sp-800-53-rev5/catalog.json
 input: demo.xlsx
 row 5 col AS missing value
 row 8 control cm-8_3 edited to remove parentheses
@@ -56,8 +56,8 @@ Viewing the result
 "component-definition": {
 "uuid": "75c68a4b-9395-470d-9653-0ae99c93f558",
 "metadata": {
-  "title": "Component definition for NIST Special Publication 800-53 Revision 4 profiles",
-  "last-modified": "2021-07-28T13:22:19.000+00:00",
+  "title": "Component definition for NIST Special Publication 800-53 Revision 5 profiles",
+"last-modified": "2025-12-12T13:22:19.000+00:00",
   "version": "0.20.0",
   "oscal-version": "1.0.0",
   "roles": [

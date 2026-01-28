@@ -19,7 +19,7 @@ install:
 	python -m pip install compliance-trestle
 	python -m pip install pre-commit
 
-pre-commit: 
+pre-commit:
 	pre-commit install
 
 pre-commit-update:
@@ -28,5 +28,5 @@ pre-commit-update:
 code-format:
 	pre-commit run yapf --all-files
 
-code-lint: pre-commit-update
+code-lint:
 	pre-commit run flake8 --all-files

@@ -88,7 +88,7 @@ def create_oscal_catalog(input_file, output_file, title, version, oscal_version)
 
         control_title = row[4]
         if control_title and control_title != 'Implementation Specification (Required)':
-            control_id = f"hipaa-{str(control_counter).zfill(3)}"
+            control_id = f'hipaa-{control_counter:03}' # noqa: E231 - false positive in flake8
             control = {'id': control_id, 'title': control_title.strip(), 'parts': []}
             if row[5]:
                 control['parts'].append({'id': f'{control_id}_smt', 'name': 'statement', 'prose': row[5].strip()})

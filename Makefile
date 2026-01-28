@@ -19,7 +19,7 @@ install:
 	python -m pip install compliance-trestle
 	python -m pip install pre-commit
 
-pre-commit: 
+pre-commit:
 	pre-commit install
 
 pre-commit-update:

@@ -16,7 +16,7 @@ Download this repo
 
 ### demo: trestle task xlsx-to-oscal-poam
 
-This demo transforms the .xlsx to OSCAP POAM.
+This demo transforms the .xlsx to OSCAL POAM.
 
 ```
 > cd trestle_task_cis_xlsx_to_oscal_cd

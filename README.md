@@ -94,7 +94,7 @@ Consult [contributors](https://github.com/oscal-compass/compliance-trestle-demos
 
 ```
 
------
+______________________________________________________________________
 
 We are a Cloud Native Computing Foundation sandbox project.
 
